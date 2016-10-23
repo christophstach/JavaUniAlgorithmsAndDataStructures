@@ -1,12 +1,21 @@
-import java.io.PrintStream;
+import java.io.IOException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- * @author s0555912@htw-berlin.de<Christoph Stach>
+ *
+ * @author Christoph Stach - s0555912@htw-berlin.de
  * @since 18.10.2016
  */
 public class Main {
+    /**
+     * Haupt methode
+     *
+     * @param args commandline args
+     */
     public static void main(String[] args) {
+        int selection, numberA, numberB;
+
         System.setProperty("console.encoding", "UTF-8");
         Scanner scanner = new Scanner(System.in);
 
@@ -16,19 +25,36 @@ public class Main {
         System.out.println("4. DivisionRestRec");
         System.out.println("");
 
-        System.out.print("Bitte geben Sie Ihre Auswahl ein: ");
-        int selection = scanner.nextInt();
+        do {
+            System.out.print("Bitte geben Sie eine ganzzahligen Wert von 1-4 ein: ");
+            try {
+                selection = scanner.nextInt();
+            } catch (InputMismatchException exception) {
+                selection = 0;
+                scanner.next();
+            }
+        } while (selection > 4 || selection < 1);
 
-        while (selection > 4 || selection < 1) {
-            System.out.print("Bitte geben Sie eine Wert von 1-4 ein: ");
-            selection = scanner.nextInt();
-        }
+        do {
+            System.out.print("Bitte geben Sie einen ganzzahligen Wert > 0 fuer A  ein: ");
+            try {
+                numberA = scanner.nextInt();
+            } catch (InputMismatchException exception) {
+                numberA = 0;
+                scanner.next();
+            }
+        } while (numberA < 1);
 
-        System.out.print("Bitte geben Sie eine Wert fuer A ein: ");
-        int numberA = scanner.nextInt();
+        do {
+            System.out.print("Bitte geben Sie einen ganzzahligen Wert > 0 fuer B  ein: ");
+            try {
+                numberB = scanner.nextInt();
+            } catch (InputMismatchException exception) {
+                numberB = 0;
+                scanner.next();
+            }
+        } while (numberB < 1);
 
-        System.out.print("Bitte geben Sie eine Wert fuer B ein: ");
-        int numberB = scanner.nextInt();
 
         switch (selection) {
             case 1:
@@ -47,6 +73,13 @@ public class Main {
 
         System.out.print("\n\n\nDruecken Sie eine beliebige Taste um das Programm zu beenden...");
 
+        try {
+            System.in.read();
+        } catch (IOException exception) {
+
+        }
+
+        System.out.println("");
         scanner.close();
     }
 }

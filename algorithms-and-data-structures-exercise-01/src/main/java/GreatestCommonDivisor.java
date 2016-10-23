@@ -1,14 +1,14 @@
 /**
- * @author s0555912@htw-berlin.de<Christoph Stach>
+ * @author Christoph Stach - s0555912@htw-berlin.de
  * @since 18.10.2016
  */
 public class GreatestCommonDivisor {
     /**
-     * Berechnet den größten gemeinsamen Teiler über den Divisionsrest Iterativ
+     * Berechnet den gr&ouml;&szlig;ten gemeinsamen Teiler &uuml;ber den Divisionsrest Iterativ
      *
-     * @param a
-     * @param b
-     * @return
+     * @param a Erster Wert
+     * @param b Zweiter Wert
+     * @return Gr&ouml;&szlig;ter gemeinsamer Teiler
      */
     public static int divisionRestIt(int a, int b) {
         int h;
@@ -23,11 +23,11 @@ public class GreatestCommonDivisor {
     }
 
     /**
-     * Berechnet den größten gemeinsamen TEiler über den Divisionrest Rekursiv
+     * Berechnet den gr&ouml;&szlig;ten gemeinsamen Teiler &uuml;ber den Divisionrest Rekursiv
      *
-     * @param a
-     * @param b
-     * @return
+     * @param a Erster Wert
+     * @param b Zweiter Wert
+     * @return Gr&ouml;&szlig;ter gemeinsamer Teiler
      */
     public static int divisionRestRec(int a, int b) {
         if (b == 0) {
@@ -38,11 +38,11 @@ public class GreatestCommonDivisor {
     }
 
     /**
-     * Berechnet den größten gemeinsamen Teiler über den Euklidischen Algorithmus iterativ
+     * Berechnet den gr&ouml;&szlig;ten gemeinsamen Teiler &uuml;ber den Euklidischen Algorithmus iterativ
      *
-     * @param a
-     * @param b
-     * @return
+     * @param a Erster Wert
+     * @param b Zweiter Wert
+     * @return Gr&ouml;&szlig;ter gemeinsamer Teiler
      */
     public static int euclidIt(int a, int b) {
         if (a == 0) {
@@ -61,11 +61,11 @@ public class GreatestCommonDivisor {
     }
 
     /**
-     * Berechnet den größten gemeinsamen Teiler über den Euklidischen Algorithmus rekursiv
+     * Berechnet den gr&ouml;&szlig;ten gemeinsamen Teiler &uuml;ber den Euklidischen Algorithmus rekursiv
      *
-     * @param a
-     * @param b
-     * @return
+     * @param a Erster Wert
+     * @param b Zweiter Wert
+     * @return Gr&ouml;&szlig;ter gemeinsamer Teiler
      */
     public static int euclidRec(int a, int b) {
         if (b == 0) {
