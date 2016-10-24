@@ -1,7 +1,3 @@
-import java.io.IOException;
-import java.util.InputMismatchException;
-import java.util.Scanner;
-
 /**
  *
  * @author Christoph Stach - s0555912@htw-berlin.de
@@ -14,72 +10,46 @@ public class Main {
      * @param args commandline args
      */
     public static void main(String[] args) {
-        int selection, numberA, numberB;
+        ConsoleApplication app = new ConsoleApplication();
 
-        System.setProperty("console.encoding", "UTF-8");
-        Scanner scanner = new Scanner(System.in);
+        app.addMenuItem("EuclidIt",  () -> {
+            int a, b;
 
-        System.out.println("1. EuclidIt");
-        System.out.println("2. EuclidRec");
-        System.out.println("3. DivisionRestIt");
-        System.out.println("4. DivisionRestRec");
-        System.out.println("");
+            a = app.readInt("Bitte geben Sie einen ganzzahligen Wert > 0 fuer A  ein: ", (value) -> value > 0);
+            b = app.readInt("Bitte geben Sie einen ganzzahligen Wert > 0 fuer B  ein: ", (value) -> value > 0);
 
-        do {
-            System.out.print("Bitte geben Sie eine ganzzahligen Wert von 1-4 ein: ");
-            try {
-                selection = scanner.nextInt();
-            } catch (InputMismatchException exception) {
-                selection = 0;
-                scanner.next();
-            }
-        } while (selection > 4 || selection < 1);
+            System.out.println("EuclidIt(" + a + ", " + b + ") = " + GreatestCommonDivisor.euclidIt(a, b));
+        });
 
-        do {
-            System.out.print("Bitte geben Sie einen ganzzahligen Wert > 0 fuer A  ein: ");
-            try {
-                numberA = scanner.nextInt();
-            } catch (InputMismatchException exception) {
-                numberA = 0;
-                scanner.next();
-            }
-        } while (numberA < 1);
+        app.addMenuItem("EuclidRec", () -> {
+            int a, b;
 
-        do {
-            System.out.print("Bitte geben Sie einen ganzzahligen Wert > 0 fuer B  ein: ");
-            try {
-                numberB = scanner.nextInt();
-            } catch (InputMismatchException exception) {
-                numberB = 0;
-                scanner.next();
-            }
-        } while (numberB < 1);
+            a = app.readInt("Bitte geben Sie einen ganzzahligen Wert > 0 fuer A  ein: ", (value) -> value > 0);
+            b = app.readInt("Bitte geben Sie einen ganzzahligen Wert > 0 fuer B  ein: ", (value) -> value > 0);
 
+            System.out.println("EuclidRec(" + a + ", " + b + ") = " + GreatestCommonDivisor.euclidRec(a, b));
+        });
 
-        switch (selection) {
-            case 1:
-                System.out.println("EuclidIt(" + numberA + ", " + numberB + ") = " + GreatestCommonDivisor.euclidIt(numberA, numberB));
-                break;
-            case 2:
-                System.out.println("EuclidRec(" + numberA + ", " + numberB + ") = " + GreatestCommonDivisor.euclidRec(numberA, numberB));
-                break;
-            case 3:
-                System.out.println("DivisionRestIt(" + numberA + ", " + numberB + ") = " + GreatestCommonDivisor.divisionRestIt(numberA, numberB));
-                break;
-            case 4:
-                System.out.println("DivisionRestRec1(" + numberA + ", " + numberB + ") = " + GreatestCommonDivisor.divisionRestRec(numberA, numberB));
-                break;
-        }
+        app.addMenuItem("DivisionRestIt", () -> {
+            int a, b;
 
-        System.out.print("\n\n\nDruecken Sie eine beliebige Taste um das Programm zu beenden...");
+            a = app.readInt("Bitte geben Sie einen ganzzahligen Wert > 0 fuer A  ein: ", (value) -> value > 0);
+            b = app.readInt("Bitte geben Sie einen ganzzahligen Wert > 0 fuer B  ein: ", (value) -> value > 0);
 
-        try {
-            System.in.read();
-        } catch (IOException exception) {
+            System.out.println("DivisionRestIt(" + a + ", " + b + ") = " + GreatestCommonDivisor.divisionRestIt(a, b));
+        });
 
-        }
+        app.addMenuItem("DivisionRestRec", () -> {
+            int a, b;
 
-        System.out.println("");
-        scanner.close();
+            a = app.readInt("Bitte geben Sie einen ganzzahligen Wert > 0 fuer A  ein: ", (value) -> value > 0);
+            b = app.readInt("Bitte geben Sie einen ganzzahligen Wert > 0 fuer B  ein: ", (value) -> value > 0);
+
+            System.out.println("DivisionRestRec(" + a + ", " + b + ") = " + GreatestCommonDivisor.divisionRestRec(a, b));
+        });
+
+        app.showMenu();
+        app.handleMenuSelection();
+        app.terminate();
     }
 }

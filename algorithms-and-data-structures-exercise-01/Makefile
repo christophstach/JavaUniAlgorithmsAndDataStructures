@@ -14,7 +14,8 @@ JDOCDIR = doc
 MAINCLASS = Main
 
 SOURCES = ./src/main/java/Main.java \
-          ./src/main/java/GreatestCommonDivisor.java
+          ./src/main/java/GreatestCommonDivisor.java \
+          ./src/main/java/ConsoleApplication.java
 
 default:
 	echo 'Run target default'
