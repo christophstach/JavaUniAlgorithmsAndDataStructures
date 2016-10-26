@@ -194,6 +194,7 @@ public class ConsoleApplication {
             } catch (InputMismatchException exception) {
                 value = 0;
                 this.scanner.next();
+                continue;
             }
         } while (!expression.apply(value));
 
