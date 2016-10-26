@@ -26,5 +26,4 @@ run {
   classpath = sourceSets.main.runtimeClasspath
   main = 'Main'
   standardInput = System.in
-  args
 }

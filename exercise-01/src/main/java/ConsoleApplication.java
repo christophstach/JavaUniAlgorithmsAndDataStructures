@@ -7,7 +7,7 @@ import java.util.function.Function;
 
 
 /**
- * Eine Hilfsklasse zum Anzeigen einer einfachen Konsolen-Applikation
+ * Eine Hilfsklasse zum Anzeigen einer einfachen Konsolenanwendung
  *
  * @author Christoph Stach - s0555912@htw-berlin.de
  * @since 22.10.16
@@ -16,6 +16,10 @@ public class ConsoleApplication {
     private LinkedHashMap<String, Runnable> menuItems;
     private Scanner scanner;
     private int selection;
+    private String header;
+    private String footer;
+    private boolean loopApp;
+    private boolean terminateApp;
 
     /**
      * Konstruktor
@@ -24,6 +28,10 @@ public class ConsoleApplication {
         this.menuItems = new LinkedHashMap<>();
         this.scanner = new Scanner(System.in);
         this.selection = -1;
+        this.header = "";
+        this.footer = "";
+        this.loopApp = false;
+        this.terminateApp = false;
     }
 
     /**
@@ -70,6 +78,48 @@ public class ConsoleApplication {
     }
 
     /**
+     * @return Gibt den aktuellen Header zur&uuml;ck
+     */
+    public String getHeader() {
+        return header;
+    }
+
+    /**
+     * @param header Setzt den aktuellen Header
+     */
+    public void setHeader(String header) {
+        this.header = header;
+    }
+
+    /**
+     * @return Gibt den aktuellen Footer zur&uuml;ck
+     */
+    public String getFooter() {
+        return footer;
+    }
+
+    /**
+     * @param footer Setzt den aktuellen Footer
+     */
+    public void setFooter(String footer) {
+        this.footer = footer;
+    }
+
+    /**
+     * @return Gibt an ob die Anwendung sich nach der Ausf&uuml;hrung wiederholen soll
+     */
+    public boolean isLoopApp() {
+        return loopApp;
+    }
+
+    /**
+     * @param loopApp Gibt an ob die Anwendung sich nach der Ausf&uuml;hrung wiederholen soll
+     */
+    public void setLoopApp(boolean loopApp) {
+        this.loopApp = loopApp;
+    }
+
+    /**
      * F&uuml; einen neuen Men&uuml;punkt hinzu
      *
      * @param item     Der Text des Men&uuml;punktes
@@ -90,8 +140,10 @@ public class ConsoleApplication {
             i++;
         }
 
+        System.out.println();
+
         do {
-            System.out.print("\nBitte geben Sie eine ganzzahligen Wert von 1-" + this.menuItems.size() + " ein: ");
+            System.out.print("Bitte geben Sie eine ganzzahligen Wert von 1-" + this.menuItems.size() + " ein: ");
             try {
                 this.selection = this.scanner.nextInt();
             } catch (InputMismatchException exception) {
@@ -99,6 +151,8 @@ public class ConsoleApplication {
                 this.scanner.next();
             }
         } while (this.selection > this.menuItems.size() || this.selection < 1);
+
+        System.out.println();
     }
 
     /**
@@ -110,6 +164,12 @@ public class ConsoleApplication {
         for (Map.Entry<String, Runnable> item : this.menuItems.entrySet()) {
             if (i == this.selection) {
                 item.getValue().run();
+
+                if (this.loopApp && !this.terminateApp) {
+                    System.out.println();
+                    this.showMenu();
+                    this.handleMenuSelection();
+                }
                 break;
             }
 
@@ -122,7 +182,7 @@ public class ConsoleApplication {
      *
      * @param text       Der Text wird vor der Aufforderung zur Eingabe angezeigt
      * @param expression Damit kann der Bereich der Eingabe eingegrenzt werden
-     * @return
+     * @return Sicher eingelesener int wert
      */
     public int readInt(String text, Function<Integer, Boolean> expression) {
         int value;
@@ -144,23 +204,53 @@ public class ConsoleApplication {
      * Beendet die App
      */
     public void terminate() {
-        System.out.print("" +
-            "\n---------------------------------------------------------------" +
-            "\nDruecken Sie eine beliebige Taste um das Programm zu beenden...");
+        this.terminate(false);
+    }
 
-        try {
-            System.in.read();
-        } catch (IOException exception) {
+    /**
+     * Beendet die App
+     *
+     * @param pauseOnTerminate gibt an ob die App eine letzte finale Eingabe erwartet und damit vorm Beenden pausiert wird
+     */
+    public void terminate(boolean pauseOnTerminate) {
+        if (pauseOnTerminate) {
+            System.out.print("" +
+                "\n---------------------------------------------------------------" +
+                "\nDruecken Sie eine beliebige Taste um das Programm zu beenden...");
 
+            try {
+                System.in.read();
+            } catch (IOException exception) {
+
+            }
         }
 
-        System.out.println("");
+        System.out.println();
         scanner.close();
 
         try {
             System.in.read();
         } catch (IOException exception) {
 
+        }
+    }
+
+    /**
+     * Startet die App
+     */
+    public void run() {
+        if (!this.header.isEmpty()) {
+            System.out.println(this.header);
+        }
+
+        if (this.loopApp) {
+            this.addMenuItem("Programm beenden", () -> this.terminateApp = true);
+        }
+        this.showMenu();
+        this.handleMenuSelection();
+
+        if (!this.footer.isEmpty()) {
+            System.out.println(this.footer);
         }
     }
 }
