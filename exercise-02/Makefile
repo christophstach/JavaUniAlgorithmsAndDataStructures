@@ -13,8 +13,10 @@ JDOCDIR = doc
 
 MAINCLASS = Main
 
-SOURCES = ./src/main/java/Main.java \
-          ./src/main/java/GreatestCommonDivisor.java
+SOURCES = ./src/main/java/exercise/Main.java \
+          ./src/main/java/exercise/entity/Program.java \
+          ./src/main/java/exercise/entity/Student.java \
+          ./src/main/java/exercise/StudentList.java
 
 default:
 	echo 'Run target default'

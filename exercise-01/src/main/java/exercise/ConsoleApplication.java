@@ -1,3 +1,5 @@
+package exercise;
+
 import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.LinkedHashMap;

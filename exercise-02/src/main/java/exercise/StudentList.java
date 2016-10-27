@@ -1,3 +1,6 @@
+package exercise;
+
+import exercise.entity.Student;
 import java.util.LinkedList;
 
 /**

@@ -1,6 +1,4 @@
-import java.io.IOException;
-import java.util.InputMismatchException;
-import java.util.Scanner;
+package exercise;
 
 /**
  * @author Christoph Stach - s0555912@htw-berlin.de
