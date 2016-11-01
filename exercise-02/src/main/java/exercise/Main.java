@@ -20,6 +20,7 @@ public class Main {
         Student s1 = new Student(1, "Christoph", "Stach", Program.APPLIED_COMPUTING);
         Student s2 = new Student(2, "Adrian", "Saiz Ferri", Program.APPLIED_COMPUTING);
         Student s3 = new Student(3, "Laila", "Westphal", Program.APPLIED_COMPUTING);
+        Student s4 = new Student(4, "Steffen", "Exler", Program.APPLIED_COMPUTING);
 
         Listable<Student> list = new SinglyLinkedList<>();
         //Listable<Student> list = new DoublyLinkedList<>();
@@ -27,6 +28,8 @@ public class Main {
         list.add(s1);
         list.add(s2);
         list.add(s3);
+        list.insertAt(3, s4);
+        //list.delete(1);
 
 
         list.printAll();
