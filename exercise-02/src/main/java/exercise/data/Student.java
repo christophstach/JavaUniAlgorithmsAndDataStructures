@@ -1,24 +1,28 @@
-package exercise.entity;
+package exercise.data;
 
 /**
  * @author Christoph Stach - s0555912@htw-berlin.de
  * @since 18.10.2016
  */
 public class Student {
-    /**
-     * Die Matrikel-Nummer
-     */
-    private int id;
+    private int mn;
     private String firstname;
     private String lastname;
     private Program program;
 
-    public int getId() {
-        return id;
+    public Student(int mn, String firstname, String lastname, Program program) {
+        this.mn = mn;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.program = program;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public int getMn() {
+        return mn;
+    }
+
+    public void setMn(int mn) {
+        this.mn = mn;
     }
 
     public String getFirstname() {
@@ -43,5 +47,15 @@ public class Student {
 
     public void setProgram(Program program) {
         this.program = program;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+            "mn=" + mn +
+            ", firstname='" + firstname + '\'' +
+            ", lastname='" + lastname + '\'' +
+            ", program=" + program +
+            '}';
     }
 }

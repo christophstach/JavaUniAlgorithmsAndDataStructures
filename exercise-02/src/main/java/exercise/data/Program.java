@@ -1,4 +1,4 @@
-package exercise.entity;
+package exercise.data;
 
 /**
  * @author Christoph Stach - s0555912@htw-berlin.de

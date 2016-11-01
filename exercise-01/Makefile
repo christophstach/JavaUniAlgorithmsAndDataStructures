@@ -11,11 +11,13 @@ JAVAFLAGS = -cp
 JDOC = javadoc
 JDOCDIR = doc
 
-MAINCLASS = Main
+MAINCLASS = exercise.Main
 
 SOURCES = ./src/main/java/exercise/Main.java \
           ./src/main/java/exercise/GreatestCommonDivisor.java \
           ./src/main/java/exercise/ConsoleApplication.java
+
+TESTS   = ./src/test/java/exercise/GreatestCommonDivisorTest.java
 
 default:
 	echo 'Run target default'
@@ -39,3 +41,5 @@ distclean: clean
 	$(RM) -r $(JDOCDIR)
 
 release: distclean default doc
+
+test:

@@ -1,3 +1,5 @@
+package exercise;
+
 import exercise.GreatestCommonDivisor;
 import org.junit.Assert;
 import org.junit.Test;
