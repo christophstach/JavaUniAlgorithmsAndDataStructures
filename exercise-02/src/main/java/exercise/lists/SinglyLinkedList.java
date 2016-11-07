@@ -1,6 +1,8 @@
 package exercise.lists;
 
 /**
+ * Einfach verketteten Liste
+ *
  * @author Christoph Stach - s0555912@htw-berlin.de
  * @since 11/1/16.
  */
@@ -14,7 +16,7 @@ public class SinglyLinkedList<T> implements Listable<T> {
     }
 
     @Override
-    public void add(T data) {
+    public void insertLast(T data) {
         Node newNode = new Node();
         newNode.data = data;
         newNode.next = null;
@@ -35,14 +37,24 @@ public class SinglyLinkedList<T> implements Listable<T> {
     }
 
     @Override
-    public void delete(int index) {
-        if(index >= 0 && index < this.size) {
-            if(index == 0) {
+    public void insertFirst(T data) {
+        Node newNode = new Node();
+        newNode.data = data;
+        newNode.next = this.head;
+
+        this.head = newNode;
+        this.size++;
+    }
+
+    @Override
+    public void remove(int index) {
+        if (index >= 0 && index < this.size) {
+            if (index == 0) {
                 this.head = this.head.next;
             } else {
                 Node temp = this.head;
 
-                while(index > 1) {
+                while (index > 1) {
                     temp = temp.next;
                     index--;
                 }
@@ -57,18 +69,18 @@ public class SinglyLinkedList<T> implements Listable<T> {
     }
 
     @Override
-    public void insertAt(int index, T data) {
-        if(index >= 0 && index <= this.size) {
+    public void insert(int index, T data) {
+        if (index >= 0 && index <= this.size) {
             Node newNode = new Node();
             newNode.data = data;
 
-            if(index == 0) {
+            if (index == 0) {
                 newNode.next = this.head;
                 this.head = newNode;
             } else {
                 Node temp = this.head;
 
-                while(index > 1) {
+                while (index > 1) {
                     temp = temp.next;
                     index--;
                 }
@@ -84,7 +96,7 @@ public class SinglyLinkedList<T> implements Listable<T> {
     }
 
     @Override
-    public void clear() {
+    public void clearAll() {
         this.head = null;
         this.size = 0;
     }
@@ -100,7 +112,7 @@ public class SinglyLinkedList<T> implements Listable<T> {
 
         Node temp = this.head;
 
-        while(temp != null) {
+        while (temp != null) {
             System.out.println(temp.data);
             temp = temp.next;
         }
@@ -113,10 +125,10 @@ public class SinglyLinkedList<T> implements Listable<T> {
 
     @Override
     public T get(int index) {
-        if(index >= 0 && index < this.size) {
+        if (index >= 0 && index < this.size) {
             Node temp = this.head;
 
-            while(index > 0) {
+            while (index > 0) {
                 temp = temp.next;
                 index--;
             }
