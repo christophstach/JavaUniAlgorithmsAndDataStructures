@@ -56,7 +56,7 @@ public class DoublyLinkedList<T> implements Listable<T> {
                 this.insertFirst(data);
             } else if (index == this.size) {
                 this.insertLast(data);
-            } else if (index < this.size / 2) {
+            } else if (index < (this.size / 2)) {
                 Node newNode = new Node();
                 newNode.data = data;
 
@@ -105,7 +105,7 @@ public class DoublyLinkedList<T> implements Listable<T> {
             if (index == 0) {
                 this.head = this.head.next;
                 this.head.prev = null;
-            } else if (index == this.size - 1) {
+            } else if (index == (this.size - 1)) {
                 this.tail = this.tail.prev;
                 this.tail.next = null;
             } else if(index < (this.size / 2)) {
@@ -172,9 +172,9 @@ public class DoublyLinkedList<T> implements Listable<T> {
         if (index >= 0 && index < this.size) {
             if (index == 0) {
                 return this.head.data;
-            } else if (index == this.size - 1) {
+            } else if (index == (this.size - 1)) {
                 return this.tail.data;
-            } else if (index < this.size / 2) {
+            } else if (index < (this.size / 2)) {
                 // Walks list from the head towards the tail
                 Node temp = this.head;
 
