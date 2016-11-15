@@ -6,14 +6,14 @@ package exercise.data;
  */
 public class Student {
     private int mn;
-    private String firstname;
-    private String lastname;
+    private String firstName;
+    private String lastName;
     private Program program;
 
-    public Student(int mn, String firstname, String lastname, Program program) {
+    public Student(int mn, String firstName, String lastName, Program program) {
         this.mn = mn;
-        this.firstname = firstname;
-        this.lastname = lastname;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.program = program;
     }
 
@@ -25,20 +25,20 @@ public class Student {
         this.mn = mn;
     }
 
-    public String getFirstname() {
-        return firstname;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getLastname() {
-        return lastname;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public Program getProgram() {
@@ -53,8 +53,8 @@ public class Student {
     public String toString() {
         return "Student{" +
             "mn=" + mn +
-            ", firstname='" + firstname + '\'' +
-            ", lastname='" + lastname + '\'' +
+            ", firstName='" + firstName + '\'' +
+            ", lastName='" + lastName + '\'' +
             ", program=" + program +
             '}';
     }
