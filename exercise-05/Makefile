@@ -11,10 +11,11 @@ JAVAFLAGS = -cp
 JDOC = javadoc
 JDOCDIR = doc
 
-MAINCLASS = Main
+MAINCLASS = exercise.Application
 
-SOURCES = ./src/main/java/Main.java \
-          ./src/main/java/GreatestCommonDivisor.java
+SOURCES = ./src/main/java/exercise/Application.java
+
+TESTS   = ./src/main/java/exercise/ApplicationTest.java
 
 default:
 	echo 'Run target default'

@@ -11,16 +11,19 @@ JAVAFLAGS = -cp
 JDOC = javadoc
 JDOCDIR = doc
 
-MAINCLASS = exercise.Main
+MAINCLASS = exercise.Application
 
-SOURCES = ./src/main/java/exercise/Main.java \
-          ./src/main/java/exercise/entity/Program.java \
-          ./src/main/java/exercise/entity/Student.java \
-          ./src/main/java/exercise/StudentList.java
+SOURCES = ./src/main/java/exercise/Application.java \
+          ./src/main/java/exercise/data/Program.java \
+          ./src/main/java/exercise/data/Student.java \
+          ./src/main/java/exercise/lists/SinglyLinkedList.java \
+          ./src/main/java/exercise/lists/DoublyLinkedList.java \
 
-TESTS   = ./src/test/java/exercise/entity/ProgramTest.java \
-          ./src/test/java/exercise/entity/StudentTest.java \
-          ./src/test/java/exercise/StudentListTest.java
+TESTS   = ./src/test/java/exercise/Application.java \
+          ./src/test/java/exercise/data/ProgramTest.java \
+          ./src/test/java/exercise/data/StudentTest.java \
+          ./src/test/java/exercise/lists/SinglyLinkedListTest.java \
+          ./src/test/java/exercise/lists/DoublyLinkedListTest.java
 
 
 default:

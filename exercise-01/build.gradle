@@ -6,7 +6,7 @@ apply plugin: 'application'
 apply plugin: 'idea'
 apply plugin: 'eclipse'
 
-mainClassName = 'Main'
+mainClassName = 'Application'
 
 repositories {
   mavenCentral()
@@ -24,6 +24,6 @@ dependencies {
 
 run {
   classpath = sourceSets.main.runtimeClasspath
-  main = 'Main'
+  main = 'Application'
   standardInput = System.in
 }
