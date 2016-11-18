@@ -18,8 +18,8 @@ public class Application {
         app.addMenuItem("EuclidIt", () -> {
             int a, b;
 
-            a = app.readInt("Bitte geben Sie einen ganzzahligen Wert > 0 fuer A  ein: ", (value) -> value > 0);
-            b = app.readInt("Bitte geben Sie einen ganzzahligen Wert > 0 fuer B  ein: ", (value) -> value > 0);
+            a = ConsoleApplication.readInt("Bitte geben Sie einen ganzzahligen Wert > 0 fuer A  ein: ", (value) -> value > 0);
+            b = ConsoleApplication.readInt("Bitte geben Sie einen ganzzahligen Wert > 0 fuer B  ein: ", (value) -> value > 0);
 
             System.out.println("\nEuclidIt(" + a + ", " + b + ") = " + GreatestCommonDivisor.euclidIt(a, b));
         });
@@ -27,8 +27,8 @@ public class Application {
         app.addMenuItem("EuclidRec", () -> {
             int a, b;
 
-            a = app.readInt("Bitte geben Sie einen ganzzahligen Wert > 0 fuer A  ein: ", (value) -> value > 0);
-            b = app.readInt("Bitte geben Sie einen ganzzahligen Wert > 0 fuer B  ein: ", (value) -> value > 0);
+            a = ConsoleApplication.readInt("Bitte geben Sie einen ganzzahligen Wert > 0 fuer A  ein: ", (value) -> value > 0);
+            b = ConsoleApplication.readInt("Bitte geben Sie einen ganzzahligen Wert > 0 fuer B  ein: ", (value) -> value > 0);
 
             System.out.println("\nEuclidRec(" + a + ", " + b + ") = " + GreatestCommonDivisor.euclidRec(a, b));
         });
@@ -36,8 +36,8 @@ public class Application {
         app.addMenuItem("DivisionRestIt", () -> {
             int a, b;
 
-            a = app.readInt("Bitte geben Sie einen ganzzahligen Wert > 0 fuer A  ein: ", (value) -> value > 0);
-            b = app.readInt("Bitte geben Sie einen ganzzahligen Wert > 0 fuer B  ein: ", (value) -> value > 0);
+            a = ConsoleApplication.readInt("Bitte geben Sie einen ganzzahligen Wert > 0 fuer A  ein: ", (value) -> value > 0);
+            b = ConsoleApplication.readInt("Bitte geben Sie einen ganzzahligen Wert > 0 fuer B  ein: ", (value) -> value > 0);
 
             System.out.println("\nDivisionRestIt(" + a + ", " + b + ") = " + GreatestCommonDivisor.divisionRestIt(a, b));
         });
@@ -45,8 +45,8 @@ public class Application {
         app.addMenuItem("DivisionRestRec", () -> {
             int a, b;
 
-            a = app.readInt("Bitte geben Sie einen ganzzahligen Wert > 0 fuer A  ein: ", (value) -> value > 0);
-            b = app.readInt("Bitte geben Sie einen ganzzahligen Wert > 0 fuer B  ein: ", (value) -> value > 0);
+            a = ConsoleApplication.readInt("Bitte geben Sie einen ganzzahligen Wert > 0 fuer A  ein: ", (value) -> value > 0);
+            b = ConsoleApplication.readInt("Bitte geben Sie einen ganzzahligen Wert > 0 fuer B  ein: ", (value) -> value > 0);
 
             System.out.println("\nDivisionRestRec(" + a + ", " + b + ") = " + GreatestCommonDivisor.divisionRestRec(a, b));
         });
