@@ -1,5 +1,6 @@
 package exercise.list;
 
+import exercise.data.Gender;
 import exercise.data.Program;
 import exercise.data.Student;
 import org.junit.Assert;
@@ -17,12 +18,12 @@ public abstract class ListableTest {
     @Before
     public void setUp() {
         this.testStudents = new Student[]{
-            new Student(0, "Christoph", "Stach", Program.APPLIED_COMPUTING),
-            new Student(1, "Adrianz", "Saiz Ferri", Program.APPLIED_COMPUTING),
-            new Student(2, "Laila", " Westphal", Program.APPLIED_COMPUTING),
-            new Student(3, "Laura", "Hartgers", Program.APPLIED_COMPUTING),
-            new Student(4, "Martin", "Johnki", Program.APPLIED_COMPUTING),
-            new Student(5, "Miles", "Lorenz", Program.APPLIED_COMPUTING),
+            new Student(0, "Christoph", "Stach", Program.APPLIED_COMPUTING, Gender.MALE),
+            new Student(1, "Adrianz", "Saiz Ferri", Program.APPLIED_COMPUTING, Gender.MALE),
+            new Student(2, "Laila", " Westphal", Program.APPLIED_COMPUTING, Gender.FEMALE),
+            new Student(3, "Laura", "Hartgers", Program.APPLIED_COMPUTING, Gender.FEMALE),
+            new Student(4, "Martin", "Johnki", Program.APPLIED_COMPUTING, Gender.MALE),
+            new Student(5, "Miles", "Lorenz", Program.APPLIED_COMPUTING, Gender.MALE),
         };
     }
 

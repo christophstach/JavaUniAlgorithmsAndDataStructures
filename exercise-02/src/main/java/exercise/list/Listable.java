@@ -8,14 +8,14 @@ package exercise.list;
  */
 public interface Listable<T> {
     /**
-     * Fuegt ein Element an den Anfang der Liste an
+     * F&uuml;gt ein Element an den Anfang der Liste an
      *
      * @param data Das Element
      */
     public void insertFirst(T data);
 
     /**
-     * Fuegt ein Element an das Ende der Liste an
+     * F&uuml;gt ein Element an das Ende der Liste an
      *
      * @param data Das Element
      */
@@ -24,13 +24,15 @@ public interface Listable<T> {
     /**
      * @param index Der Index
      * @param data  Das Element
+     * @throws IllegalArgumentException Wenn der index au&szlig;erhalb des Wertebereichs liegt
      */
     public void insert(int index, T data);
 
     /**
-     * Loescht ein Element
+     * L&ouml;scht ein Element
      *
      * @param index Der Index
+     * @throws IllegalArgumentException Wenn der index au&szlig;erhalb des Wertebereichs liegt
      */
     public void remove(int index);
 
@@ -41,7 +43,7 @@ public interface Listable<T> {
     public void clearAll();
 
     /**
-     * Gibt die Laenge der Liste zurueck
+     * Gibt die Laenge der Liste zur&uuml;ck
      *
      * @return Die Laenge
      */
@@ -53,14 +55,14 @@ public interface Listable<T> {
     public void printAll();
 
     /**
-     * Ueberprueft of die Liste leer ist
+     * &Uuml;berpr&uuml;ft of die Liste leer ist
      *
      * @return TRUE = Liste leer, FALSE = Liste nicht leer
      */
     public boolean isEmpty();
 
     /**
-     * Gibt ein Element am angegebenen Index zurueck
+     * Gibt ein Element am angegebenen Index zur&uuml;ck
      *
      * @param index Der Index
      * @return Das Element
