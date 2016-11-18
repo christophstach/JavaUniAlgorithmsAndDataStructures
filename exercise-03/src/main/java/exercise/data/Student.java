@@ -8,7 +8,7 @@
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package data;
+package exercise.data;
 
 /**
  * @author Christoph Stach - s0555912@htw-berlin.de
@@ -19,12 +19,12 @@ public class Student {
     private String firstName;
     private String lastName;
     private Program program;
-    private int gender;
+    private Gender gender;
 
     public Student() {
     }
 
-    public Student(int mn, String firstName, String lastName, Program program, int gender) {
+    public Student(int mn, String firstName, String lastName, Program program, Gender gender) {
         this.mn = mn;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -65,11 +65,11 @@ public class Student {
         this.program = program;
     }
 
-    public int getGender() {
+    public Gender getGender() {
         return gender;
     }
 
-    public void setGender(int gender) {
+    public void setGender(Gender gender) {
         this.gender = gender;
     }
 

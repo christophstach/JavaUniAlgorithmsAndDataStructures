@@ -1,4 +1,14 @@
-package exercise;
+/*
+ * Copyright (c) 2016 Christoph Stach <christoph.stach@gmail.com>
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+
+package exercise.util;
 
 import java.io.IOException;
 import java.util.InputMismatchException;
@@ -16,7 +26,7 @@ import java.util.function.Function;
  */
 public class ConsoleApplication {
     private LinkedHashMap<String, Runnable> menuItems;
-    private Scanner scanner;
+    private static Scanner scanner = new Scanner(System.in);
     private int selection;
     private String header;
     private String footer;
@@ -28,7 +38,6 @@ public class ConsoleApplication {
      */
     public ConsoleApplication() {
         this.menuItems = new LinkedHashMap<>();
-        this.scanner = new Scanner(System.in);
         this.selection = -1;
         this.header = "";
         this.footer = "";
@@ -54,15 +63,15 @@ public class ConsoleApplication {
     /**
      * @return Gibt den Scanner zur&uuml;ck
      */
-    public Scanner getScanner() {
-        return scanner;
+    public static Scanner getScanner() {
+        return ConsoleApplication.scanner;
     }
 
     /**
      * @param scanner Setzt den Scanner
      */
-    public void setScanner(Scanner scanner) {
-        this.scanner = scanner;
+    public static void setScanner(Scanner scanner) {
+        ConsoleApplication.scanner = scanner;
     }
 
     /**
@@ -147,10 +156,10 @@ public class ConsoleApplication {
         do {
             System.out.print("Bitte geben Sie eine ganzzahligen Wert von 1-" + this.menuItems.size() + " ein: ");
             try {
-                this.selection = this.scanner.nextInt();
+                this.selection = ConsoleApplication.scanner.nextInt();
             } catch (InputMismatchException exception) {
                 this.selection = 0;
-                this.scanner.next();
+                ConsoleApplication.scanner.next();
             }
         } while (this.selection > this.menuItems.size() || this.selection < 1);
 
@@ -184,20 +193,68 @@ public class ConsoleApplication {
      *
      * @param text       Der Text wird vor der Aufforderung zur Eingabe angezeigt
      * @param expression Damit kann der Bereich der Eingabe eingegrenzt werden
-     * @return Sicher eingelesener int wert
+     * @return Sicher eingelesener Integer Wert
      */
-    public int readInt(String text, Function<Integer, Boolean> expression) {
-        int value;
+    public static int readInt(String text, Function<Integer, Boolean> expression) {
+        int value = 0;
+        boolean threwException = false;
 
         do {
             System.out.print(text);
             try {
-                value = this.scanner.nextInt();
+                value = ConsoleApplication.scanner.nextInt();
+                threwException = false;
             } catch (InputMismatchException exception) {
                 value = 0;
-                this.scanner.next();
-                continue;
+                ConsoleApplication.scanner.next();
+                threwException = true;
             }
+        } while (threwException || !expression.apply(value));
+
+        return value;
+    }
+
+    /**
+     * Liest einen Double Wert sicher von der Komandozeile ein und fordert bei Fehleingaben zur erneuten Eingabe auf
+     *
+     * @param text       Der Text wird vor der Aufforderung zur Eingabe angezeigt
+     * @param expression Damit kann der Bereich der Eingabe eingegrenzt werden
+     * @return Sicher eingelesener Double Wert
+     */
+    public static double readDouble(String text, Function<Double, Boolean> expression) {
+        double value = 0;
+        boolean threwException = false;
+
+        do {
+            System.out.print(text);
+            try {
+                value = ConsoleApplication.scanner.nextInt();
+                threwException = false;
+            } catch (InputMismatchException exception) {
+                value = 0;
+                ConsoleApplication.scanner.next();
+                threwException = true;
+            }
+        } while (threwException || !expression.apply(value));
+
+        return value;
+    }
+
+    /**
+     * Liest einen String Wert sicher von der Komandozeile ein und fordert bei Fehleingaben zur erneuten Eingabe auf
+     *
+     * @param text       Der Text wird vor der Aufforderung zur Eingabe angezeigt
+     * @param expression Damit kann der Bereich der Eingabe eingegrenzt werden
+     * @return Sicher eingelesener String Wert
+     */
+    public static String readString(String text, Function<String, Boolean> expression) {
+        String value;
+
+        do {
+            System.out.print(text);
+
+            value = ConsoleApplication.scanner.next();
+
         } while (!expression.apply(value));
 
         return value;

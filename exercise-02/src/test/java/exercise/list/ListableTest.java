@@ -1,4 +1,4 @@
-package exercise.lists;
+package exercise.list;
 
 import exercise.data.Program;
 import exercise.data.Student;

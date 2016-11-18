@@ -2,9 +2,8 @@ package exercise;
 
 import exercise.data.Program;
 import exercise.data.Student;
-import exercise.lists.DoublyLinkedList;
-import exercise.lists.Listable;
-import exercise.lists.SinglyLinkedList;
+import exercise.list.DoublyLinkedList;
+import exercise.list.Listable;
 
 /**
  * @author Christoph Stach - s0555912@htw-berlin.de

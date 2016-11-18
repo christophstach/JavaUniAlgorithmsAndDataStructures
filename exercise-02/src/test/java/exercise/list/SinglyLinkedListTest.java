@@ -1,4 +1,4 @@
-package exercise.lists;
+package exercise.list;
 
 import org.junit.Before;
 

@@ -1,4 +1,4 @@
-package exercise.lists;
+package exercise.list;
 
 /**
  * Interface welches von Listen implementiert werden muss

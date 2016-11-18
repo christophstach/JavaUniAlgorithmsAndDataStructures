@@ -10,10 +10,12 @@
 
 package exercise;
 
-import data.Program;
-import data.Student;
-import stack.Stack;
-import stack.Stackable;
+import exercise.data.Gender;
+import exercise.data.Program;
+import exercise.data.Student;
+import exercise.stack.Stack;
+import exercise.stack.Stackable;
+import exercise.util.ConsoleApplication;
 
 /**
  * @author Christoph Stach - s0555912@htw-berlin.de
@@ -26,31 +28,69 @@ public class Application {
      * @param args commandline args
      */
     public static void main(String[] args) {
-        Student[] students = new Student[]{
-            new Student(555912, "Christoph", "Stach", Program.APPLIED_COMPUTING, 1),
-            new Student(555913, "Miles", "Lorenz", Program.APPLIED_COMPUTING, 2),
-            new Student(555914, "Steffen", "Exler", Program.APPLIED_COMPUTING, 3)
-        };
-
-
         Stackable<Student> stack = new Stack<>();
+        ConsoleApplication app = new ConsoleApplication();
 
-        stack.push(students[0]);
-        stack.push(students[1]);
-        stack.push(students[2]);
+        app.setHeader("STACK");
+        app.setLoopApp(true);
 
-        stack.printAll();
+        app.addMenuItem("Push", () -> {
+            Student student = new Student();
+            student.setMn(ConsoleApplication.readInt("Bitte die MatrikelNr eingeben: ", (value) -> true));
+            student.setFirstName(ConsoleApplication.readString("Bitte den Vornamen eingeben: ", (value) -> true));
+            student.setLastName(ConsoleApplication.readString("Bitte den Nachnamen eingeben: ", (value) -> true));
 
-        System.out.println("Size: " + stack.size());
-        System.out.println("Pop: " + stack.pop());
-        System.out.println("Size: " + stack.size());
-        System.out.println("Empty: " + stack.empty());
-        System.out.println("Peak: " + stack.peak());
+            System.out.println("");
+            for (int i = 0; i < Program.values().length; i++) {
+                System.out.println(i + ": " + Program.values()[i]);
+            }
+            System.out.println("");
+            student.setProgram(
+                Program.values()[ConsoleApplication.readInt(
+                    "Bitte den Studiengang auswählen: ",
+                    (value) -> (value >= 0 && value < Program.values().length)
+                )]
+            );
 
-        stack.pop();
-        stack.pop();
+            System.out.println("");
+            for (int i = 0; i < Gender.values().length; i++) {
+                System.out.println(i + ": " + Gender.values()[i]);
+            }
+            System.out.println("");
+            student.setGender(
+                Gender.values()[ConsoleApplication.readInt(
+                    "Bitte das Geschlecht auswählen: ",
+                    (value) -> (value >= 0 && value < Gender.values().length)
+                )]
+            );
 
-        System.out.println("Size: " + stack.size());
-        System.out.println("Empty: " + stack.empty());
+            stack.push(student);
+        });
+
+        app.addMenuItem("Pop", () -> {
+            System.out.println("Return von stack.pop(): " + stack.pop());
+        });
+
+        app.addMenuItem("Peak", () -> {
+            System.out.println("Return von stack.peak(): " + stack.peak());
+        });
+
+        app.addMenuItem("Size", () -> {
+            System.out.println("Return von stack.size(): " + stack.size());
+        });
+
+        app.addMenuItem("Empty", () -> {
+            System.out.println("Return von stack.empty(): " + stack.empty());
+        });
+
+        app.addMenuItem("Clear", () -> {
+            System.out.println("Stack wurde geleert");
+        });
+
+        app.addMenuItem("PrintAll", () -> {
+            stack.printAll();
+        });
+
+        app.run();
     }
 }

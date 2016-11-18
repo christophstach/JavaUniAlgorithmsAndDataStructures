@@ -1,4 +1,4 @@
-package exercise.lists;
+package exercise.list;
 
 /**
  * @author Christoph Stach - s0555912@htw-berlin.de
