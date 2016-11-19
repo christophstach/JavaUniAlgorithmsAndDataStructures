@@ -1,10 +1,20 @@
 version '1.0-SNAPSHOT'
 
+buildscript {
+  repositories {
+    mavenLocal()
+    mavenCentral()
+  }
+  dependencies {
+    classpath group: 'com.github.csabasulyok', name: 'gradle-latex', version: '1.0'
+  }
+}
 
 apply plugin: 'java'
 apply plugin: 'application'
 apply plugin: 'idea'
 apply plugin: 'eclipse'
+apply plugin: 'latex'
 
 mainClassName = 'Application'
 
@@ -12,19 +22,17 @@ repositories {
   mavenCentral()
 }
 
-
-
 dependencies {
   testCompile group: 'junit', name: 'junit', version: '4.11'
-  runtime(
-
-  )
 }
-
 
 run {
   classpath = sourceSets.main.runtimeClasspath
   main = 'Application'
   standardInput = System.in
   args
+}
+
+latex {
+  tex 'readme.tex'
 }

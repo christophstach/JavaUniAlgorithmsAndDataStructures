@@ -1,0 +1,52 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi)
+\usepackage{lipsum} %This package just generates Lorem Ipsum filler text.
+\usepackage{fullpage} % changes the margin
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+
+\noindent
+\large\textbf{Algorithmen und Datenstrukturen} \hfill \textbf{Christoph Stach (555912)} \\
+\normalsize Aufgabe 2: Einfach und doppelt verkette Liste \hfill Tom Buhrtz \\
+
+
+
+\section*{Einige Methoden obiger einfach verketteter Liste lassen sich (im Gegensatz zum
+          Array oder einer doppelt verketteten Liste) effizient (in unterschiedlicher Hinsicht)
+          implementieren, andere nicht unbedingt - welche sind das und warum?}
+
+\subsection*{insertFirst()}
+Die Methode lässt sich bei der einfach und doppelt verketteten Liste sehr leicht implementieren, da nur ein neuer Kopf
+gesetzt werden muss. Im Vergleich zum Array muss hier weniger Aufwand geleistet werden, da ein Array komplett neu
+erstellt werden müsste um den neuen Wert zu speichern.
+
+\subsection*{insertLast()}
+
+Ähnlich wie bei \textit{insertFirst()} kann bei der doppelt verketteten Liste einfach ein neuer Fuß gesetzt werden, was
+sehr einfach ist, da die doppelt verkette Liste bereits eine Referenz auf den Fuß hat. Bei bei der einfach verketteten
+Liste gestaltet sich das komplizierter, weil erst die komplette Liste durchlaufen werden muss um den Fuß zu finden.
+Das Array müsste wieder neu erstellt werden.
+
+\subsection*{insert()}
+
+Um Elemente einzufügen müssen beide Listen jeweils bis zum Index durchlaufen werden. Hier können sich die Vorteile einer
+doppelt verketten Liste zu nutze gemacht werden, da bei einem Index der größer ist als die Hälfe der Länge der Liste auch
+von hinten angefangen werden kann die Liste zu durch laufen. Die implementierung ist dadurch natürlich komplexer aber
+man hat unter Umständen im Vergleich zur einfach verketteten Liste Performancevorteile. Das Array müsste wieder neu
+erstellt werden.
+
+\subsection*{remove()}
+
+\subsection*{clearAll()}
+
+\subsection*{isEmpty()}
+
+\subsection*{get()}
+
+\subsection*{insertFirst()}
+
+\section*{Analysieren Sie die Komplexität der von ihnen implementierten Sortierverfahren
+          allgemein und im speziellen Fall Ihrer Implementierung}
+
+\end{document}
