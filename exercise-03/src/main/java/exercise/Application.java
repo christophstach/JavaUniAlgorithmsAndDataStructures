@@ -83,7 +83,8 @@ public class Application {
             System.out.println("Return von stack.empty(): " + stack.empty());
         });
 
-        app.addMenuItem("Clear", () -> {
+        app.addMenuItem("ClearAll", () -> {
+            stack.clearAll();
             System.out.println("Stack wurde geleert");
         });
 

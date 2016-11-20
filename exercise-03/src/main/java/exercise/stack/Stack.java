@@ -66,7 +66,7 @@ public class Stack<T> implements Stackable<T> {
     }
 
     @Override
-    public void clear() {
+    public void clearAll() {
         this.head = null;
         this.size = 0;
     }

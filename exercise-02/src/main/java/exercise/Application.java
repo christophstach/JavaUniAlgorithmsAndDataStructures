@@ -58,10 +58,10 @@ public class Application {
             int index = 0;
             Student student = Application.readStudent();
 
-            if (!list.isEmpty()) {
+            if (!list.empty()) {
                 index = ConsoleApplication.readInt(
-                    "Bitte geben Sie einen Wert für den Index von 0 - " + list.getSize() + " ein: ",
-                    (value) -> (value >= 0 && value <= list.getSize())
+                    "Bitte geben Sie einen Wert für den Index von 0 - " + list.size() + " ein: ",
+                    (value) -> (value >= 0 && value <= list.size())
                 );
             }
 
@@ -72,11 +72,11 @@ public class Application {
         app.addMenuItem("Remove", () -> {
             int index = 0;
 
-            if (!list.isEmpty()) {
-                if (list.getSize() > 1) {
+            if (!list.empty()) {
+                if (list.size() > 1) {
                     index = ConsoleApplication.readInt(
-                        "Bitte geben Sie einen Wert für den Index von 0 - " + list.getSize() + " ein: ",
-                        (value) -> (value >= 0 && value < list.getSize())
+                        "Bitte geben Sie einen Wert für den Index von 0 - " + list.size() + " ein: ",
+                        (value) -> (value >= 0 && value < list.size())
                     );
                 } else {
                     index = 0;
@@ -92,11 +92,11 @@ public class Application {
         app.addMenuItem("Get", () -> {
             int index = 0;
 
-            if (!list.isEmpty()) {
-                if (list.getSize() > 1) {
+            if (!list.empty()) {
+                if (list.size() > 1) {
                     index = ConsoleApplication.readInt(
-                        "Bitte geben Sie einen Wert für den Index von 0 - " + list.getSize() + " ein: ",
-                        (value) -> (value >= 0 && value < list.getSize())
+                        "Bitte geben Sie einen Wert für den Index von 0 - " + list.size() + " ein: ",
+                        (value) -> (value >= 0 && value < list.size())
                     );
                 } else {
                     index = 0;
@@ -109,11 +109,11 @@ public class Application {
         });
 
         app.addMenuItem("GetSize", () -> {
-            System.out.println("Size: " + list.getSize());
+            System.out.println("Size: " + list.size());
         });
 
         app.addMenuItem("IsEmpty", () -> {
-            System.out.println("IsEmpty: " + list.isEmpty());
+            System.out.println("IsEmpty: " + list.empty());
         });
 
         app.addMenuItem("ClearAll", () -> {

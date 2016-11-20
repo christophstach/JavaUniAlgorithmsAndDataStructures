@@ -29,26 +29,26 @@ public abstract class ListableTest {
 
     @Test
     public void isEmpty() {
-        Assert.assertTrue(this.list.isEmpty());
+        Assert.assertTrue(this.list.empty());
         this.list.insertLast(this.testStudents[0]);
-        Assert.assertFalse(this.list.isEmpty());
+        Assert.assertFalse(this.list.empty());
     }
 
     @Test
     public void clearAll() {
         this.list.insertLast(this.testStudents[0]);
-        Assert.assertFalse(this.list.isEmpty());
+        Assert.assertFalse(this.list.empty());
         this.list.clearAll();
-        Assert.assertTrue(this.list.isEmpty());
+        Assert.assertTrue(this.list.empty());
     }
 
     @Test
     public void getSize() {
-        Assert.assertEquals(0, this.list.getSize());
+        Assert.assertEquals(0, this.list.size());
         this.list.insertLast(this.testStudents[0]);
-        Assert.assertEquals(1, this.list.getSize());
+        Assert.assertEquals(1, this.list.size());
         this.list.insertLast(this.testStudents[1]);
-        Assert.assertEquals(2, this.list.getSize());
+        Assert.assertEquals(2, this.list.size());
     }
 
     @Test
@@ -56,7 +56,7 @@ public abstract class ListableTest {
         this.list.insert(0, this.testStudents[0]);
         this.list.insert(1, this.testStudents[1]);
 
-        Assert.assertEquals(2, this.list.getSize());
+        Assert.assertEquals(2, this.list.size());
         Assert.assertSame(this.testStudents[0], this.list.get(0));
         Assert.assertSame(this.testStudents[1], this.list.get(1));
 
@@ -75,7 +75,7 @@ public abstract class ListableTest {
         this.list.insertFirst(this.testStudents[2]);
         this.list.insertFirst(this.testStudents[3]);
 
-        Assert.assertEquals(4, this.list.getSize());
+        Assert.assertEquals(4, this.list.size());
         Assert.assertSame(this.testStudents[3], this.list.get(0));
         Assert.assertSame(this.testStudents[0], this.list.get(3));
     }
@@ -87,7 +87,7 @@ public abstract class ListableTest {
         this.list.insertLast(this.testStudents[2]);
         this.list.insertLast(this.testStudents[3]);
 
-        Assert.assertEquals(4, this.list.getSize());
+        Assert.assertEquals(4, this.list.size());
         Assert.assertSame(this.testStudents[0], this.list.get(0));
         Assert.assertSame(this.testStudents[3], this.list.get(3));
     }
@@ -100,25 +100,25 @@ public abstract class ListableTest {
         this.list.insertLast(this.testStudents[3]);
         this.list.insertLast(this.testStudents[4]);
         this.list.insertLast(this.testStudents[5]);
-        Assert.assertEquals(6, this.list.getSize());
+        Assert.assertEquals(6, this.list.size());
 
         this.list.remove(0);
-        Assert.assertEquals(5, this.list.getSize());
+        Assert.assertEquals(5, this.list.size());
         Assert.assertSame(this.testStudents[1], this.list.get(0));
         this.list.insertFirst(this.testStudents[0]);
 
         this.list.remove(5);
-        Assert.assertEquals(5, this.list.getSize());
+        Assert.assertEquals(5, this.list.size());
         Assert.assertSame(this.testStudents[4], this.list.get(4));
         this.list.insertLast(this.testStudents[5]);
 
         this.list.remove(1);
-        Assert.assertEquals(5, this.list.getSize());
+        Assert.assertEquals(5, this.list.size());
         Assert.assertSame(this.testStudents[2], this.list.get(1));
         this.list.insert(1, this.testStudents[1]);
 
         this.list.remove(4);
-        Assert.assertEquals(5, this.list.getSize());
+        Assert.assertEquals(5, this.list.size());
         Assert.assertSame(this.testStudents[5], this.list.get(4));
     }
 

@@ -11,53 +11,55 @@
 package exercise.stack;
 
 /**
+ * Interface for stacks
+ *
  * @author Christoph Stach - s0555912@htw-berlin.de
  * @since 11/15/16
  */
 public interface Stackable<T> {
     /**
-     * Legt ein Element oben auf den Stack drauf
+     * Puts an element on top of the stack
      *
-     * @param data Das Element
+     * @param data The element
      */
     public void push(T data);
 
     /**
-     * Nimmst das oberste Element vom Stack runter und gibt es zurück
+     * Returns the top element of the list with removing it
      *
-     * @return Das oberste Element
+     * @return The top element
      */
     public T pop();
 
     /**
-     * Gibt das oberste Elemet des Stacks zurück ohne es zu entfernen
+     * Returns the top element of the stack without removing it
      *
-     * @return Das oberste Element
+     * @return The top element
      */
     public T peak();
 
     /**
-     * Gibt die Größe des Stacks zurück
+     * Returns the size of the list
      *
-     * @return Die Größe Stacks
+     * @return The size
      */
     public int size();
 
     /**
-     * Gibt zurück ob der Stack leer ist
+     * Checks if the list is empty
      *
-     * @return True = Leer; False = Nicht Leer
+     * @return true = list is empty, false = list is not empty
      */
     public boolean empty();
 
 
     /**
-     * Leert den Stack
+     * Empties the stack
      */
-    public void clear();
+    public void clearAll();
 
     /**
-     * Gibt den kompletten Stack auf der Konsole aus
+     * Prints the complete stack to the console
      */
     public void printAll();
 }

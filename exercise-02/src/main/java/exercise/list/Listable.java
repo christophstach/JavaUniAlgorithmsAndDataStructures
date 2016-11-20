@@ -1,71 +1,74 @@
 package exercise.list;
 
 /**
- * Interface welches von Listen implementiert werden muss
+ * Interface for lists
  *
  * @author Christoph Stach - s0555912@htw-berlin.de
  * @since 11/1/16.
  */
 public interface Listable<T> {
     /**
-     * F&uuml;gt ein Element an den Anfang der Liste an
+     * Inserts an element into the first position of the list
      *
-     * @param data Das Element
+     * @param data The element
      */
     public void insertFirst(T data);
 
     /**
-     * F&uuml;gt ein Element an das Ende der Liste an
+     * Inserts an element into the last position of the list
      *
-     * @param data Das Element
+     * @param data The element
      */
     public void insertLast(T data);
 
     /**
-     * @param index Der Index
-     * @param data  Das Element
-     * @throws IllegalArgumentException Wenn der index au&szlig;erhalb des Wertebereichs liegt
+     * Inserts an element into a chosen position of the list
+     *
+     * @param index The index
+     * @param data  The element
+     * @throws IndexOutOfBoundsException Is thrown if the index is out of the list bounds
      */
     public void insert(int index, T data);
 
     /**
-     * L&ouml;scht ein Element
+     * Removes an element from the list
      *
-     * @param index Der Index
-     * @throws IllegalArgumentException Wenn der index au&szlig;erhalb des Wertebereichs liegt
+     * @param index The index
+     * @throws IndexOutOfBoundsException Is thrown if the index is out of the list bounds
      */
     public void remove(int index);
 
 
     /**
-     * Leert die Liste
+     * Empties the list
      */
     public void clearAll();
 
     /**
-     * Gibt die Laenge der Liste zur&uuml;ck
+     * Returns the size of the list
      *
-     * @return Die Laenge
+     * @return The size
      */
-    public int getSize();
+    public int size();
 
     /**
-     * Gibt die komplette Liste auf der Konsole aus
+     * Prints the complete list to the console
      */
     public void printAll();
 
     /**
-     * &Uuml;berpr&uuml;ft of die Liste leer ist
+     * Checks if the list is empty
      *
-     * @return TRUE = Liste leer, FALSE = Liste nicht leer
+     * @return true = list is empty, false = list is not empty
      */
-    public boolean isEmpty();
+    public boolean empty();
 
     /**
-     * Gibt ein Element am angegebenen Index zur&uuml;ck
+     * Returns an element from the list
      *
-     * @param index Der Index
-     * @return Das Element
+     * @param index The index
+     * @return The element
+     * @throws IndexOutOfBoundsException Is thrown if the index is out of the list bounds
      */
     public T get(int index);
 

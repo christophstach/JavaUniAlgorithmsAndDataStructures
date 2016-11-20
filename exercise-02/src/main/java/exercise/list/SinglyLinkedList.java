@@ -1,7 +1,7 @@
 package exercise.list;
 
 /**
- * Einfach verketteten Liste
+ * Singly linked list
  *
  * @author Christoph Stach - s0555912@htw-berlin.de
  * @since 11/1/16.
@@ -64,7 +64,7 @@ public class SinglyLinkedList<T> implements Listable<T> {
 
             this.size--;
         } else {
-            throw new IllegalArgumentException("Außerhalb des des Wertebereichs");
+            throw new IndexOutOfBoundsException("The index is out of bounds");
         }
     }
 
@@ -91,7 +91,7 @@ public class SinglyLinkedList<T> implements Listable<T> {
 
             this.size++;
         } else {
-            throw new IllegalArgumentException("Außerhalb des des Wertebereichs");
+            throw new IndexOutOfBoundsException("The index is out of bounds");
         }
     }
 
@@ -102,7 +102,7 @@ public class SinglyLinkedList<T> implements Listable<T> {
     }
 
     @Override
-    public int getSize() {
+    public int size() {
         return this.size;
     }
 
@@ -119,7 +119,7 @@ public class SinglyLinkedList<T> implements Listable<T> {
     }
 
     @Override
-    public boolean isEmpty() {
+    public boolean empty() {
         return (this.head == null);
     }
 
@@ -135,7 +135,7 @@ public class SinglyLinkedList<T> implements Listable<T> {
 
             return temp.data;
         } else {
-            throw new IllegalArgumentException("Außerhalb des des Wertebereichs");
+            throw new IndexOutOfBoundsException("The index is out of bounds");
         }
     }
 }
