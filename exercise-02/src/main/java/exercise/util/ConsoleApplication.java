@@ -19,7 +19,7 @@ import java.util.function.Function;
 
 
 /**
- * Eine Hilfsklasse zum Anzeigen einer einfachen Konsolenanwendung
+ * A utility class for simple console applications
  *
  * @author Christoph Stach - s0555912@htw-berlin.de
  * @since 22.10.16
@@ -34,7 +34,7 @@ public class ConsoleApplication {
     private boolean terminateApp;
 
     /**
-     * Konstruktor
+     * Constructor
      */
     public ConsoleApplication() {
         this.menuItems = new LinkedHashMap<>();
@@ -46,102 +46,125 @@ public class ConsoleApplication {
     }
 
     /**
-     * @return Gibt die Men&uuml;punkte zur&uuml;ck
+     * Getter for menuItems
+     *
+     * @return The menuItems
      */
     public LinkedHashMap<String, Runnable> getMenuItems() {
-        return menuItems;
+        return this.menuItems;
     }
 
     /**
-     * @param menuItems Setzt alle Men&uuml;punkte
+     * Setter for menuItems
+     *
+     * @param menuItems The menuItems
      */
     public void setMenuItems(LinkedHashMap<String, Runnable> menuItems) {
         this.menuItems = menuItems;
     }
 
-
     /**
-     * @return Gibt den Scanner zur&uuml;ck
+     * Getter for scanner
+     *
+     * @return The scanner
      */
     public static Scanner getScanner() {
         return ConsoleApplication.scanner;
     }
 
     /**
-     * @param scanner Setzt den Scanner
+     * Setter for scanner
+     *
+     * @param scanner The scanner
      */
     public static void setScanner(Scanner scanner) {
         ConsoleApplication.scanner = scanner;
     }
 
     /**
-     * @return Gibt die aktuelle Men&uuml;auswahl
+     * Getter for selection
+     *
+     * @return The selection
      */
     public int getSelection() {
-        return selection;
+        return this.selection;
     }
 
     /**
-     * @param selection Setzt die aktuelle Menu&uuml;auswahl
+     * Setter for selection
+     *
+     * @param selection The selection
      */
     public void setSelection(int selection) {
         this.selection = selection;
     }
 
     /**
-     * @return Gibt den aktuellen Header zur&uuml;ck
+     * Getter for header
+     *
+     * @return The header
      */
     public String getHeader() {
-        return header;
+        return this.header;
     }
 
     /**
-     * @param header Setzt den aktuellen Header
+     * Setter for header
+     *
+     * @param header The header
      */
     public void setHeader(String header) {
         this.header = header;
     }
 
     /**
-     * @return Gibt den aktuellen Footer zur&uuml;ck
+     * Getter for footer
+     *
+     * @return The footer
      */
     public String getFooter() {
-        return footer;
+        return this.footer;
     }
 
     /**
-     * @param footer Setzt den aktuellen Footer
+     * Setter for footer
+     *
+     * @param footer The footer
      */
     public void setFooter(String footer) {
         this.footer = footer;
     }
 
     /**
-     * @return Gibt an ob die Anwendung sich nach der Ausf&uuml;hrung wiederholen soll
+     * Getter for loopApp
+     *
+     * @return The loopApp
      */
     public boolean isLoopApp() {
-        return loopApp;
+        return this.loopApp;
     }
 
     /**
-     * @param loopApp Gibt an ob die Anwendung sich nach der Ausf&uuml;hrung wiederholen soll
+     * Setter for loopApp
+     *
+     * @param loopApp The loopApp
      */
     public void setLoopApp(boolean loopApp) {
         this.loopApp = loopApp;
     }
 
     /**
-     * F&uuml; einen neuen Men&uuml;punkt hinzu
+     * Adds a new menu item
      *
-     * @param item     Der Text des Men&uuml;punktes
-     * @param runnable Die Aktion die ausgef&uuml;hrt werden soll wenn der Men&uuml;punkt ausgew&auml;t wurde
+     * @param item     The text of the menu item
+     * @param runnable The function which will be executed if the menu item is selected
      */
     public void addMenuItem(String item, Runnable runnable) {
         this.menuItems.put(item, runnable);
     }
 
     /**
-     * Zeigt das Men&uuml; an und fordert zur Auswahl auf
+     * Shows the value and prompts for selection
      */
     public void showMenu() {
         int i = 1;
@@ -167,7 +190,7 @@ public class ConsoleApplication {
     }
 
     /**
-     * Startet die Funktion des Ausgewählten Men&uuml;punktes
+     * Runs the user selected menu item
      */
     public void handleMenuSelection() {
         int i = 1;
@@ -189,15 +212,15 @@ public class ConsoleApplication {
     }
 
     /**
-     * Liest einen Integer Wert sicher von der Komandozeile ein und fordert bei Fehleingaben zur erneuten Eingabe auf
+     * Securely reads a integer value from the commandline and user to reenter the value on wrong input
      *
-     * @param text       Der Text wird vor der Aufforderung zur Eingabe angezeigt
-     * @param expression Damit kann der Bereich der Eingabe eingegrenzt werden
-     * @return Sicher eingelesener Integer Wert
+     * @param text       The prompt text
+     * @param expression Will be executed to validate the input
+     * @return Securely read integer value
      */
     public static int readInt(String text, Function<Integer, Boolean> expression) {
-        int value = 0;
-        boolean threwException = false;
+        int value;
+        boolean threwException;
 
         do {
             System.out.print(text);
@@ -215,15 +238,15 @@ public class ConsoleApplication {
     }
 
     /**
-     * Liest einen Double Wert sicher von der Komandozeile ein und fordert bei Fehleingaben zur erneuten Eingabe auf
+     * Securely reads a double value from the commandline and user to reenter the value on wrong input
      *
-     * @param text       Der Text wird vor der Aufforderung zur Eingabe angezeigt
-     * @param expression Damit kann der Bereich der Eingabe eingegrenzt werden
-     * @return Sicher eingelesener Double Wert
+     * @param text       The prompt text
+     * @param expression Will be executed to validate the input
+     * @return Securely read double value
      */
     public static double readDouble(String text, Function<Double, Boolean> expression) {
-        double value = 0;
-        boolean threwException = false;
+        double value;
+        boolean threwException;
 
         do {
             System.out.print(text);
@@ -241,11 +264,11 @@ public class ConsoleApplication {
     }
 
     /**
-     * Liest einen String Wert sicher von der Komandozeile ein und fordert bei Fehleingaben zur erneuten Eingabe auf
+     * Securely reads a string value from the commandline and user to reenter the value on wrong input
      *
-     * @param text       Der Text wird vor der Aufforderung zur Eingabe angezeigt
-     * @param expression Damit kann der Bereich der Eingabe eingegrenzt werden
-     * @return Sicher eingelesener String Wert
+     * @param text       The prompt text
+     * @param expression Will be executed to validate the input
+     * @return Securely read string value
      */
     public static String readString(String text, Function<String, Boolean> expression) {
         String value;
@@ -261,16 +284,16 @@ public class ConsoleApplication {
     }
 
     /**
-     * Beendet die App
+     * Terminates the app
      */
     public void terminate() {
         this.terminate(false);
     }
 
     /**
-     * Beendet die App
+     * Terminates the app
      *
-     * @param pauseOnTerminate gibt an ob die App eine letzte finale Eingabe erwartet und damit vorm Beenden pausiert wird
+     * @param pauseOnTerminate If true the app awaits a final terminating keyboard input
      */
     public void terminate(boolean pauseOnTerminate) {
         if (pauseOnTerminate) {
@@ -296,7 +319,7 @@ public class ConsoleApplication {
     }
 
     /**
-     * Startet die App
+     * Starts the app
      */
     public void run() {
         if (!this.header.isEmpty()) {
