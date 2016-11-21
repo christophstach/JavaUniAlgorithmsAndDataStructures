@@ -28,14 +28,14 @@ public abstract class ListableTest {
     }
 
     @Test
-    public void isEmpty() {
+    public void testEmpty() {
         Assert.assertTrue(this.list.empty());
         this.list.insertLast(this.testStudents[0]);
         Assert.assertFalse(this.list.empty());
     }
 
     @Test
-    public void clearAll() {
+    public void testClearAll() {
         this.list.insertLast(this.testStudents[0]);
         Assert.assertFalse(this.list.empty());
         this.list.clearAll();
@@ -43,7 +43,7 @@ public abstract class ListableTest {
     }
 
     @Test
-    public void getSize() {
+    public void testSize() {
         Assert.assertEquals(0, this.list.size());
         this.list.insertLast(this.testStudents[0]);
         Assert.assertEquals(1, this.list.size());
@@ -52,7 +52,7 @@ public abstract class ListableTest {
     }
 
     @Test
-    public void insert() {
+    public void testInsert() {
         this.list.insert(0, this.testStudents[0]);
         this.list.insert(1, this.testStudents[1]);
 
@@ -69,7 +69,7 @@ public abstract class ListableTest {
     }
 
     @Test
-    public void insertFirst() {
+    public void testInsertFirst() {
         this.list.insertFirst(this.testStudents[0]);
         this.list.insertFirst(this.testStudents[1]);
         this.list.insertFirst(this.testStudents[2]);
@@ -81,7 +81,7 @@ public abstract class ListableTest {
     }
 
     @Test
-    public void insertLast() {
+    public void testInsertLast() {
         this.list.insertLast(this.testStudents[0]);
         this.list.insertLast(this.testStudents[1]);
         this.list.insertLast(this.testStudents[2]);
@@ -93,7 +93,7 @@ public abstract class ListableTest {
     }
 
     @Test
-    public void remove() {
+    public void testRemove() {
         this.list.insertLast(this.testStudents[0]);
         this.list.insertLast(this.testStudents[1]);
         this.list.insertLast(this.testStudents[2]);
@@ -123,7 +123,7 @@ public abstract class ListableTest {
     }
 
     @Test
-    public void get() {
+    public void testGet() {
         this.list.insertFirst(this.testStudents[0]);
         this.list.insertLast(this.testStudents[1]);
 
@@ -133,17 +133,17 @@ public abstract class ListableTest {
 
 
     @Test(expected = IndexOutOfBoundsException.class)
-    public void getThrowsIndexOutOfBoundsException() {
+    public void testGetThrowsIndexOutOfBoundsException() {
         this.list.get(0);
     }
 
     @Test(expected = IndexOutOfBoundsException.class)
-    public void insertThrowsIndexOutOfBoundsException() {
+    public void testInsertThrowsIndexOutOfBoundsException() {
         this.list.insert(1, this.testStudents[0]);
     }
 
     @Test(expected = IndexOutOfBoundsException.class)
-    public void removeThrowsIndexOutOfBoundsException() {
+    public void testRemoveThrowsIndexOutOfBoundsException() {
         this.list.remove(1);
     }
 }
