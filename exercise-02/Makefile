@@ -1,4 +1,5 @@
-# see for more information README.md
+JUNIT = junit/junit-4.12.jar
+HAMCREST = junit/hamcrest-core-1.3.jar
 JC = javac
 JCFLAGS = -g
 JBINDIR = bin	# :-) BITTE KEIN SLASH AM ANFANG VOM PFAD 'bin' SETZEN!
@@ -13,23 +14,34 @@ JDOCDIR = doc
 
 MAINCLASS = exercise.Application
 
-SOURCES = ./src/main/java/exercise/Application.java \
-          ./src/main/java/exercise/data/Program.java \
-          ./src/main/java/exercise/data/Student.java \
-          ./src/main/java/exercise/lists/SinglyLinkedList.java \
-          ./src/main/java/exercise/lists/DoublyLinkedList.java \
+SOURCES     = ./src/main/java/exercise/Application.java \
+              ./src/main/java/exercise/util/ConsoleApplication.java \
+              ./src/main/java/exercise/data/Program.java \
+              ./src/main/java/exercise/data/Student.java \
+              ./src/main/java/exercise/data/Gender.java \
+              ./src/main/java/exercise/list/Listable.java \
+              ./src/main/java/exercise/list/SinglyLinkedList.java \
+              ./src/main/java/exercise/list/DoublyLinkedList.java
 
-TESTS   = ./src/test/java/exercise/Application.java \
-          ./src/test/java/exercise/data/ProgramTest.java \
-          ./src/test/java/exercise/data/StudentTest.java \
-          ./src/test/java/exercise/lists/SinglyLinkedListTest.java \
-          ./src/test/java/exercise/lists/DoublyLinkedListTest.java
+TESTSOURCES = ./src/test/java/exercise/list/SinglyLinkedListTest.java \
+              ./src/test/java/exercise/list/DoublyLinkedListTest.java \
+              ./src/test/java/exercise/list/ListableTest.java \
+              ./src/main/java/exercise/list/SinglyLinkedList.java \
+              ./src/main/java/exercise/list/DoublyLinkedList.java \
+              ./src/main/java/exercise/list/Listable.java \
+              ./src/main/java/exercise/data/Program.java \
+              ./src/main/java/exercise/data/Student.java \
+              ./src/main/java/exercise/data/Gender.java
+
+TESTCLASSES = exercise.list.SinglyLinkedListTest \
+              exercise.list.DoublyLinkedListTest
+
 
 
 default:
 	echo 'Run target default'
 	mkdir -p $(JBINDIR)
-	$(JC) $(JCFLAGS) $(SOURCES) -d $(JBINDIR)$
+	$(JC) $(JCFLAGS) $(SOURCES) -d $(JBINDIR)
 
 run-app:
 	@echo 'Run target run'
@@ -46,5 +58,11 @@ clean:
 distclean: clean
 	@echo 'Run target distclean'
 	$(RM) -r $(JDOCDIR)
+
+test:
+	@echo 'Run target test'
+	mkdir -p $(JBINDIR)
+	$(JC) -cp .:$(JUNIT) $(TESTSOURCES) -d $(JBINDIR)
+	cd $(JBINDIR); $(JAVA) -cp .:../$(JUNIT):../$(HAMCREST) org.junit.runner.JUnitCore $(TESTCLASSES)
 
 release: distclean default doc

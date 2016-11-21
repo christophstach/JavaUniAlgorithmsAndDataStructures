@@ -1,4 +1,5 @@
-# see for more information README.md
+JUNIT = junit/junit-4.12.jar
+HAMCREST = junit/hamcrest-core-1.3.jar
 JC = javac
 JCFLAGS = -g
 JBINDIR = bin	# :-) BITTE KEIN SLASH AM ANFANG VOM PFAD 'bin' SETZEN!
@@ -11,11 +12,19 @@ JAVAFLAGS = -cp
 JDOC = javadoc
 JDOCDIR = doc
 
-MAINCLASS = exercise.Application
+MAINCLASS   = exercise.Application
 
-SOURCES = ./src/main/java/exercise/Application.java
+SOURCES     = ./src/main/java/exercise/Application.java
 
-TESTS   = ./src/main/java/exercise/ApplicationTest.java
+TESTSOURCES = ./src/main/java/exercise/stack/Stack.java \
+              ./src/main/java/exercise/stack/Stackable.java \
+              ./src/main/java/exercise/data/Program.java \
+              ./src/main/java/exercise/data/Student.java \
+              ./src/main/java/exercise/data/Gender.java \
+              ./src/main/java/exercise/stack/Stack.java \
+              ./src/test/java/exercise/stack/StackTest.java
+
+TESTCLASSES = exercise.stack.StackTest
 
 
 default:
@@ -38,5 +47,11 @@ clean:
 distclean: clean
 	@echo 'Run target distclean'
 	$(RM) -r $(JDOCDIR)
+
+test:
+	@echo 'Run target test'
+	mkdir -p $(JBINDIR)
+	$(JC) -cp .:$(JUNIT) $(TESTSOURCES) -d $(JBINDIR)
+	cd $(JBINDIR); $(JAVA) -cp .:../$(JUNIT):../$(HAMCREST) org.junit.runner.JUnitCore $(TESTCLASSES)
 
 release: distclean default doc
