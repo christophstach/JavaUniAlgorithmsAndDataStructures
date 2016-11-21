@@ -132,18 +132,18 @@ public abstract class ListableTest {
     }
 
 
-    @Test(expected = IllegalArgumentException.class)
-    public void getThrowsIllegalArgumentException() {
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void getThrowsIndexOutOfBoundsException() {
         this.list.get(0);
     }
 
-    @Test(expected = IllegalArgumentException.class)
-    public void insertThrowsIllegalArgumentException() {
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void insertThrowsIndexOutOfBoundsException() {
         this.list.insert(1, this.testStudents[0]);
     }
 
-    @Test(expected = IllegalArgumentException.class)
-    public void removeThrowsIllegalArgumentException() {
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void removeThrowsIndexOutOfBoundsException() {
         this.list.remove(1);
     }
 }
