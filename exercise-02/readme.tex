@@ -40,15 +40,40 @@ von hinten angefangen werden kann die Liste zu durch laufen. Die implementierung
 man hat unter Umständen im Vergleich zur einfach verketteten Liste Performancevorteile. Das Array müsste wieder neu
 erstellt werden.
 
+
 \subsection*{remove()}
-
-\subsection*{clearAll()}
-
-\subsection*{isEmpty()}
+Wie bei \textit{insert()} müssen die Listen wieder zum Index durchlaufen werden. Das Element wird entfernt in dem man
+Beim Vorgänger Element die \textit{next} Eigenschaft anpasst. Bei der Doppelt verketteten Liste muss zusätzlich auch
+noch die \textit{prev} Eigenschaft angepasst werden. Das zu entfernende Element wird gefunden in dem man wieder bis zum
+jeweiligen Index durchläuft. Bei der Doppelt verketteten Liste kann sich unter Umständen die Eigenschaft zu nutze
+gemacht werden das man von Hinten anfangen kann die Liste zu durchlaufen um das Element zu finden.
 
 \subsection*{get()}
+Das finden des jeweiligen Elements funktioniert gleich wie bei \textit{insert()} und \textit{remove()}.
+Die Doppelt verkette Liste bietet die gleichen Vorteile wie sonst.
 
-\subsection*{insertFirst()}
+\subsection*{size()}
+Die Methode lässt sich sehr einfach implementieren da nur der Wert der Instanzeigenschaft \textit{size} zurückgeben
+werden muss. Ein Array hat dafür die native Eigenschaft \textit{.length}.
+
+\subsection*{empty()}
+Lässt sich bei den Listen auch sehr einfach implementieren da nur überprüft werden muss ob der Kopf == \textit{null} ist.
+Alternativ kann auch überpüft werden ob die \textit{size} == \textit{0} ist.
+
+\subsection*{clearAll()}
+Die Methode ist einfach und Performant bei beiden Listen zu implementieren. Bei der einfach verketten Liste muss der
+Kopf auf \textit{null} gesetzt werden. Außerdem muss die Instanzeigenschaft \textit{size} auf \textit{0} gesetzt werden.
+Bei der doppelt verketten Liste muss zusätzlich der Fuß auf \textit{null} gesetzt werden. Ein Array müsste nur mit einem
+neuen Array der Länge \textit{0} bzw. mit \textit{null} inititialisiert werden.
+
+
+\subsection*{Zusammenfassung}
+Im Allgemeinen kann man sagen das Listen das schreibenden Methode bei Listen wie \textit{insert()}, \\
+\textit{insertFirst()}, \textit{insertLast()} und \textit{remove()} besser implementiert sind im gegensatz zum Array
+besser implementiert werden können. Das Array muss bei schreibenen Methoden jedes mal komplett neu aufgebaut und die
+Elemente müssen in das neue Array kopiert werden. Um die Länge korrekt ermitteln zu können müssen bei den Listen die
+Methoden \textit{insert()}, \textit{insertFirst()}, \textit{insertLast()} und \textit{remove()}  die Instanzeigenschaft
+\textit{size} jeweils um \textit{1} hochzählen bzw. verringern. Beim Array kann die Länge direkt nativ gelesen werden.
 
 \section*{Analysieren Sie die Komplexität der von ihnen implementierten Sortierverfahren
           allgemein und im speziellen Fall Ihrer Implementierung}
