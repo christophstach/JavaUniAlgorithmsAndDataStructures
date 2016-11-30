@@ -1,5 +1,7 @@
 package exercise.list;
 
+import exercise.comparator.Comparator;
+
 /**
  * Singly linked list
  *
@@ -137,5 +139,15 @@ public class SinglyLinkedList<T> implements Listable<T> {
         } else {
             throw new IndexOutOfBoundsException("The index is out of bounds");
         }
+    }
+
+    @Override
+    public void search(Comparator<T> comparator) {
+
+    }
+
+    @Override
+    public void sort(Comparator<T> comparator) {
+
     }
 }

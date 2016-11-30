@@ -6,7 +6,7 @@ package exercise.list;
  * @author Christoph Stach - s0555912@htw-berlin.de
  * @since 11/1/16.
  */
-public interface Listable<T> {
+public interface Listable<T> extends Sortable<T> {
     /**
      * Inserts an element into the first position of the list
      *
@@ -71,6 +71,7 @@ public interface Listable<T> {
      * @throws IndexOutOfBoundsException Is thrown if the index is out of the list bounds
      */
     public T get(int index);
+
 
     // TODO: sort
     // TODO: search

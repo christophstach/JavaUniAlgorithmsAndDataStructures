@@ -1,5 +1,7 @@
 package exercise.list;
 
+import exercise.comparator.Comparator;
+
 /**
  * Doubly linked list
  *
@@ -202,4 +204,15 @@ public class DoublyLinkedList<T> implements Listable<T> {
             throw new IndexOutOfBoundsException("The index is out of bounds");
         }
     }
+
+    @Override
+    public void search(Comparator<T> comparator) {
+
+    }
+
+    @Override
+    public void sort(Comparator<T> comparator) {
+
+    }
 }
+
