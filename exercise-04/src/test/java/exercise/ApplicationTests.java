@@ -30,15 +30,16 @@ public class ApplicationTests {
             TowersOfHanoi game = new TowersOfHanoi(i);
             game.setVerbose(false);
 
-            Assert.assertEquals(game.getPegs()[0].size(), i);
-            Assert.assertEquals(game.getPegs()[1].size(), 0);
-            Assert.assertEquals(game.getPegs()[2].size(), 0);
+            Assert.assertEquals(i, game.getPegs()[0].size(), i);
+            Assert.assertEquals(0, game.getPegs()[1].size());
+            Assert.assertEquals(0, game.getPegs()[2].size());
 
             game.startGame();
 
-            Assert.assertEquals(game.getPegs()[0].size(), 0);
-            Assert.assertEquals(game.getPegs()[1].size(), 0);
-            Assert.assertEquals(game.getPegs()[2].size(), i);
+            Assert.assertEquals(0, game.getPegs()[0].size());
+            Assert.assertEquals(0, game.getPegs()[1].size());
+            Assert.assertEquals(i, game.getPegs()[2].size());
+
             Assert.assertEquals(expectedNumberOfMoves, game.getMovesDone());
         }
     }
