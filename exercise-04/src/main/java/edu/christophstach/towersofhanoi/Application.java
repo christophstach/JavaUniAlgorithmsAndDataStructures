@@ -23,16 +23,11 @@ public class Application {
      * @param args Console arguments
      */
     public static void main(String[] args) {
-        TowersOfHanoi towersOfHanoi = new TowersOfHanoi(3);
-
-        towersOfHanoi.initializeGame();
-
-
-        for (int i = 0; i < 3; i++) {
-            towersOfHanoi.nextTurn();
-        }
-
+        TowersOfHanoi towersOfHanoi = new TowersOfHanoi(2);
+        towersOfHanoi.setVerbose(false);
+        towersOfHanoi.startGame();
 
         System.out.println(towersOfHanoi);
+        System.out.println("Moves done: " + towersOfHanoi.getMovesDone());
     }
 }

@@ -10,46 +10,53 @@
 
 package edu.christophstach.towersofhanoi.game;
 
+import java.util.Stack;
+
 /**
  * @author Christoph Stach - s0555912@htw-berlin.de
  * @since 11/27/16
  */
-class Disk {
-    private final int size;
+public class Peg extends Stack<Disc> {
+    private String name;
 
     /**
      * Constructor
      *
-     * @param size The size
+     * @param name The name
      */
-    public Disk(int size) {
-        this.size = size;
-
-        if (this.size < 1) {
-            throw new IllegalArgumentException("Disk size can't be less than 1");
-        }
+    public Peg(String name) {
+        this.name = name;
     }
 
     /**
-     * Getter for size
+     * Getter for name
      *
-     * @return The size
+     * @return The name
      */
-    public int getSize() {
-        return this.size;
+    public String getName() {
+        return this.name;
     }
 
     /**
-     * Builds the string representation of the Disk
+     * Setter for name
      *
-     * @return The string representation of the Disk
+     * @param name The name
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * Builds the string representation of the Peg
+     *
+     * @return The string representation of the Peg
      */
     @Override
     public String toString() {
         String str = "";
 
-        for (int i = 0; i < this.size; i++) {
-            str += "_";
+        for (int i = 0; i < this.elementCount; i++) {
+            str += this.elementAt(this.size() - 1 - i) + "\n";
         }
 
         return str;

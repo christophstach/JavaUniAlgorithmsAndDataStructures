@@ -10,135 +10,138 @@
 
 package edu.christophstach.towersofhanoi.game;
 
-import edu.christophstach.towersofhanoi.util.InfiniteLooper;
-
 /**
  * @author Christoph Stach - s0555912@htw-berlin.de
  * @since 11/27/16
  */
 public class TowersOfHanoi {
     private int movesDone;
-    private final int diskCount;
-    private final Rod[] rods;
+    private final Disc[] discs;
+    private final Peg[] pegs;
+    private boolean verbose = true;
 
     /**
      * Constructor
      *
-     * @param diskCount The diskCount
+     * @param discCount The discCount
      */
-    public TowersOfHanoi(int diskCount) {
-        this.diskCount = diskCount;
+    public TowersOfHanoi(int discCount) {
+        this.discs = new Disc[discCount];
 
-        this.rods = new Rod[]{
-            new Rod(),
-            new Rod(),
-            new Rod()
+        this.pegs = new Peg[]{
+            new Peg("A"),
+            new Peg("B"),
+            new Peg("C")
         };
-    }
 
-    /**
-     * Getter for diskCount
-     *
-     * @return The diskCount
-     */
-    public int getDiskCount() {
-        return this.diskCount;
-    }
-
-    /**
-     * Getter for rods
-     *
-     * @return The rods
-     */
-    public Rod[] getRods() {
-        return this.rods;
-    }
-
-    /**
-     * Starts a new Game
-     */
-    public void initializeGame() {
-        for (int i = 0; i < this.diskCount; i++) {
-            this.rods[0].push(new Disk(this.diskCount - i));
+        for (int i = 0; i < discCount; i++) {
+            this.discs[discCount - i - 1] = new Disc(discCount - i);
+            this.pegs[0].push(this.discs[discCount - i - 1]);
         }
     }
 
     /**
-     * Makes the next turn and puts a disk on another rod
+     * Getter for discCount
      *
-     * @return Returns false if the game is finished
+     * @return The discCount
      */
-    public boolean nextTurn() {
-        if (this.movesDone % 2 == 0) {
-            this.moveDiskLeft(this.getNextSourceRodIndex());
-        } else {
-            this.moveDiskRight(this.getNextSourceRodIndex());
+    public int getDiscCount() {
+        return this.discs.length;
+    }
+
+    /**
+     * Getter for pegs
+     *
+     * @return The pegs
+     */
+    public Peg[] getPegs() {
+        return this.pegs;
+    }
+
+    /**
+     * Getter for movesDone
+     *
+     * @return The movesDone
+     */
+    public int getMovesDone() {
+        return this.movesDone;
+    }
+
+    /**
+     * Setter for movesDone
+     *
+     * @param movesDone The movesDone
+     */
+    public void setMovesDone(int movesDone) {
+        this.movesDone = movesDone;
+    }
+
+    /**
+     * Getter for verbose
+     *
+     * @return The verbose
+     */
+    public boolean isVerbose() {
+        return this.verbose;
+    }
+
+    /**
+     * Setter for verbose
+     *
+     * @param verbose The verbose
+     */
+    public void setVerbose(boolean verbose) {
+        this.verbose = verbose;
+    }
+
+    /**
+     * Puts a disc from a source peg to the destination peg
+     *
+     * @param source      The source peg
+     * @param destination The destination peg
+     */
+    public void moveDisc(Peg source, Peg destination) {
+        if (this.verbose) {
+            System.out.println("Moving Disc with size of " + source.peek().getSize() + " from " + source.getName() + " to " + destination.getName());
+        }
+
+        destination.push(source.pop());
+
+        if (this.verbose) {
+
+            System.out.println(this);
+            System.out.println("\n\n\n\n\n");
         }
 
         this.movesDone++;
-
-        return !this.hasGameFinished();
     }
 
     /**
-     * TODO:
+     * Moves n discs from the source peg to the destination peg using the tmp peg.
+     * If n is greater than one the, first n-1 disc will be moved recursively to the tmp peg before the
+     * biggest disc is moved to the destination peg. In the end all discs from the tmp peg will be moved again recursively
+     * to the destination peg.
      *
-     * @return
+     * @param n           Number of discs
+     * @param source      The source peg
+     * @param destination The destination peg
+     * @param tmp         The temporary peg
      */
-    public int getNextSourceRodIndex() {
-        InfiniteLooper looper = new InfiniteLooper(0, this.rods.length - 1, 0);
-
-        for (Rod rod : this.rods) {
-
-        }
-        return 0;
-    }
-
-    /**
-     * Checks if the game has finished
-     *
-     * @return True if the game has finished
-     */
-    public boolean hasGameFinished() {
-        return this.rods[this.rods.length - 1].size() == this.diskCount;
-    }
-
-    /**
-     * Moves a disk from the rod to the next free rod left of it
-     *
-     * @param sourceRodIndex The index of the rod
-     */
-    private void moveDiskLeft(int sourceRodIndex) {
-        boolean hasMoved = false;
-        InfiniteLooper destinationRodIndex = new InfiniteLooper(0, this.rods.length - 1, sourceRodIndex);
-
-        while (!hasMoved) {
-            destinationRodIndex.drecrement();
-
-            if (this.rods[destinationRodIndex.getValue()].canPutDisk(this.rods[sourceRodIndex].peek())) {
-                this.rods[destinationRodIndex.getValue()].push(this.rods[sourceRodIndex].pop());
-                hasMoved = true;
-            }
+    public void moveDiscs(int n, Peg source, Peg destination, Peg tmp) {
+        if (n == 1) {
+            this.moveDisc(source, destination);
+        } else if (n > 1) {
+            this.moveDiscs(n - 1, source, tmp, destination);
+            this.moveDisc(source, destination);
+            this.moveDiscs(n - 1, tmp, destination, source);
         }
     }
 
     /**
-     * Moves a disk from the rod to the next free rod rod of it
-     *
-     * @param sourceRodIndex The index of the rod
+     * Starts the game
      */
-    private void moveDiskRight(int sourceRodIndex) {
-        boolean hasMoved = false;
-        InfiniteLooper destinationRodIndex = new InfiniteLooper(0, this.rods.length - 1, sourceRodIndex);
-
-        while (!hasMoved) {
-            destinationRodIndex.increment();
-
-            if (this.rods[destinationRodIndex.getValue()].canPutDisk(this.rods[sourceRodIndex].peek())) {
-                this.rods[destinationRodIndex.getValue()].push(this.rods[sourceRodIndex].pop());
-                hasMoved = true;
-            }
-        }
+    public void startGame() {
+        this.moveDiscs(this.getDiscCount(), this.pegs[0], this.pegs[2], this.pegs[1]);
     }
 
     /**
@@ -150,10 +153,9 @@ public class TowersOfHanoi {
     public String toString() {
         String str = "";
 
-
-        for (int i = 0; i < this.rods.length; i++) {
-            str += "Tower " + (i + 1) + "\n";
-            str += this.rods[i];
+        for (int i = 0; i < this.pegs.length; i++) {
+            str += "Tower " + this.pegs[i].getName() + "\n";
+            str += this.pegs[i];
         }
 
         return str;

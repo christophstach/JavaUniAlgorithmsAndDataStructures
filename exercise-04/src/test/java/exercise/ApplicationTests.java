@@ -10,10 +10,36 @@
 
 package exercise;
 
+import edu.christophstach.towersofhanoi.game.TowersOfHanoi;
+import org.junit.Assert;
+import org.junit.Test;
+
 /**
  * @author Christoph Stach - s0555912@htw-berlin.de
  * @since 18.10.2016
  */
-public class ApplicationTest {
+public class ApplicationTests {
+    /**
+     * Tests the game with up to 25 discs and checks if the results are accurate
+     */
+    @Test
+    public void testGame() {
+        for (int i = 0; i <= 25; i++) {
+            int expectedNumberOfMoves = (int) (Math.pow(2, i) - 1);
 
+            TowersOfHanoi game = new TowersOfHanoi(i);
+            game.setVerbose(false);
+
+            Assert.assertEquals(game.getPegs()[0].size(), i);
+            Assert.assertEquals(game.getPegs()[1].size(), 0);
+            Assert.assertEquals(game.getPegs()[2].size(), 0);
+
+            game.startGame();
+
+            Assert.assertEquals(game.getPegs()[0].size(), 0);
+            Assert.assertEquals(game.getPegs()[1].size(), 0);
+            Assert.assertEquals(game.getPegs()[2].size(), i);
+            Assert.assertEquals(expectedNumberOfMoves, game.getMovesDone());
+        }
+    }
 }

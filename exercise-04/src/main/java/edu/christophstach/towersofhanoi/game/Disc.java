@@ -10,36 +10,46 @@
 
 package edu.christophstach.towersofhanoi.game;
 
-import java.util.Stack;
-
 /**
  * @author Christoph Stach - s0555912@htw-berlin.de
  * @since 11/27/16
  */
-class Rod extends Stack<Disk> {
-
+public class Disc {
+    private final int size;
 
     /**
-     * Checks if it is possible to put the disk on the rod
+     * Constructor
      *
-     * @param disk The disk
-     * @return True if it is possible
+     * @param size The size
      */
-    public boolean canPutDisk(Disk disk) {
-        return this.isEmpty() || disk.getSize() < this.peek().getSize();
+    public Disc(int size) {
+        this.size = size;
+
+        if (this.size < 1) {
+            throw new IllegalArgumentException("Disc size can't be less than 1");
+        }
     }
 
     /**
-     * Builds the string representation of the Rod
+     * Getter for size
      *
-     * @return The string representation of the Rod
+     * @return The size
+     */
+    public int getSize() {
+        return this.size;
+    }
+
+    /**
+     * Builds the string representation of the Disc
+     *
+     * @return The string representation of the Disc
      */
     @Override
     public String toString() {
         String str = "";
 
-        for (int i = 0; i < this.elementCount; i++) {
-            str += this.elementAt(this.size() - 1 - i) + "\n";
+        for (int i = 0; i < this.size; i++) {
+            str += "_";
         }
 
         return str;
