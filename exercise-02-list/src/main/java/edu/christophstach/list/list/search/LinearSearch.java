@@ -8,25 +8,18 @@
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package edu.christophstach.university.sort.data;
+package edu.christophstach.list.list.search;
 
-import edu.christophstach.university.sort.sort.Comparator;
+import edu.christophstach.list.comparator.Comparable;
+import edu.christophstach.list.list.Listable;
 
 /**
  * @author Christoph Stach - s0555912@htw-berlin.de
- * @since 11/29/16
+ * @since 12/14/16
  */
-public class LastNameComparator implements Comparator<Student> {
+public class LinearSearch<T> implements Searchable<T> {
     @Override
-    public int compare(Student o1, Student o2) {
-        if (o1.getLastName() == null && o2.getLastName() == null) {
-            return 0;
-        } else if (o2.getLastName() == null) {
-            return -1;
-        } else if (o1.getLastName() == null) {
-            return 1;
-        } else {
-            return o1.getLastName().compareTo(o2.getLastName());
-        }
+    public T search(Listable<T> list, Comparable<T> comparable) {
+        return null;
     }
 }

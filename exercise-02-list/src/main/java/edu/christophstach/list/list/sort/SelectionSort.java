@@ -8,18 +8,40 @@
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package edu.christophstach.list.list;
+package edu.christophstach.list.list.sort;
 
-import edu.christophstach.list.comparator.Comparator;
+import edu.christophstach.list.comparator.Comparable;
+import edu.christophstach.list.list.Listable;
 
 /**
  * @author Christoph Stach - s0555912@htw-berlin.de
- * @since 11/30/16
+ * @since 11/29/16
  */
-public interface Searchable<T> {
+public class SelectionSort<T> implements Sortable<T> {
+    @Override
+    public void sort(Listable<T> listable, Comparable<T> comparable) {
+        int min = 0;
+
+        for (int i = 0; i < listable.size(); i++) {
+            min = i;
+
+            for (int j = i + 1; j < listable.size(); j++) {
+                if (comparable.compare(listable.get(j), listable.get(min)) < 0) {
+                    min = j;
+                }
+            }
+            this.swap(listable, i, min);
+        }
+    }
+
     /**
-     *
-     * @param comparator
+     * @param list
+     * @param a
+     * @param b
      */
-    public void search(Comparator<T> comparator);
+    private void swap(Listable<T> list, int a, int b) {
+        T memorizedObject = list.get(a);
+        list.set(a, list.get(b));
+        list.set(b, memorizedObject);
+    }
 }

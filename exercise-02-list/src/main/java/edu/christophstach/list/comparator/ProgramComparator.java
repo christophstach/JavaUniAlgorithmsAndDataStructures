@@ -16,7 +16,7 @@ import edu.christophstach.list.data.Student;
  * @author Christoph Stach - s0555912@htw-berlin.de
  * @since 11/30/16
  */
-public class ProgramComparator implements Comparator<Student> {
+public class ProgramComparator implements Comparable<Student> {
     @Override
     public int compare(Student o1, Student o2) {
         if (o1.getProgram() == null && o2.getProgram() == null) {

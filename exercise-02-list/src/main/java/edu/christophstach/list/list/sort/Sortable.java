@@ -8,13 +8,18 @@
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package edu.christophstach.university.sort.data;
+package edu.christophstach.list.list.sort;
+
+import edu.christophstach.list.comparator.Comparable;
+import edu.christophstach.list.list.Listable;
 
 /**
  * @author Christoph Stach - s0555912@htw-berlin.de
- * @since 18.10.2016
+ * @since 11/30/16
  */
-public enum Program {
-    APPLIED_COMPUTING, PHYSICS, INTERNATIONAL_BUSINESS, CHEMICS,
-    ART, LANGUAGES;
+public interface Sortable<T> {
+    /**
+     * @param comparable
+     */
+    public void sort(Listable<T> listable, Comparable<T> comparable);
 }

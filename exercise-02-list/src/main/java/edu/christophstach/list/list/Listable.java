@@ -1,12 +1,16 @@
 package edu.christophstach.list.list;
 
+import edu.christophstach.list.comparator.Comparable;
+import edu.christophstach.list.list.search.Searchable;
+import edu.christophstach.list.list.sort.Sortable;
+
 /**
  * Interface for lists
  *
  * @author Christoph Stach - s0555912@htw-berlin.de
  * @since 11/1/16.
  */
-public interface Listable<T> extends Sortable<T> {
+public interface Listable<T> {
     /**
      * Inserts an element into the first position of the list
      *
@@ -72,7 +76,29 @@ public interface Listable<T> extends Sortable<T> {
      */
     public T get(int index);
 
+    /**
+     * Sets an element at the chosen index
+     *
+     * @param index The index
+     * @param data  The data
+     */
+    public void set(int index, T data);
 
-    // TODO: sort
-    // TODO: search
+
+    /**
+     * Searches for an object in the list
+     *
+     * @param searchable The searchable
+     * @param comparable The comparable
+     * @return The object or null
+     */
+    public T search(Searchable<T> searchable, Comparable<T> comparable);
+
+    /**
+     * Sorts the list
+     *
+     * @param sortable   The sortable
+     * @param comparable The comparable
+     */
+    public void sort(Sortable<T> sortable, Comparable<T> comparable);
 }

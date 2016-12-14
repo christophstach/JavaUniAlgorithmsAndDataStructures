@@ -8,17 +8,22 @@
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package edu.christophstach.list.list;
+package edu.christophstach.list.list.search;
 
-import edu.christophstach.list.comparator.Comparator;
+import edu.christophstach.list.comparator.Comparable;
+import edu.christophstach.list.list.Listable;
 
 /**
  * @author Christoph Stach - s0555912@htw-berlin.de
  * @since 11/30/16
  */
-public interface Sortable<T> extends Searchable<T> {
+public interface Searchable<T> {
+
     /**
-     * @param comparator
+     * Searches a list
+     *
+     * @param list       The list
+     * @param comparable The comparable
      */
-    public void sort(Comparator<T> comparator);
+    public T search(Listable<T> list, Comparable<T> comparable);
 }

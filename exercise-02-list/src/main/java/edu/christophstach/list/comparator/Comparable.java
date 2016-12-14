@@ -14,7 +14,7 @@ package edu.christophstach.list.comparator;
  * @author Christoph Stach - s0555912@htw-berlin.de
  * @since 11/30/16
  */
-public interface Comparator<T> {
+public interface Comparable<T> {
     /**
      * Compares to objects
      *

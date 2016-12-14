@@ -1,6 +1,8 @@
 package edu.christophstach.list.list;
 
-import edu.christophstach.list.comparator.Comparator;
+import edu.christophstach.list.comparator.Comparable;
+import edu.christophstach.list.list.search.Searchable;
+import edu.christophstach.list.list.sort.Sortable;
 
 /**
  * Singly linked list
@@ -142,12 +144,28 @@ public class SinglyLinkedList<T> implements Listable<T> {
     }
 
     @Override
-    public void search(Comparator<T> comparator) {
+    public void set(int index, T data) {
+        if (index >= 0 && index < this.size) {
+            Node temp = this.head;
 
+            while (index > 0) {
+                temp = temp.next;
+                index--;
+            }
+
+            temp.data = data;
+        } else {
+            throw new IndexOutOfBoundsException("The index is out of bounds");
+        }
     }
 
     @Override
-    public void sort(Comparator<T> comparator) {
+    public T search(Searchable<T> searchable, Comparable<T> comparable) {
+        return searchable.search(this, comparable);
+    }
 
+    @Override
+    public void sort(Sortable<T> sortable, Comparable<T> comparable) {
+        sortable.sort(this, comparable);
     }
 }

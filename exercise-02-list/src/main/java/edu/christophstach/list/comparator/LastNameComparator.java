@@ -16,7 +16,7 @@ import edu.christophstach.list.data.Student;
  * @author Christoph Stach - s0555912@htw-berlin.de
  * @since 11/30/16
  */
-public class LastNameComparator implements Comparator<Student> {
+public class LastNameComparator implements Comparable<Student> {
     @Override
     public int compare(Student o1, Student o2) {
         if (o1.getLastName() == null && o2.getLastName() == null) {

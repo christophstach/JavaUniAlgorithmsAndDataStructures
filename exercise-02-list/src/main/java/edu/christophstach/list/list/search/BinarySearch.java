@@ -8,19 +8,11 @@
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package edu.christophstach.university.sort.sort;
+package edu.christophstach.list.list.search;
 
 /**
  * @author Christoph Stach - s0555912@htw-berlin.de
- * @since 11/29/16
+ * @since 12/14/16
  */
-public interface Comparator<T> {
-    /**
-     * Compares to objects
-     *
-     * @param o1 The first object
-     * @param o2 The second object
-     * @return &lt; 0 = first object is smaller; &gt; 0 = first object is bigger; 0 = objects are equal
-     */
-    int compare(T o1, T o2);
+public class BinarySearch {
 }

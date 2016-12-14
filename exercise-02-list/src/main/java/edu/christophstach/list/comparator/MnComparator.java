@@ -16,7 +16,7 @@ import edu.christophstach.list.data.Student;
  * @author Christoph Stach - s0555912@htw-berlin.de
  * @since 11/30/16
  */
-public class MnComparator implements Comparator<Student> {
+public class MnComparator implements Comparable<Student> {
     @Override
     public int compare(Student o1, Student o2) {
         return o1.getMn() - o2.getMn();
