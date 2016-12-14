@@ -1,12 +1,12 @@
-package exercise;
+package edu.christophstach.list;
 
-import exercise.data.Gender;
-import exercise.data.Program;
-import exercise.data.Student;
-import exercise.list.DoublyLinkedList;
-import exercise.list.Listable;
-import exercise.list.SinglyLinkedList;
-import exercise.util.ConsoleApplication;
+import edu.christophstach.list.list.SinglyLinkedList;
+import edu.christophstach.list.util.ConsoleApplication;
+import edu.christophstach.list.data.Gender;
+import edu.christophstach.list.data.Program;
+import edu.christophstach.list.data.Student;
+import edu.christophstach.list.list.DoublyLinkedList;
+import edu.christophstach.list.list.Listable;
 
 /**
  * @author Christoph Stach - s0555912@htw-berlin.de

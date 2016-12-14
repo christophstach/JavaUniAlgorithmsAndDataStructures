@@ -8,25 +8,25 @@
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package exercise.comparator;
+package edu.christophstach.list.comparator;
 
-import exercise.data.Student;
+import edu.christophstach.list.data.Student;
 
 /**
  * @author Christoph Stach - s0555912@htw-berlin.de
  * @since 11/30/16
  */
-public class ProgramComparator implements Comparator<Student> {
+public class FirstNameComparator implements Comparator<Student> {
     @Override
     public int compare(Student o1, Student o2) {
-        if (o1.getProgram() == null && o2.getProgram() == null) {
+        if (o1.getFirstName() == null && o2.getFirstName() == null) {
             return 0;
-        } else if (o2.getProgram() == null) {
+        } else if (o2.getFirstName() == null) {
             return -1;
-        } else if (o1.getProgram() == null) {
+        } else if (o1.getFirstName() == null) {
             return 1;
         } else {
-            return o1.getProgram().compareTo(o2.getProgram());
+            return o1.getFirstName().compareTo(o2.getFirstName());
         }
     }
 }

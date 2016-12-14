@@ -8,17 +8,17 @@
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package exercise.comparator;
+package edu.christophstach.list.list;
 
-import exercise.data.Student;
+import edu.christophstach.list.comparator.Comparator;
 
 /**
  * @author Christoph Stach - s0555912@htw-berlin.de
  * @since 11/30/16
  */
-public class MnComparator implements Comparator<Student> {
-    @Override
-    public int compare(Student o1, Student o2) {
-        return o1.getMn() - o2.getMn();
-    }
+public interface Sortable<T> extends Searchable<T> {
+    /**
+     * @param comparator
+     */
+    public void sort(Comparator<T> comparator);
 }

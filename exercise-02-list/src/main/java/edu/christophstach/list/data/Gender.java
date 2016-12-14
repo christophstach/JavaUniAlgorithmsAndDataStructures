@@ -8,25 +8,12 @@
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package exercise.comparator;
-
-import exercise.data.Student;
+package edu.christophstach.list.data;
 
 /**
  * @author Christoph Stach - s0555912@htw-berlin.de
- * @since 11/30/16
+ * @since 18.10.2016
  */
-public class GenderComparator implements Comparator<Student> {
-    @Override
-    public int compare(Student o1, Student o2) {
-        if (o1.getGender() == null && o2.getGender() == null) {
-            return 0;
-        } else if (o2.getGender() == null) {
-            return -1;
-        } else if (o1.getGender() == null) {
-            return 1;
-        } else {
-            return o1.getGender().compareTo(o2.getGender());
-        }
-    }
+public enum Gender {
+    MALE, FEMALE
 }

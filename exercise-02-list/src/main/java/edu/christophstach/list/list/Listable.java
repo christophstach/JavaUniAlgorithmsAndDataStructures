@@ -1,4 +1,4 @@
-package exercise.list;
+package edu.christophstach.list.list;
 
 /**
  * Interface for lists

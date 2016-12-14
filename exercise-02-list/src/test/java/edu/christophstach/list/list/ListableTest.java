@@ -1,8 +1,8 @@
-package exercise.list;
+package edu.christophstach.list.list;
 
-import exercise.data.Gender;
-import exercise.data.Program;
-import exercise.data.Student;
+import edu.christophstach.list.data.Gender;
+import edu.christophstach.list.data.Program;
+import edu.christophstach.list.data.Student;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

@@ -1,6 +1,6 @@
-package exercise.list;
+package edu.christophstach.list.list;
 
-import exercise.comparator.Comparator;
+import edu.christophstach.list.comparator.Comparator;
 
 /**
  * Doubly linked list

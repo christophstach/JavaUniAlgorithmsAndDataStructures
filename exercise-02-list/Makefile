@@ -12,7 +12,7 @@ JAVAFLAGS = -cp
 JDOC = javadoc
 JDOCDIR = doc
 
-MAINCLASS = exercise.Application
+MAINCLASS = Application
 
 SOURCES     = ./src/main/java/exercise/Application.java \
               ./src/main/java/exercise/util/ConsoleApplication.java \
@@ -33,8 +33,8 @@ TESTSOURCES = ./src/test/java/exercise/list/SinglyLinkedListTest.java \
               ./src/main/java/exercise/data/Student.java \
               ./src/main/java/exercise/data/Gender.java
 
-TESTCLASSES = exercise.list.SinglyLinkedListTest \
-              exercise.list.DoublyLinkedListTest
+TESTCLASSES = SinglyLinkedListTest \
+              DoublyLinkedListTest
 
 
 
