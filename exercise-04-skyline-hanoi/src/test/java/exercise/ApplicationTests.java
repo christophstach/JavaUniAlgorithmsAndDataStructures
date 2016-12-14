@@ -10,7 +10,7 @@
 
 package exercise;
 
-import edu.christophstach.towersofhanoi.game.TowersOfHanoi;
+import edu.christophstach.hanoi.game.TowersOfHanoi;
 import org.junit.Assert;
 import org.junit.Test;
 
