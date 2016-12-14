@@ -11,7 +11,7 @@ JAVAFLAGS = -cp
 JDOC = javadoc
 JDOCDIR = doc
 
-MAINCLASS = exercise.Application
+MAINCLASS = Application
 
 SOURCES = ./src/main/java/exercise/Application.java \
           ./src/main/java/exercise/GreatestCommonDivisor.java \

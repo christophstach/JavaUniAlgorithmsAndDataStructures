@@ -1,6 +1,6 @@
-package exercise;
+package edu.christophstach.ggt;
 
-import exercise.util.ConsoleApplication;
+import edu.christophstach.ggt.util.ConsoleApplication;
 
 /**
  * @author Christoph Stach - s0555912@htw-berlin.de

@@ -1,4 +1,4 @@
-package exercise;
+package edu.christophstach.ggt;
 
 /**
  * @author Christoph Stach - s0555912@htw-berlin.de

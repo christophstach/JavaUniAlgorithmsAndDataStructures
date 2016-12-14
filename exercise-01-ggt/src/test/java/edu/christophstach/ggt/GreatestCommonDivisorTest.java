@@ -1,4 +1,4 @@
-package exercise;
+package edu.christophstach.ggt;
 
 import org.junit.Assert;
 import org.junit.Test;
