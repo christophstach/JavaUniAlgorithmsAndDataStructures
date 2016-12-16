@@ -14,22 +14,71 @@ package edu.christophstach.skyline;
  * @author Christoph Stach - s0555912@htw-berlin.de
  * @since 12/14/16
  */
-public class Application {
-    /**
-     * Entry point for the application
-     *
-     * @param args Console arguments
-     */
-    public static void main(String[] args) {
-        Skyline skyline = new Skyline(new Building[]{
-            new Building(5, 5, 0),
-            new Building(5, 10, 2),
-            new Building(5, 5, 0),
-            new Building(100, 7, 1),
-            new Building(20, 1, 0)
-        });
+public class Building {
+    private int width;
+    private int height;
+    private int position;
 
-        System.out.println(skyline.getHeightAtPosition(0));
+    public Building() {
+    }
+
+    public Building(int width, int height, int position) {
+        this.width = width;
+        this.height = height;
+        this.position = position;
+    }
+
+    /**
+     * Getter for width
+     *
+     * @return The width
+     */
+    public int getWidth() {
+        return this.width;
+    }
+
+    /**
+     * Setter for width
+     *
+     * @param width The width
+     */
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    /**
+     * Getter for height
+     *
+     * @return The height
+     */
+    public int getHeight() {
+        return this.height;
+    }
+
+    /**
+     * Setter for height
+     *
+     * @param height The height
+     */
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    /**
+     * Getter for position
+     *
+     * @return The position
+     */
+    public int getPosition() {
+        return this.position;
+    }
+
+    /**
+     * Setter for position
+     *
+     * @param position The position
+     */
+    public void setPosition(int position) {
+        this.position = position;
     }
 }
-

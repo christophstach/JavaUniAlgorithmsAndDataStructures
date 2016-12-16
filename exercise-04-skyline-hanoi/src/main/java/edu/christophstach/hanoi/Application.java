@@ -23,7 +23,7 @@ public class Application {
      * @param args Console arguments
      */
     public static void main(String[] args) {
-        TowersOfHanoi towersOfHanoi = new TowersOfHanoi(2);
+        TowersOfHanoi towersOfHanoi = new TowersOfHanoi(15);
         towersOfHanoi.setVerbose(false);
         towersOfHanoi.startGame();
 
