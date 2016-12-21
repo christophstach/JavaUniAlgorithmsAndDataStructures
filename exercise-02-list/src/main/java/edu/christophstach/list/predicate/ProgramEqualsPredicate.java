@@ -8,11 +8,24 @@
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package edu.christophstach.list.list.search;
+package edu.christophstach.list.predicate;
+
+import edu.christophstach.list.data.Program;
+import edu.christophstach.list.data.Student;
 
 /**
  * @author Christoph Stach - s0555912@htw-berlin.de
- * @since 12/14/16
+ * @since 12/21/16
  */
-public class BinaryTreeSearch {
+public class ProgramEqualsPredicate implements Predicable<Student> {
+    private Program testValue;
+
+    public ProgramEqualsPredicate(Program testValue) {
+        this.testValue = testValue;
+    }
+
+    @Override
+    public boolean test(Student el) {
+        return el.getProgram().equals(testValue);
+    }
 }

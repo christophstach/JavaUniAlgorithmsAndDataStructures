@@ -10,8 +10,8 @@
 
 package edu.christophstach.list.list.search;
 
-import edu.christophstach.list.comparator.Comparable;
 import edu.christophstach.list.list.Listable;
+import edu.christophstach.list.predicate.Predicable;
 
 /**
  * @author Christoph Stach - s0555912@htw-berlin.de
@@ -20,10 +20,10 @@ import edu.christophstach.list.list.Listable;
 public interface Searchable<T> {
 
     /**
-     * Searches a list
+     * Searches a list and returns the first match with the predicate
      *
      * @param list       The list
-     * @param comparable The comparable
+     * @param predicable The predicable
      */
-    public T search(Listable<T> list, Comparable<T> comparable);
+    public T search(Listable<T> list, Predicable<T> predicable);
 }

@@ -3,6 +3,7 @@ package edu.christophstach.list.list;
 import edu.christophstach.list.comparator.Comparable;
 import edu.christophstach.list.list.search.Searchable;
 import edu.christophstach.list.list.sort.Sortable;
+import edu.christophstach.list.predicate.Predicable;
 
 /**
  * Singly linked list
@@ -68,7 +69,7 @@ public class SinglyLinkedList<T> implements Listable<T> {
 
             this.size--;
         } else {
-            throw new IndexOutOfBoundsException("The index is out of bounds");
+            throw new IndexOutOfBoundsException("The index:" + index + " is out of bounds");
         }
     }
 
@@ -95,7 +96,7 @@ public class SinglyLinkedList<T> implements Listable<T> {
 
             this.size++;
         } else {
-            throw new IndexOutOfBoundsException("The index is out of bounds");
+            throw new IndexOutOfBoundsException("The index:" + index + " is out of bounds");
         }
     }
 
@@ -139,7 +140,7 @@ public class SinglyLinkedList<T> implements Listable<T> {
 
             return temp.data;
         } else {
-            throw new IndexOutOfBoundsException("The index is out of bounds");
+            throw new IndexOutOfBoundsException("The index:" + index + "  is out of bounds");
         }
     }
 
@@ -155,13 +156,13 @@ public class SinglyLinkedList<T> implements Listable<T> {
 
             temp.data = data;
         } else {
-            throw new IndexOutOfBoundsException("The index is out of bounds");
+            throw new IndexOutOfBoundsException("The index:" + index + " is out of bounds");
         }
     }
 
     @Override
-    public T search(Searchable<T> searchable, Comparable<T> comparable) {
-        return searchable.search(this, comparable);
+    public T search(Searchable<T> searchable, Predicable<T> predicable) {
+        return searchable.search(this, predicable);
     }
 
     @Override

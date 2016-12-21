@@ -15,44 +15,15 @@ import edu.christophstach.list.list.Listable;
 
 /**
  * @author Christoph Stach - s0555912@htw-berlin.de
- * @since 11/29/16
+ * @since 12/21/16
  */
-public class SelectionSort<T> implements Sortable<T> {
+public class RadixSort<T> implements Sortable<T> {
     private int comparisons = 0;
     private int insertions = 0;
 
     @Override
     public void sort(Listable<T> listable, Comparable<T> comparable) {
-        int min;
 
-        for (int i = 0; i < listable.size(); i++) {
-            min = i;
-
-            for (int j = i + 1; j < listable.size(); j++) {
-                comparisons++;
-
-                if (comparable.compare(listable.get(j), listable.get(min)) < 0) {
-                    min = j;
-                }
-            }
-
-            this.swap(listable, i, min);
-        }
-    }
-
-    /**
-     * Swaps two element in the list
-     *
-     * @param listable The list
-     * @param a        The first element
-     * @param b        The second element
-     */
-    private void swap(Listable<T> listable, int a, int b) {
-        insertions++;
-
-        T memorizedObject = listable.get(a);
-        listable.set(a, listable.get(b));
-        listable.set(b, memorizedObject);
     }
 
     @Override
@@ -62,6 +33,6 @@ public class SelectionSort<T> implements Sortable<T> {
 
     @Override
     public int countComparisons() {
-        return comparisons;
+        return insertions;
     }
 }

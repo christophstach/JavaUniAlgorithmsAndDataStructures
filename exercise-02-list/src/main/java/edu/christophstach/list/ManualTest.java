@@ -11,14 +11,19 @@
 package edu.christophstach.list;
 
 import edu.christophstach.list.comparator.Comparable;
-import edu.christophstach.list.comparator.LastNameComparator;
+import edu.christophstach.list.comparator.MnComparator;
 import edu.christophstach.list.data.Gender;
 import edu.christophstach.list.data.Program;
 import edu.christophstach.list.data.Student;
 import edu.christophstach.list.list.DoublyLinkedList;
 import edu.christophstach.list.list.Listable;
-import edu.christophstach.list.list.sort.SelectionSort;
+import edu.christophstach.list.list.search.LinearSearch;
+import edu.christophstach.list.list.search.Searchable;
+import edu.christophstach.list.list.sort.BubbleSort;
+import edu.christophstach.list.list.sort.HeapSort;
+import edu.christophstach.list.list.sort.QuickSort;
 import edu.christophstach.list.list.sort.Sortable;
+import edu.christophstach.list.predicate.FirstNameEqualsPredicate;
 
 /**
  * @author Christoph Stach - s0555912@htw-berlin.de
@@ -26,15 +31,18 @@ import edu.christophstach.list.list.sort.Sortable;
  */
 public class ManualTest {
     /**
-     * Entry point for the application
+     * Just a class for doing manual tests.
+     * I left it becuase of convenience.
      *
      * @param args Console arguments
      */
     public static void main(String[] args) {
         Listable<Student> list = new DoublyLinkedList<>();
 
-        Sortable<Student> sortable = new SelectionSort<>();
-        Comparable comparable = new LastNameComparator();
+        Sortable<Student> sortable = new HeapSort<>();
+        Searchable<Student> searchable = new LinearSearch<>();
+
+        Comparable comparable = new MnComparator();
 
         list.insertFirst(new Student(5559123, "Christoph", "Stach", Program.APPLIED_COMPUTING, Gender.MALE));
         list.insertFirst(new Student(5559124, "Laura", "Hartgers", Program.APPLIED_COMPUTING, Gender.FEMALE));
@@ -42,13 +50,20 @@ public class ManualTest {
         list.insertFirst(new Student(5559126, "Steffen", "Exler", Program.APPLIED_COMPUTING, Gender.MALE));
         list.insertFirst(new Student(5559127, "Laila", "Westphal", Program.APPLIED_COMPUTING, Gender.FEMALE));
 
+        list.insertFirst(new Student(5559128, "Laila", "Westphal", Program.APPLIED_COMPUTING, Gender.FEMALE));
+        list.insertFirst(new Student(5559129, "Laila", "Westphal", Program.APPLIED_COMPUTING, Gender.FEMALE));
+        list.insertFirst(new Student(5559130, "Laila", "Westphal", Program.APPLIED_COMPUTING, Gender.FEMALE));
+
+
 
         System.out.println("\n\nAfter sort\n\n");
         list.printAll();
 
         list.sort(sortable, comparable);
 
-        System.out.println("\n\nAfter sort\n\n");
+        System.out.println("\n\nAfter sort: " + sortable.countComparisons() + " Comparisons, " + sortable.countInsertions() + " Insertions\n\n");
         list.printAll();
+
+        System.out.println("\n\nSearch" + list.search(new LinearSearch<Student>(), new FirstNameEqualsPredicate("Christoph")));
     }
 }

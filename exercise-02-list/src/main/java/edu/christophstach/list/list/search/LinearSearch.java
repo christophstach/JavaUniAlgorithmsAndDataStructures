@@ -10,8 +10,8 @@
 
 package edu.christophstach.list.list.search;
 
-import edu.christophstach.list.comparator.Comparable;
 import edu.christophstach.list.list.Listable;
+import edu.christophstach.list.predicate.Predicable;
 
 /**
  * @author Christoph Stach - s0555912@htw-berlin.de
@@ -19,7 +19,15 @@ import edu.christophstach.list.list.Listable;
  */
 public class LinearSearch<T> implements Searchable<T> {
     @Override
-    public T search(Listable<T> list, Comparable<T> comparable) {
+    public T search(Listable<T> list, Predicable<T> predicable) {
+        for (int i = 0; i < list.size(); i++) {
+            T el = list.get(i);
+
+            if (predicable.test(el)) {
+                return el;
+            }
+        }
+
         return null;
     }
 }

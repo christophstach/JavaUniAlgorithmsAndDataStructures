@@ -1,8 +1,17 @@
 package edu.christophstach.list.list;
 
+import edu.christophstach.list.comparator.Comparable;
+import edu.christophstach.list.comparator.FirstNameComparator;
 import edu.christophstach.list.data.Gender;
 import edu.christophstach.list.data.Program;
 import edu.christophstach.list.data.Student;
+import edu.christophstach.list.list.search.LinearSearch;
+import edu.christophstach.list.list.search.Searchable;
+import edu.christophstach.list.list.sort.BubbleSort;
+import edu.christophstach.list.list.sort.QuickSort;
+import edu.christophstach.list.list.sort.SelectionSort;
+import edu.christophstach.list.list.sort.Sortable;
+import edu.christophstach.list.predicate.*;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -129,6 +138,67 @@ public abstract class ListableTest {
 
         Assert.assertSame(this.testStudents[0], this.list.get(0));
         Assert.assertSame(this.testStudents[1], this.list.get(1));
+    }
+
+
+    @Test
+    public void testSort() {
+        Sortable<Student> sortable = new QuickSort<>();
+        Comparable<Student> comparable = new FirstNameComparator();
+
+
+        this.list.insertLast(this.testStudents[0]);
+        this.list.insertLast(this.testStudents[1]);
+        this.list.insertLast(this.testStudents[2]);
+        this.list.insertLast(this.testStudents[3]);
+        this.list.insertLast(this.testStudents[4]);
+        this.list.insertLast(this.testStudents[5]);
+
+        this.list.sort(sortable, comparable);
+
+        Assert.assertSame(this.testStudents[0], this.list.get(1));
+        Assert.assertSame(this.testStudents[1], this.list.get(0));
+        Assert.assertSame(this.testStudents[2], this.list.get(2));
+        Assert.assertSame(this.testStudents[3], this.list.get(3));
+        Assert.assertSame(this.testStudents[4], this.list.get(4));
+        Assert.assertSame(this.testStudents[5], this.list.get(5));
+    }
+
+    @Test
+    public void testSearch() {
+        Searchable<Student> searchable = new LinearSearch<>();
+
+        this.list.insertLast(this.testStudents[0]);
+        this.list.insertLast(this.testStudents[1]);
+        this.list.insertLast(this.testStudents[2]);
+        this.list.insertLast(this.testStudents[3]);
+        this.list.insertLast(this.testStudents[4]);
+        this.list.insertLast(this.testStudents[5]);
+
+        Assert.assertSame(
+            this.testStudents[1],
+            this.list.search(searchable, new MnEqualsPredicate(1))
+        );
+
+        Assert.assertSame(
+            this.testStudents[4],
+            this.list.search(searchable, new FirstNameEqualsPredicate("Martin"))
+        );
+
+        Assert.assertSame(
+            this.testStudents[5],
+            this.list.search(searchable, new LastNameEqualsPredicate("Lorenz"))
+        );
+
+        Assert.assertSame(
+            this.testStudents[2],
+            this.list.search(searchable, new GenderEqualsPredicate(Gender.FEMALE))
+        );
+
+        Assert.assertSame(
+            this.testStudents[0],
+            this.list.search(searchable, new ProgramEqualsPredicate(Program.APPLIED_COMPUTING))
+        );
     }
 
 

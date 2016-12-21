@@ -3,6 +3,7 @@ package edu.christophstach.list.list;
 import edu.christophstach.list.comparator.Comparable;
 import edu.christophstach.list.list.search.Searchable;
 import edu.christophstach.list.list.sort.Sortable;
+import edu.christophstach.list.predicate.Predicable;
 
 /**
  * Interface for lists
@@ -84,15 +85,14 @@ public interface Listable<T> {
      */
     public void set(int index, T data);
 
-
     /**
      * Searches for an object in the list
      *
      * @param searchable The searchable
-     * @param comparable The comparable
+     * @param predicable The predicable
      * @return The object or null
      */
-    public T search(Searchable<T> searchable, Comparable<T> comparable);
+    public T search(Searchable<T> searchable, Predicable<T> predicable);
 
     /**
      * Sorts the list

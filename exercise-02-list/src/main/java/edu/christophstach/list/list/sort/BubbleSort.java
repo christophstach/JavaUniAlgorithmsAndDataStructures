@@ -14,29 +14,30 @@ import edu.christophstach.list.comparator.Comparable;
 import edu.christophstach.list.list.Listable;
 
 /**
+ * Bubble Sort
+ *
+ * Worst Case:
+ * Comparisons(n) =
+ * Insertions(n)  =
+ * O(n)           =
+ *
  * @author Christoph Stach - s0555912@htw-berlin.de
- * @since 11/29/16
+ * @since 12/21/16
  */
-public class SelectionSort<T> implements Sortable<T> {
+public class BubbleSort<T> implements Sortable<T> {
     private int comparisons = 0;
     private int insertions = 0;
 
     @Override
     public void sort(Listable<T> listable, Comparable<T> comparable) {
-        int min;
-
         for (int i = 0; i < listable.size(); i++) {
-            min = i;
-
-            for (int j = i + 1; j < listable.size(); j++) {
+            for (int j = 0; j < listable.size() - i - 1; j++) {
                 comparisons++;
 
-                if (comparable.compare(listable.get(j), listable.get(min)) < 0) {
-                    min = j;
+                if (comparable.compare(listable.get(j), listable.get(j + 1)) > 0) {
+                    swap(listable, j, j + 1);
                 }
             }
-
-            this.swap(listable, i, min);
         }
     }
 
