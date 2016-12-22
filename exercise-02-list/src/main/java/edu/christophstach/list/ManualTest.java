@@ -44,7 +44,7 @@ public class ManualTest {
 
         Comparable comparable = new MnComparator();
 
-        list.insertFirst(new Student(5559123, "Christoph", "Stach", Program.APPLIED_COMPUTING, Gender.MALE));
+        /*list.insertFirst(new Student(5559123, "Christoph", "Stach", Program.APPLIED_COMPUTING, Gender.MALE));
         list.insertFirst(new Student(5559124, "Laura", "Hartgers", Program.APPLIED_COMPUTING, Gender.FEMALE));
         list.insertFirst(new Student(5559125, "Miles", "Lorenz", Program.APPLIED_COMPUTING, Gender.MALE));
         list.insertFirst(new Student(5559126, "Steffen", "Exler", Program.APPLIED_COMPUTING, Gender.MALE));
@@ -52,7 +52,17 @@ public class ManualTest {
 
         list.insertFirst(new Student(5559128, "Laila", "Westphal", Program.APPLIED_COMPUTING, Gender.FEMALE));
         list.insertFirst(new Student(5559129, "Laila", "Westphal", Program.APPLIED_COMPUTING, Gender.FEMALE));
-        list.insertFirst(new Student(5559130, "Laila", "Westphal", Program.APPLIED_COMPUTING, Gender.FEMALE));
+        list.insertFirst(new Student(5559130, "Laila", "Westphal", Program.APPLIED_COMPUTING, Gender.FEMALE));*/
+
+        list.insertLast(new Student(2, "Christoph", "Stach", Program.APPLIED_COMPUTING, Gender.MALE));
+        list.insertLast(new Student(1, "Laura", "Hartgers", Program.APPLIED_COMPUTING, Gender.FEMALE));
+        list.insertLast(new Student(5, "Miles", "Lorenz", Program.APPLIED_COMPUTING, Gender.MALE));
+        list.insertLast(new Student(3, "Steffen", "Exler", Program.APPLIED_COMPUTING, Gender.MALE));
+        list.insertLast(new Student(4, "Laila", "Westphal", Program.APPLIED_COMPUTING, Gender.FEMALE));
+
+        list.insertLast(new Student(8, "Laila", "Westphal", Program.APPLIED_COMPUTING, Gender.FEMALE));
+        list.insertLast(new Student(7, "Laila", "Westphal", Program.APPLIED_COMPUTING, Gender.FEMALE));
+        list.insertLast(new Student(6, "Laila", "Westphal", Program.APPLIED_COMPUTING, Gender.FEMALE));
 
 
 

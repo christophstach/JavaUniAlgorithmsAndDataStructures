@@ -49,6 +49,7 @@ public abstract class ListableTest {
         Assert.assertFalse(this.list.empty());
         this.list.clearAll();
         Assert.assertTrue(this.list.empty());
+        Assert.assertEquals(0, this.list.size());
     }
 
     @Test

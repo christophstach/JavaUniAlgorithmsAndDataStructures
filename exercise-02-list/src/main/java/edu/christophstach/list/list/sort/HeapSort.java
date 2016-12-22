@@ -11,6 +11,7 @@
 package edu.christophstach.list.list.sort;
 
 import edu.christophstach.list.comparator.Comparable;
+import edu.christophstach.list.data.Student;
 import edu.christophstach.list.list.Listable;
 
 /**
@@ -23,7 +24,67 @@ public class HeapSort<T> implements Sortable<T> {
 
     @Override
     public void sort(Listable<T> listable, Comparable<T> comparable) {
+        this.createHeapCondition(listable, comparable);
 
+
+    }
+
+    /**
+     * Creates the heap condition which is necessary for sorting
+     *
+     * @param listable   The list
+     * @param comparable the comparator
+     */
+    private void createHeapCondition(Listable<T> listable, Comparable<T> comparable, int index) {
+        if (index < listable.size()) {
+            int leftChildIndex = index * 2 + 1;
+            int rightChildIndex = leftChildIndex + 1;
+
+            if (leftChildIndex < listable.size() && rightChildIndex < listable.size()) {
+                if (comparable.compare(listable.get(leftChildIndex), listable.get(rightChildIndex)) > 0) {
+                    if (comparable.compare(listable.get(index), listable.get(leftChildIndex)) < 0) {
+                        swap(listable, index, leftChildIndex);
+                    }
+                } else {
+                    if (comparable.compare(listable.get(index), listable.get(rightChildIndex)) < 0) {
+                        swap(listable, index, rightChildIndex);
+                    }
+                }
+            } else if (leftChildIndex < listable.size()) {
+                if (comparable.compare(listable.get(index), listable.get(leftChildIndex)) < 0) {
+                    swap(listable, index, leftChildIndex);
+                }
+            }
+
+            this.createHeapCondition(listable, comparable, leftChildIndex);
+            this.createHeapCondition(listable, comparable, rightChildIndex);
+        }
+    }
+
+    /**
+     * @param listable
+     * @param comparable
+     */
+    private void createHeapCondition(Listable<T> listable, Comparable<T> comparable) {
+        for (int i = ((listable.size() / 2) - 1); i >= 0; i--) {
+            this.createHeapCondition(listable, comparable, i);
+        }
+    }
+
+    /**
+     * Swaps two element in the list
+     *
+     * @param listable The list
+     * @param a        The first element
+     * @param b        The second element
+     */
+    private void swap(Listable<T> listable, int a, int b) {
+        insertions++;
+
+        System.out.println(a + "(" + ((Student) listable.get(a)).getMn() + ") <-> " + b + "(" + ((Student) listable.get(b)).getMn() + ")");
+        T memorizedObject = listable.get(a);
+        listable.set(a, listable.get(b));
+        listable.set(b, memorizedObject);
     }
 
     @Override
@@ -33,6 +94,6 @@ public class HeapSort<T> implements Sortable<T> {
 
     @Override
     public int countComparisons() {
-        return insertions;
+        return comparisons;
     }
 }
