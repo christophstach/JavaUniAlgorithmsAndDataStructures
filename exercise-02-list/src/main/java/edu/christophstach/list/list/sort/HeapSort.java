@@ -11,7 +11,7 @@
 package edu.christophstach.list.list.sort;
 
 import edu.christophstach.list.comparator.Comparable;
-import edu.christophstach.list.data.Student;
+import edu.christophstach.list.list.DoublyLinkedList;
 import edu.christophstach.list.list.Listable;
 
 /**
@@ -24,28 +24,30 @@ public class HeapSort<T> implements Sortable<T> {
 
     @Override
     public void sort(Listable<T> listable, Comparable<T> comparable) {
-        this.createHeapCondition(listable, comparable);
-
-
+        this.restoreHeapCondition(listable, comparable);
     }
 
     /**
-     * Creates the heap condition which is necessary for sorting
+     * Restores the heap condition for a sub tree at a chosen index which is necessary for sorting
      *
      * @param listable   The list
      * @param comparable the comparator
+     * @param index      The index under which the heap condition is restored
      */
-    private void createHeapCondition(Listable<T> listable, Comparable<T> comparable, int index) {
+    private void restoreHeapCondition(Listable<T> listable, Comparable<T> comparable, int index) {
         if (index < listable.size()) {
             int leftChildIndex = index * 2 + 1;
             int rightChildIndex = leftChildIndex + 1;
 
             if (leftChildIndex < listable.size() && rightChildIndex < listable.size()) {
+                comparisons++;
                 if (comparable.compare(listable.get(leftChildIndex), listable.get(rightChildIndex)) > 0) {
+                    comparisons++;
                     if (comparable.compare(listable.get(index), listable.get(leftChildIndex)) < 0) {
                         swap(listable, index, leftChildIndex);
                     }
                 } else {
+                    comparisons++;
                     if (comparable.compare(listable.get(index), listable.get(rightChildIndex)) < 0) {
                         swap(listable, index, rightChildIndex);
                     }
@@ -56,18 +58,38 @@ public class HeapSort<T> implements Sortable<T> {
                 }
             }
 
-            this.createHeapCondition(listable, comparable, leftChildIndex);
-            this.createHeapCondition(listable, comparable, rightChildIndex);
+            this.restoreHeapCondition(listable, comparable, leftChildIndex);
+            this.restoreHeapCondition(listable, comparable, rightChildIndex);
         }
     }
 
     /**
-     * @param listable
-     * @param comparable
+     * Restores the heap condition which is necessary for sorting
+     *
+     * @param listable   The list
+     * @param comparable The comparator
      */
-    private void createHeapCondition(Listable<T> listable, Comparable<T> comparable) {
+    private void restoreHeapCondition(Listable<T> listable, Comparable<T> comparable) {
+        Listable<T> tmp = new DoublyLinkedList<T>();
+
         for (int i = ((listable.size() / 2) - 1); i >= 0; i--) {
-            this.createHeapCondition(listable, comparable, i);
+            this.restoreHeapCondition(listable, comparable, i);
+        }
+
+        while (listable.size() > 1) {
+            tmp.insertLast(listable.get(0));
+
+            listable.set(0, listable.get(listable.size() - 1));
+            listable.remove(listable.size() - 1);
+
+            this.restoreHeapCondition(listable, comparable, 0);
+        }
+
+        tmp.insertLast(listable.get(0));
+        listable.clearAll();
+
+        for (int i = 0; i < tmp.size(); i++) {
+            listable.insertFirst(tmp.get(i));
         }
     }
 
@@ -81,7 +103,6 @@ public class HeapSort<T> implements Sortable<T> {
     private void swap(Listable<T> listable, int a, int b) {
         insertions++;
 
-        System.out.println(a + "(" + ((Student) listable.get(a)).getMn() + ") <-> " + b + "(" + ((Student) listable.get(b)).getMn() + ")");
         T memorizedObject = listable.get(a);
         listable.set(a, listable.get(b));
         listable.set(b, memorizedObject);

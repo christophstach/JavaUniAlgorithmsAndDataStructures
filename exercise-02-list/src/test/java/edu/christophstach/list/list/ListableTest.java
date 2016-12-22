@@ -7,10 +7,7 @@ import edu.christophstach.list.data.Program;
 import edu.christophstach.list.data.Student;
 import edu.christophstach.list.list.search.LinearSearch;
 import edu.christophstach.list.list.search.Searchable;
-import edu.christophstach.list.list.sort.BubbleSort;
-import edu.christophstach.list.list.sort.QuickSort;
-import edu.christophstach.list.list.sort.SelectionSort;
-import edu.christophstach.list.list.sort.Sortable;
+import edu.christophstach.list.list.sort.*;
 import edu.christophstach.list.predicate.*;
 import org.junit.Assert;
 import org.junit.Before;
@@ -144,7 +141,7 @@ public abstract class ListableTest {
 
     @Test
     public void testSort() {
-        Sortable<Student> sortable = new QuickSort<>();
+        Sortable<Student> sortable = new HeapSort<>();
         Comparable<Student> comparable = new FirstNameComparator();
 
 

@@ -15,6 +15,13 @@ import edu.christophstach.list.list.DoublyLinkedList;
 import edu.christophstach.list.list.Listable;
 
 /**
+ * Quick Sort
+ *
+ * Worst Case:
+ * Comparisons(n) =
+ * Insertions(n)  =
+ * O(n)           =
+ *
  * @author Christoph Stach - s0555912@htw-berlin.de
  * @since 12/21/16
  */

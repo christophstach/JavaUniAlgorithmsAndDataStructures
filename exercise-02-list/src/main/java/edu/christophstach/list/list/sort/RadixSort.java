@@ -14,6 +14,13 @@ import edu.christophstach.list.comparator.Comparable;
 import edu.christophstach.list.list.Listable;
 
 /**
+ * Radix Sort
+ *
+ * Worst Case:
+ * Comparisons(n) =
+ * Insertions(n)  =
+ * O(n)           =
+ *
  * @author Christoph Stach - s0555912@htw-berlin.de
  * @since 12/21/16
  */
@@ -33,6 +40,6 @@ public class RadixSort<T> implements Sortable<T> {
 
     @Override
     public int countComparisons() {
-        return insertions;
+        return comparisons;
     }
 }

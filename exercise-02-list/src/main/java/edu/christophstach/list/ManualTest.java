@@ -39,7 +39,7 @@ public class ManualTest {
     public static void main(String[] args) {
         Listable<Student> list = new DoublyLinkedList<>();
 
-        Sortable<Student> sortable = new HeapSort<>();
+        Sortable<Student> sortable = new QuickSort<>();
         Searchable<Student> searchable = new LinearSearch<>();
 
         Comparable comparable = new MnComparator();
