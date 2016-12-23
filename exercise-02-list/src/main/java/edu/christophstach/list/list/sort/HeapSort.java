@@ -19,9 +19,6 @@ import edu.christophstach.list.list.Listable;
  * @since 12/21/16
  */
 public class HeapSort<T> implements Sortable<T> {
-    private int comparisons = 0;
-    private int insertions = 0;
-
     @Override
     public void sort(Listable<T> listable, Comparable<T> comparable) {
         this.restoreHeapCondition(listable, comparable);
@@ -40,14 +37,11 @@ public class HeapSort<T> implements Sortable<T> {
             int rightChildIndex = leftChildIndex + 1;
 
             if (leftChildIndex < listable.size() && rightChildIndex < listable.size()) {
-                comparisons++;
                 if (comparable.compare(listable.get(leftChildIndex), listable.get(rightChildIndex)) > 0) {
-                    comparisons++;
                     if (comparable.compare(listable.get(index), listable.get(leftChildIndex)) < 0) {
                         swap(listable, index, leftChildIndex);
                     }
                 } else {
-                    comparisons++;
                     if (comparable.compare(listable.get(index), listable.get(rightChildIndex)) < 0) {
                         swap(listable, index, rightChildIndex);
                     }
@@ -101,20 +95,8 @@ public class HeapSort<T> implements Sortable<T> {
      * @param b        The second element
      */
     private void swap(Listable<T> listable, int a, int b) {
-        insertions++;
-
         T memorizedObject = listable.get(a);
         listable.set(a, listable.get(b));
         listable.set(b, memorizedObject);
-    }
-
-    @Override
-    public int countInsertions() {
-        return insertions;
-    }
-
-    @Override
-    public int countComparisons() {
-        return comparisons;
     }
 }

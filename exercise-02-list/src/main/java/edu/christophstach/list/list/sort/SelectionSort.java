@@ -18,9 +18,6 @@ import edu.christophstach.list.list.Listable;
  * @since 11/29/16
  */
 public class SelectionSort<T> implements Sortable<T> {
-    private int comparisons = 0;
-    private int insertions = 0;
-
     @Override
     public void sort(Listable<T> listable, Comparable<T> comparable) {
         int min;
@@ -29,7 +26,6 @@ public class SelectionSort<T> implements Sortable<T> {
             min = i;
 
             for (int j = i + 1; j < listable.size(); j++) {
-                comparisons++;
 
                 if (comparable.compare(listable.get(j), listable.get(min)) < 0) {
                     min = j;
@@ -48,20 +44,8 @@ public class SelectionSort<T> implements Sortable<T> {
      * @param b        The second element
      */
     private void swap(Listable<T> listable, int a, int b) {
-        insertions++;
-
         T memorizedObject = listable.get(a);
         listable.set(a, listable.get(b));
         listable.set(b, memorizedObject);
-    }
-
-    @Override
-    public int countInsertions() {
-        return insertions;
-    }
-
-    @Override
-    public int countComparisons() {
-        return comparisons;
     }
 }

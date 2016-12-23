@@ -1,12 +1,12 @@
 package edu.christophstach.list;
 
-import edu.christophstach.list.list.SinglyLinkedList;
-import edu.christophstach.list.util.ConsoleApplication;
 import edu.christophstach.list.data.Gender;
 import edu.christophstach.list.data.Program;
 import edu.christophstach.list.data.Student;
 import edu.christophstach.list.list.DoublyLinkedList;
 import edu.christophstach.list.list.Listable;
+import edu.christophstach.list.list.SinglyLinkedList;
+import edu.christophstach.list.util.ConsoleApplication;
 
 /**
  * @author Christoph Stach - s0555912@htw-berlin.de

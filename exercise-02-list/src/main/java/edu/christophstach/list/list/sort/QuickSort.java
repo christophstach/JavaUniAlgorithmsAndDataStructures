@@ -15,20 +15,10 @@ import edu.christophstach.list.list.DoublyLinkedList;
 import edu.christophstach.list.list.Listable;
 
 /**
- * Quick Sort
- *
- * Worst Case:
- * Comparisons(n) =
- * Insertions(n)  =
- * O(n)           =
- *
  * @author Christoph Stach - s0555912@htw-berlin.de
  * @since 12/21/16
  */
 public class QuickSort<T> implements Sortable<T> {
-    private int comparisons = 0;
-    private int insertions = 0;
-
     @Override
     public void sort(Listable<T> listable, Comparable<T> comparable) {
         if (listable.size() > 1) {
@@ -42,7 +32,6 @@ public class QuickSort<T> implements Sortable<T> {
                 if (i != pivotIndex) {
                     T current = listable.get(i);
 
-                    comparisons++;
                     if (comparable.compare(current, pivot) < 0) {
                         leftOfPivot.insertLast(current);
                     } else {
@@ -57,27 +46,14 @@ public class QuickSort<T> implements Sortable<T> {
             listable.clearAll();
 
             for (int i = 0; i < leftOfPivot.size(); i++) {
-                insertions++;
                 listable.insertLast(leftOfPivot.get(i));
             }
 
-            insertions++;
             listable.insertLast(pivot);
 
             for (int i = 0; i < rightOfPivot.size(); i++) {
-                insertions++;
                 listable.insertLast(rightOfPivot.get(i));
             }
         }
-    }
-
-    @Override
-    public int countInsertions() {
-        return insertions;
-    }
-
-    @Override
-    public int countComparisons() {
-        return comparisons;
     }
 }

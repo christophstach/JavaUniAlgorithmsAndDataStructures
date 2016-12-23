@@ -25,18 +25,4 @@ public interface Sortable<T> {
      * @param comparable The comparable
      */
     public void sort(Listable<T> listable, Comparable<T> comparable);
-
-    /**
-     * Returns the number of insertions used for sorting
-     *
-     * @return The insertion count
-     */
-    public int countInsertions();
-
-    /**
-     * Returns the number of comparisons used for sorting
-     *
-     * @return The comparison count
-     */
-    public int countComparisons();
 }
