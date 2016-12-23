@@ -42,18 +42,37 @@ SOURCES     = ./src/main/java/edu/christophstach/list/Application.java \
               ./src/main/java/edu/christophstach/list/list/SinglyLinkedList.java \
               ./src/main/java/edu/christophstach/list/list/DoublyLinkedList.java
 
-TESTSOURCES = ./src/test/java/exercise/list/SinglyLinkedListTest.java \
-              ./src/test/java/exercise/list/DoublyLinkedListTest.java \
-              ./src/test/java/exercise/list/ListableTest.java \
-              ./src/main/java/exercise/list/SinglyLinkedList.java \
-              ./src/main/java/exercise/list/DoublyLinkedList.java \
-              ./src/main/java/exercise/list/Listable.java \
-              ./src/main/java/exercise/data/Program.java \
-              ./src/main/java/exercise/data/Student.java \
-              ./src/main/java/exercise/data/Gender.java
+TESTSOURCES = ./src/test/java/edu/christophstach/list/list/SinglyLinkedListTest.java \
+              ./src/test/java/edu/christophstach/list/list/DoublyLinkedListTest.java \
+              ./src/test/java/edu/christophstach/list/list/ListableTest.java \
+              ./src/main/java/edu/christophstach/list/predicate/FirstNameEqualsPredicate.java \
+              ./src/main/java/edu/christophstach/list/predicate/LastNameEqualsPredicate.java \
+              ./src/main/java/edu/christophstach/list/predicate/GenderEqualsPredicate.java \
+              ./src/main/java/edu/christophstach/list/predicate/MnEqualsPredicate.java \
+              ./src/main/java/edu/christophstach/list/predicate/ProgramEqualsPredicate.java \
+              ./src/main/java/edu/christophstach/list/predicate/Predicable.java \
+              ./src/main/java/edu/christophstach/list/list/search/Searchable.java \
+              ./src/main/java/edu/christophstach/list/list/search/LinearSearch.java \
+              ./src/main/java/edu/christophstach/list/list/sort/Sortable.java \
+              ./src/main/java/edu/christophstach/list/list/sort/BubbleSort.java \
+              ./src/main/java/edu/christophstach/list/list/sort/HeapSort.java \
+              ./src/main/java/edu/christophstach/list/list/sort/QuickSort.java \
+              ./src/main/java/edu/christophstach/list/list/sort/SelectionSort.java \
+              ./src/main/java/edu/christophstach/list/comparator/Comparable.java \
+              ./src/main/java/edu/christophstach/list/comparator/FirstNameComparator.java \
+              ./src/main/java/edu/christophstach/list/comparator/LastNameComparator.java \
+              ./src/main/java/edu/christophstach/list/comparator/GenderComparator.java \
+              ./src/main/java/edu/christophstach/list/comparator/MnComparator.java \
+              ./src/main/java/edu/christophstach/list/comparator/ProgramComparator.java \
+              ./src/main/java/edu/christophstach/list/data/Program.java \
+              ./src/main/java/edu/christophstach/list/data/Student.java \
+              ./src/main/java/edu/christophstach/list/data/Gender.java \
+              ./src/main/java/edu/christophstach/list/list/Listable.java \
+              ./src/main/java/edu/christophstach/list/list/SinglyLinkedList.java \
+              ./src/main/java/edu/christophstach/list/list/DoublyLinkedList.java
 
-TESTCLASSES = SinglyLinkedListTest \
-              DoublyLinkedListTest
+TESTCLASSES = edu.christophstach.list.list.SinglyLinkedListTest \
+              edu.christophstach.list.list.DoublyLinkedListTest
 
 
 
