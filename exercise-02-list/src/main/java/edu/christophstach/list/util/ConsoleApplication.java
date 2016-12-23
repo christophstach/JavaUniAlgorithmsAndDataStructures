@@ -169,6 +169,12 @@ public class ConsoleApplication {
     public void showMenu() {
         int i = 1;
 
+        ConsoleApplication.clearConsole();
+
+        if (!this.header.isEmpty()) {
+            System.out.println(this.header);
+        }
+
         for (Map.Entry<String, Runnable> item : this.menuItems.entrySet()) {
             System.out.println(i + ". " + item.getKey());
             i++;
@@ -197,7 +203,9 @@ public class ConsoleApplication {
 
         for (Map.Entry<String, Runnable> item : this.menuItems.entrySet()) {
             if (i == this.selection) {
+                ConsoleApplication.clearConsole();
                 item.getValue().run();
+                ConsoleApplication.waitForUserInput();
 
                 if (this.loopApp && !this.terminateApp) {
                     System.out.println();
@@ -319,13 +327,31 @@ public class ConsoleApplication {
     }
 
     /**
+     * Clears (fake) the console.
+     * Maybe not the best implementation
+     */
+    public static void clearConsole() {
+        for (int i = 0; i < 100; i++) {
+            System.out.println();
+        }
+    }
+
+    /**
+     * Prompts the user for hitting a key to continue
+     */
+    public static void waitForUserInput() {
+        System.out.print("\nBitte drücken Sie eine beliebige Taste um fortzufahren");
+        try {
+            System.in.read();
+        } catch (IOException exception) {
+
+        }
+    }
+
+    /**
      * Starts the app
      */
     public void run() {
-        if (!this.header.isEmpty()) {
-            System.out.println(this.header);
-        }
-
         if (this.loopApp) {
             this.addMenuItem("Programm beenden", () -> this.terminateApp = true);
         }
