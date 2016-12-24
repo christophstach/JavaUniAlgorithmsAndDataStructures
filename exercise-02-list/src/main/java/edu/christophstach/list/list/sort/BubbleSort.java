@@ -20,13 +20,20 @@ import edu.christophstach.list.list.Listable;
 public class BubbleSort<T> implements Sortable<T> {
     @Override
     public void sort(Listable<T> listable, Comparable<T> comparable) {
-        for (int i = 0; i < listable.size(); i++) {
-            for (int j = 0; j < listable.size() - i - 1; j++) {
+        boolean swapped;
+        int i = 1;
+
+        do  {
+            swapped = false;
+            for (int j = 0; j < listable.size() - i; j++) {
                 if (comparable.compare(listable.get(j), listable.get(j + 1)) > 0) {
                     swap(listable, j, j + 1);
+                    swapped = true;
                 }
             }
-        }
+
+            i++;
+        } while (swapped);
     }
 
     /**
