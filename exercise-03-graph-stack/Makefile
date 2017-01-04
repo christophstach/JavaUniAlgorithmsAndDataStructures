@@ -12,25 +12,30 @@ JAVAFLAGS = -cp
 JDOC = javadoc
 JDOCDIR = doc
 
-MAINCLASS   = Application
+MAINCLASS   = edu.christophstach.stack.Application
 
-SOURCES     = ./src/main/java/exercise/Application.java
+SOURCES     = ./src/main/java/edu/christophstach/stack/Application.java \
+              ./src/main/java/edu/christophstach/stack/util/ConsoleApplication.java \
+              ./src/main/java/edu/christophstach/stack/stack/Stackable.java \
+              ./src/main/java/edu/christophstach/stack/stack/Stack.java \
+              ./src/main/java/edu/christophstach/stack/data/Gender.java \
+              ./src/main/java/edu/christophstach/stack/data/Program.java \
+              ./src/main/java/edu/christophstach/stack/data/Student.java
 
-TESTSOURCES = ./src/main/java/exercise/stack/Stack.java \
-              ./src/main/java/exercise/stack/Stackable.java \
-              ./src/main/java/exercise/data/Program.java \
-              ./src/main/java/exercise/data/Student.java \
-              ./src/main/java/exercise/data/Gender.java \
-              ./src/main/java/exercise/stack/Stack.java \
-              ./src/test/java/exercise/stack/StackTest.java
+TESTSOURCES = ./src/main/java/edu/christophstach/stack/stack/Stackable.java \
+              ./src/main/java/edu/christophstach/stack/stack/Stack.java \
+              ./src/main/java/edu/christophstach/stack/data/Gender.java \
+              ./src/main/java/edu/christophstach/stack/data/Program.java \
+              ./src/main/java/edu/christophstach/stack/data/Student.java \
+              ./src/test/java/edu/christophstach/stack/stack/StackTest.java
 
-TESTCLASSES = StackTest
+TESTCLASSES = edu.christophstach.stack.stack.StackTest
 
 
 default:
 	echo 'Run target default'
 	mkdir -p $(JBINDIR)
-	$(JC) $(JCFLAGS) $(SOURCES) -d $(JBINDIR)$
+	$(JC) $(JCFLAGS) $(SOURCES) -d $(JBINDIR)
 
 run-app:
 	@echo 'Run target run'
