@@ -22,7 +22,7 @@ import java.util.Random;
  */
 public class Application {
     /**
-     * Haupt methode
+     * Main method
      *
      * @param args commandline args
      */
@@ -64,7 +64,7 @@ public class Application {
             list.insertLast(new Student(Integer.parseInt("555" + (rnd.nextInt(100) + 100)), "Laura", "Hartgers", Program.APPLIED_COMPUTING, Gender.FEMALE));
             list.insertLast(new Student(Integer.parseInt("555" + (rnd.nextInt(100) + 100)), "Miles", "Lorenz", Program.APPLIED_COMPUTING, Gender.MALE));
             list.insertLast(new Student(Integer.parseInt("555" + (rnd.nextInt(100) + 100)), "Steffen", "Exler", Program.APPLIED_COMPUTING, Gender.MALE));
-            list.insertLast(new Student(Integer.parseInt("555" + (rnd.nextInt(100) + 100)), "Steffen", "Exler", Program.APPLIED_COMPUTING, Gender.MALE));
+            list.insertLast(new Student(Integer.parseInt("555" + (rnd.nextInt(100) + 100)), "Marvin", "Pikarek", Program.APPLIED_COMPUTING, Gender.MALE));
 
             list.printAll();
         });

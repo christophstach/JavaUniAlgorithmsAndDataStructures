@@ -307,7 +307,7 @@ public class ConsoleApplication {
         if (pauseOnTerminate) {
             System.out.print("" +
                 "\n---------------------------------------------------------------" +
-                "\nDruecken Sie eine beliebige Taste um das Programm zu beenden...");
+                "\nDruecken Sie die Eingabe Taste um das Programm zu beenden...");
 
             try {
                 System.in.read();
@@ -340,7 +340,7 @@ public class ConsoleApplication {
      * Prompts the user for hitting a key to continue
      */
     public static void waitForUserInput() {
-        System.out.print("\nBitte drücken Sie eine beliebige Taste um fortzufahren");
+        System.out.print("\nBitte drücken Sie die Eingabe Taste um fortzufahren");
         try {
             System.in.read();
         } catch (IOException exception) {
