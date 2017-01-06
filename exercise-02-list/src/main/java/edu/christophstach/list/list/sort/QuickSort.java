@@ -11,7 +11,6 @@
 package edu.christophstach.list.list.sort;
 
 import edu.christophstach.list.comparator.Comparable;
-import edu.christophstach.list.list.DoublyLinkedList;
 import edu.christophstach.list.list.Listable;
 
 /**
@@ -21,39 +20,64 @@ import edu.christophstach.list.list.Listable;
 public class QuickSort<T> implements Sortable<T> {
     @Override
     public void sort(Listable<T> listable, Comparable<T> comparable) {
-        if (listable.size() > 1) {
-            int pivotIndex = listable.size() / 2;
+        quickSort(listable, comparable, 0, listable.size() - 1);
+    }
 
-            T pivot = listable.get(pivotIndex);
-            Listable<T> leftOfPivot = new DoublyLinkedList<>();
-            Listable<T> rightOfPivot = new DoublyLinkedList<>();
+    /**
+     * Sorts the list recursively with the quickSort algorithm
+     *
+     * @param listable   The list
+     * @param comparable The comparator
+     * @param from       The index from which to sort
+     * @param to         The index to which to sort
+     */
+    private void quickSort(Listable<T> listable, Comparable<T> comparable, int from, int to) {
+        if (from < to) {
+            int pivotIndex = sortFromTo(listable, comparable, from, to);
 
-            for (int i = 0; i < listable.size(); i++) {
-                if (i != pivotIndex) {
-                    T current = listable.get(i);
+            quickSort(listable, comparable, from, pivotIndex - 1);
+            quickSort(listable, comparable, pivotIndex + 1, to);
+        }
+    }
 
-                    if (comparable.compare(current, pivot) < 0) {
-                        leftOfPivot.insertLast(current);
-                    } else {
-                        rightOfPivot.insertLast(current);
-                    }
-                }
-            }
+    /**
+     * Is doing one part of the sorting, moves all elements smaller of the pivot, left to it and all elements
+     * bigger than the pivot, right to it. Afterwards it returns the index of the pivot element.
+     *
+     * @param listable   The list
+     * @param comparable The comparator
+     * @param from       The index from which to sort
+     * @param to         The index to which to sort
+     * @return The index of the pivot element which was found
+     */
+    private int sortFromTo(Listable<T> listable, Comparable<T> comparable, int from, int to) {
+        int i = from, j = to - 1;
+        T pivot = listable.get(to);
 
-            this.sort(leftOfPivot, comparable);
-            this.sort(rightOfPivot, comparable);
-
-            listable.clearAll();
-
-            for (int i = 0; i < leftOfPivot.size(); i++) {
-                listable.insertLast(leftOfPivot.get(i));
-            }
-
-            listable.insertLast(pivot);
-
-            for (int i = 0; i < rightOfPivot.size(); i++) {
-                listable.insertLast(rightOfPivot.get(i));
+        while (i <= j) {
+            if (comparable.compare(listable.get(i), pivot) > 0) {
+                swap(listable, i, j);
+                j--;
+            } else {
+                i++;
             }
         }
+
+        swap(listable, i, to);
+
+        return i;
+    }
+
+    /**
+     * Swaps two element in the list
+     *
+     * @param listable The list
+     * @param a        The first element
+     * @param b        The second element
+     */
+    private void swap(Listable<T> listable, int a, int b) {
+        T memorizedObject = listable.get(a);
+        listable.set(a, listable.get(b));
+        listable.set(b, memorizedObject);
     }
 }

@@ -218,22 +218,14 @@ public class Application {
             Comparable<Student> comparable;
 
             System.out.println("1. Bubble Sort");
-            System.out.println("2. Selection Sort");
-            System.out.println("3. Quick Sort");
-            System.out.println("4. Heap Sort");
+            System.out.println("2. Quick Sort");
 
             switch (ConsoleApplication.readInt("\nBitte den Suchalgorithmus auswählen: ", (value) -> value >= 0 && value <= 4)) {
                 case 1:
                     sortable = new BubbleSort<>();
                     break;
                 case 2:
-                    sortable = new SelectionSort<>();
-                    break;
-                case 3:
                     sortable = new QuickSort<>();
-                    break;
-                case 4:
-                    sortable = new HeapSort<>();
                     break;
                 default:
                     throw new RuntimeException();

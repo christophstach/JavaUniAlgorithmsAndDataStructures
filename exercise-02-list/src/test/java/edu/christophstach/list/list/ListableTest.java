@@ -180,45 +180,6 @@ public abstract class ListableTest {
         Assert.assertSame(this.testStudents[3], this.list.get(3));
         Assert.assertSame(this.testStudents[4], this.list.get(4));
         Assert.assertSame(this.testStudents[5], this.list.get(5));
-
-
-        this.list.clearAll();
-        sortable = new HeapSort<>();
-
-        this.list.insertLast(this.testStudents[0]);
-        this.list.insertLast(this.testStudents[1]);
-        this.list.insertLast(this.testStudents[2]);
-        this.list.insertLast(this.testStudents[3]);
-        this.list.insertLast(this.testStudents[4]);
-        this.list.insertLast(this.testStudents[5]);
-
-        this.list.sort(sortable, comparable);
-
-        Assert.assertSame(this.testStudents[0], this.list.get(1));
-        Assert.assertSame(this.testStudents[1], this.list.get(0));
-        Assert.assertSame(this.testStudents[2], this.list.get(2));
-        Assert.assertSame(this.testStudents[3], this.list.get(3));
-        Assert.assertSame(this.testStudents[4], this.list.get(4));
-        Assert.assertSame(this.testStudents[5], this.list.get(5));
-
-        this.list.clearAll();
-        sortable = new SelectionSort<>();
-
-        this.list.insertLast(this.testStudents[0]);
-        this.list.insertLast(this.testStudents[1]);
-        this.list.insertLast(this.testStudents[2]);
-        this.list.insertLast(this.testStudents[3]);
-        this.list.insertLast(this.testStudents[4]);
-        this.list.insertLast(this.testStudents[5]);
-
-        this.list.sort(sortable, comparable);
-
-        Assert.assertSame(this.testStudents[0], this.list.get(1));
-        Assert.assertSame(this.testStudents[1], this.list.get(0));
-        Assert.assertSame(this.testStudents[2], this.list.get(2));
-        Assert.assertSame(this.testStudents[3], this.list.get(3));
-        Assert.assertSame(this.testStudents[4], this.list.get(4));
-        Assert.assertSame(this.testStudents[5], this.list.get(5));
     }
 
     @Test
