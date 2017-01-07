@@ -10,6 +10,8 @@
 
 package edu.christophstach.skyline;
 
+import edu.christophstach.util.ConsoleApplication;
+
 /**
  * @author Christoph Stach - s0555912@htw-berlin.de
  * @since 12/14/16
@@ -21,15 +23,38 @@ public class Application {
      * @param args Console arguments
      */
     public static void main(String[] args) {
-        Skyline skyline = new Skyline(new Building[]{
-            new Building(5, 5, 0),
-            new Building(5, 10, 2),
-            new Building(5, 5, 0),
-            new Building(100, 7, 1),
-            new Building(20, 1, 0)
+        ConsoleApplication app = new ConsoleApplication();
+        app.setLoopApp(true);
+
+        Skyline skyline = new Skyline();
+
+        app.addMenuItem("Testgebaeude zur Skyline hinzufuegen", () -> {
+            skyline.addBuilding(new Building(4, 8, 0));
+            skyline.addBuilding(new Building(2, 16, 3));
+            skyline.addBuilding(new Building(3, 12, 4));
+            skyline.addBuilding(new Building(8, 8, 6));
+            skyline.addBuilding(new Building(4, 20, 8));
+            skyline.addBuilding(new Building(10, 3, 8));
+
+            System.out.println("Test Gebauede hinzugefuegt");
         });
 
-        System.out.println(skyline.getHeightAtPosition(0));
+        app.addMenuItem("Gebauede der Skyline hinzufuegen", () -> {
+            Building building = new Building();
+            building.setPosition(ConsoleApplication.readInt("Bitte die Position (>= 0) eingeben: ", value -> value >= 0));
+            building.setHeight(ConsoleApplication.readInt("Bitte die Hoehe (> 0) eingeben: ", value -> value > 0));
+            building.setWidth(ConsoleApplication.readInt("Bitte die Breite (> 0) eingeben: ", value -> value > 0));
+
+            skyline.addBuilding(building);
+        });
+
+        app.addMenuItem("Skyline ausgeben", () -> {
+            System.out.println(skyline);
+        });
+
+
+        app.run();
+
     }
 }
 

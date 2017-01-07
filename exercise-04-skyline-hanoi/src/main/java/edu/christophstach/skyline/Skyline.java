@@ -20,6 +20,7 @@ import java.util.List;
  */
 public class Skyline {
     private List<Building> list;
+    private int width;
 
     /**
      * Constructor
@@ -54,6 +55,8 @@ public class Skyline {
      */
     public void addBuilding(Building building) {
         list.add(building);
+
+        width = width >= building.getWidth() + building.getPosition() ? width : building.getWidth() + building.getPosition();
     }
 
     /**
@@ -74,5 +77,29 @@ public class Skyline {
         }
 
         return maxHeight;
+    }
+
+    /**
+     * Getter for the width of the Skyline
+     *
+     * @return The width
+     */
+    public int getWidth() {
+        return width;
+    }
+
+    @Override
+    public String toString() {
+        String s = "Skyline Breite: " + width + "\n";
+
+        for (int i = 0; i < width; i++) {
+            int height = getHeightAtPosition(i);
+            for (int j = 0; j < height; j++) {
+                s += "#";
+            }
+            s += " " + height + "\n";
+        }
+
+        return s;
     }
 }

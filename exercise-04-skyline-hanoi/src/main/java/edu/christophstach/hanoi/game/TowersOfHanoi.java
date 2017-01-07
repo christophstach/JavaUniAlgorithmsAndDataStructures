@@ -14,7 +14,7 @@ package edu.christophstach.hanoi.game;
  * @author Christoph Stach - s0555912@htw-berlin.de
  * @since 11/27/16
  */
-public class TowersOfHanoi {
+public class TowersOfHanoi implements ITowersOfHanoi {
     private int movesDone;
     private final Disc[] discs;
     private final Peg[] pegs;
@@ -94,12 +94,7 @@ public class TowersOfHanoi {
         this.verbose = verbose;
     }
 
-    /**
-     * Puts a disc from a source peg to the destination peg
-     *
-     * @param source      The source peg
-     * @param destination The destination peg
-     */
+    @Override
     public void moveDisc(Peg source, Peg destination) {
         if (this.verbose) {
             System.out.println("Moving Disc with size of " + source.peek().getSize() + " from " + source.getName() + " to " + destination.getName());
@@ -116,17 +111,7 @@ public class TowersOfHanoi {
         this.movesDone++;
     }
 
-    /**
-     * Moves n discs from the source peg to the destination peg using the tmp peg.
-     * If n is greater than one the, first n-1 disc will be moved recursively to the tmp peg before the
-     * biggest disc is moved to the destination peg. In the end all discs from the tmp peg will be moved again recursively
-     * to the destination peg.
-     *
-     * @param n           Number of discs
-     * @param source      The source peg
-     * @param destination The destination peg
-     * @param tmp         The temporary peg
-     */
+    @Override
     public void moveDiscs(int n, Peg source, Peg destination, Peg tmp) {
         if (n == 1) {
             this.moveDisc(source, destination);
@@ -137,10 +122,8 @@ public class TowersOfHanoi {
         }
     }
 
-    /**
-     * Starts the game
-     */
-    public void startGame() {
+    @Override
+    public void solve() {
         this.moveDiscs(this.getDiscCount(), this.pegs[0], this.pegs[2], this.pegs[1]);
     }
 

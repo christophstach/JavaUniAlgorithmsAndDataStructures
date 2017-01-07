@@ -4,6 +4,7 @@
 \usepackage{fullpage}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{amsmath}
 \usepackage{libertine}
 \usepackage{libertinust1math}
 
@@ -77,5 +78,22 @@ Methoden \textit{insert()}, \textit{insertFirst()}, \textit{insertLast()} und \t
 
 \section*{Analysieren Sie die Komplexität der von ihnen implementierten Sortierverfahren
           allgemein und im speziellen Fall Ihrer Implementierung}
+
+\subsubsection*{Bubble Sort}
+
+Im ersten durchlauf werden im schlechtesten Fall n - 1 Vergleiche und n - 1 Vetauschungen durchgeführt.
+Im den weiteren Durchläufen jeweils (n - k). k ist dabei die Nummer des Durchlaufs. Somit ergibt sich z.B. bei n = 5: \\
+
+\begin{equation*}
+\begin{split}
+Vergleiche(5) = & 5 - 1 + \\
+                & 5 - 2 + \\
+                & 5 - 3 + \\
+                & 5 - 4
+\end{split}
+\end{equation*}
+
+
+\subsubsection*{Quick Sort}
 
 \end{document}
