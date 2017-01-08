@@ -14,7 +14,8 @@ JDOCDIR = doc
 MAINCLASS_HANOI   = edu.christophstach.hanoi.Application
 MAINCLASS_SKYLINE = edu.christophstach.skyline.Application
 
-SOURCES   = ./src/main/java/edu/christophstach/Application.java \
+SOURCES   = ./src/main/java/edu/christophstach/hanoi/Application.java \
+            ./src/main/java/edu/christophstach/skyline/Application.java \
             ./src/main/java/edu/christophstach/util/ConsoleApplication.java \
             ./src/main/java/edu/christophstach/hanoi/game/Disc.java \
             ./src/main/java/edu/christophstach/hanoi/game/Peg.java \
@@ -32,7 +33,7 @@ run-hanoi:
 	@echo 'Run target run'
 	cd $(JBINDIR); $(JAVA) $(JAVAFLAGS) . $(MAINCLASS_HANOI)
 
-run-hanoi:
+run-skyline:
 	@echo 'Run target run'
 	cd $(JBINDIR); $(JAVA) $(JAVAFLAGS) . $(MAINCLASS_SKYLINE)
 
