@@ -97,7 +97,7 @@ distclean: clean
 	@echo 'Run target distclean'
 	$(RM) -r $(JDOCDIR)
 
-test:
+run-test:
 	@echo 'Run target test'
 	mkdir -p $(JBINDIR)
 	$(JC) -cp .:$(JUNIT) $(TESTSOURCES) -d $(JBINDIR)
