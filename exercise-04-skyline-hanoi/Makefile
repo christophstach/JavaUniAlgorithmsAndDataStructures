@@ -11,11 +11,9 @@ JAVAFLAGS = -cp
 JDOC = javadoc
 JDOCDIR = doc
 
-MAINCLASS_HANOI   = edu.christophstach.hanoi.Application
-MAINCLASS_SKYLINE = edu.christophstach.skyline.Application
+MAINCLASS   = edu.christophstach.Application
 
-SOURCES   = ./src/main/java/edu/christophstach/hanoi/Application.java \
-            ./src/main/java/edu/christophstach/skyline/Application.java \
+SOURCES   = ./src/main/java/edu/christophstach/Application.java \
             ./src/main/java/edu/christophstach/util/ConsoleApplication.java \
             ./src/main/java/edu/christophstach/hanoi/game/Disc.java \
             ./src/main/java/edu/christophstach/hanoi/game/Peg.java \
@@ -29,9 +27,9 @@ default:
 	mkdir -p $(JBINDIR)
 	$(JC) $(JCFLAGS) $(SOURCES) -d $(JBINDIR)
 
-run-hanoi:
+run-app:
 	@echo 'Run target run'
-	cd $(JBINDIR); $(JAVA) $(JAVAFLAGS) . $(MAINCLASS_HANOI)
+	cd $(JBINDIR); $(JAVA) $(JAVAFLAGS) . $(MAINCLASS)
 
 run-skyline:
 	@echo 'Run target run'
