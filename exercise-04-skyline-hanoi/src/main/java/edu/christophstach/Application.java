@@ -73,10 +73,7 @@ public class Application {
                     skyline.addBuilding(building);
                 });
 
-                app.addMenuItem("Skyline ausgeben", () -> {
-                    System.out.println(skyline);
-                });
-
+                app.addMenuItem("Skyline ausgeben", () -> System.out.println(skyline));
 
                 app.run();
                 break;
