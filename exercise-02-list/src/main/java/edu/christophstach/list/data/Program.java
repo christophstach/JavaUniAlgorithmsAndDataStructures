@@ -5,6 +5,10 @@ package edu.christophstach.list.data;
  * @since 18.10.2016
  */
 public enum Program {
-    APPLIED_COMPUTING, PHYSICS, INTERNATIONAL_BUSINESS, CHEMICS,
-    ART, LANGUAGES
+    APPLIED_COMPUTING,
+    ART,
+    CHEMICS,
+    INTERNATIONAL_BUSINESS,
+    LANGUAGES,
+    PHYSICS
 }

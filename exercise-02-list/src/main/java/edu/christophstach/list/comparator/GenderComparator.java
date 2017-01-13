@@ -19,14 +19,6 @@ import edu.christophstach.list.data.Student;
 public class GenderComparator implements Comparable<Student> {
     @Override
     public int compare(Student o1, Student o2) {
-        if (o1.getGender() == null && o2.getGender() == null) {
-            return 0;
-        } else if (o2.getGender() == null) {
-            return -1;
-        } else if (o1.getGender() == null) {
-            return 1;
-        } else {
-            return o1.getGender().compareTo(o2.getGender());
-        }
+        return o1.getGender().ordinal() - o2.getGender().ordinal();
     }
 }

@@ -19,14 +19,6 @@ import edu.christophstach.list.data.Student;
 public class ProgramComparator implements Comparable<Student> {
     @Override
     public int compare(Student o1, Student o2) {
-        if (o1.getProgram() == null && o2.getProgram() == null) {
-            return 0;
-        } else if (o2.getProgram() == null) {
-            return -1;
-        } else if (o1.getProgram() == null) {
-            return 1;
-        } else {
-            return o1.getProgram().compareTo(o2.getProgram());
-        }
+        return o1.getProgram().ordinal() - o2.getProgram().ordinal();
     }
 }

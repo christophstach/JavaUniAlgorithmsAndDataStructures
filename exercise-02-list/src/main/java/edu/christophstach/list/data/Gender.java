@@ -15,5 +15,5 @@ package edu.christophstach.list.data;
  * @since 18.10.2016
  */
 public enum Gender {
-    MALE, FEMALE
+    FEMALE, MALE
 }

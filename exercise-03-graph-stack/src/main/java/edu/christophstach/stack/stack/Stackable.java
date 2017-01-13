@@ -36,7 +36,7 @@ public interface Stackable<T> {
      *
      * @return The top element
      */
-    public T peak();
+    public T peek();
 
     /**
      * Returns the size of the list

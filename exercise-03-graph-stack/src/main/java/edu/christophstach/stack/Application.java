@@ -86,7 +86,7 @@ public class Application {
         });
 
         app.addMenuItem("Peak", () -> {
-            System.out.println("Return von stack.peak(): " + stack.peak());
+            System.out.println("Return von stack.peek(): " + stack.peek());
         });
 
         app.addMenuItem("Size", () -> {

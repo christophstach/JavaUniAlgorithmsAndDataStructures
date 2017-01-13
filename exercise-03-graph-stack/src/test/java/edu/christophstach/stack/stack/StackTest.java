@@ -64,12 +64,12 @@ public class StackTest {
 
     @Test
     public void testPeak() {
-        Assert.assertEquals(this.testStudents[3], this.stack.peak());
-        Assert.assertEquals(this.testStudents[3], this.stack.peak());
+        Assert.assertEquals(this.testStudents[3], this.stack.peek());
+        Assert.assertEquals(this.testStudents[3], this.stack.peek());
 
         this.stack.pop();
 
-        Assert.assertEquals(this.testStudents[2], this.stack.peak());
+        Assert.assertEquals(this.testStudents[2], this.stack.peek());
     }
 
     @Test

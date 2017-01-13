@@ -25,9 +25,7 @@ SOURCES     = ./src/main/java/edu/christophstach/list/Application.java \
               ./src/main/java/edu/christophstach/list/list/search/LinearSearch.java \
               ./src/main/java/edu/christophstach/list/list/sort/Sortable.java \
               ./src/main/java/edu/christophstach/list/list/sort/BubbleSort.java \
-              ./src/main/java/edu/christophstach/list/list/sort/HeapSort.java \
               ./src/main/java/edu/christophstach/list/list/sort/QuickSort.java \
-              ./src/main/java/edu/christophstach/list/list/sort/SelectionSort.java \
               ./src/main/java/edu/christophstach/list/comparator/Comparable.java \
               ./src/main/java/edu/christophstach/list/comparator/FirstNameComparator.java \
               ./src/main/java/edu/christophstach/list/comparator/LastNameComparator.java \

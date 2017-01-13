@@ -10,7 +10,9 @@ import edu.christophstach.list.list.Listable;
 import edu.christophstach.list.list.SinglyLinkedList;
 import edu.christophstach.list.list.search.LinearSearch;
 import edu.christophstach.list.list.search.Searchable;
-import edu.christophstach.list.list.sort.*;
+import edu.christophstach.list.list.sort.BubbleSort;
+import edu.christophstach.list.list.sort.QuickSort;
+import edu.christophstach.list.list.sort.Sortable;
 import edu.christophstach.list.predicate.*;
 import edu.christophstach.list.util.ConsoleApplication;
 
@@ -43,16 +45,16 @@ public class Application {
             case 1:
                 list = new SinglyLinkedList<>();
                 app.setHeader("\n"
-                    + "SinglyLinkedList\n"
-                    + "----------------\n"
+                        + "SinglyLinkedList\n"
+                        + "----------------\n"
                 );
                 break;
             case 2:
             default:
                 list = new DoublyLinkedList<>();
                 app.setHeader("\n"
-                    + "DoublyLinkedList\n"
-                    + "----------------\n"
+                        + "DoublyLinkedList\n"
+                        + "----------------\n"
                 );
                 break;
         }
@@ -86,8 +88,8 @@ public class Application {
 
             if (!list.empty()) {
                 index = ConsoleApplication.readInt(
-                    "Bitte geben Sie einen Wert für den Index von 0 - " + list.size() + " ein: ",
-                    (value) -> (value >= 0 && value <= list.size())
+                        "Bitte geben Sie einen Wert für den Index von 0 - " + list.size() + " ein: ",
+                        (value) -> (value >= 0 && value <= list.size())
                 );
             }
 
@@ -103,8 +105,8 @@ public class Application {
             if (!list.empty()) {
                 if (list.size() > 1) {
                     index = ConsoleApplication.readInt(
-                        "Bitte geben Sie einen Wert für den Index von 0 - " + list.size() + " ein: ",
-                        (value) -> (value >= 0 && value < list.size())
+                            "Bitte geben Sie einen Wert für den Index von 0 - " + (list.size() - 1) + " ein: ",
+                            (value) -> (value >= 0 && value < list.size())
                     );
                 } else {
                     index = 0;
@@ -123,8 +125,8 @@ public class Application {
             if (!list.empty()) {
                 if (list.size() > 1) {
                     index = ConsoleApplication.readInt(
-                        "Bitte geben Sie einen Wert für den Index von 0 - " + list.size() + " ein: ",
-                        (value) -> (value >= 0 && value < list.size())
+                            "Bitte geben Sie einen Wert für den Index von 0 - " + (list.size() - 1) + " ein: ",
+                            (value) -> (value >= 0 && value < list.size())
                     );
                 } else {
                     index = 0;
@@ -166,17 +168,17 @@ public class Application {
             switch (ConsoleApplication.readInt("\nSuche nach: ", (value) -> value >= 1 && value <= 5)) {
                 case 1:
                     predicable = new FirstNameEqualsPredicate(
-                        ConsoleApplication.readString("Bitte Vorname eingeben: ", (value) -> true)
+                            ConsoleApplication.readString("Bitte Vorname eingeben: ", (value) -> true)
                     );
                     break;
                 case 2:
                     predicable = new LastNameEqualsPredicate(
-                        ConsoleApplication.readString("Bitte Nachname eingeben: ", (value) -> true)
+                            ConsoleApplication.readString("Bitte Nachname eingeben: ", (value) -> true)
                     );
                     break;
                 case 3:
                     predicable = new MnEqualsPredicate(
-                        ConsoleApplication.readInt("Bitte Mn eingeben: ", (value) -> true)
+                            ConsoleApplication.readInt("Bitte Mn eingeben: ", (value) -> true)
                     );
                     break;
                 case 4:
@@ -187,10 +189,10 @@ public class Application {
                     System.out.println();
 
                     predicable = new GenderEqualsPredicate(
-                        Gender.values()[ConsoleApplication.readInt(
-                            "Bitte das Geschlecht auswählen: ",
-                            (value) -> (value >= 0 && value < Gender.values().length)
-                        )]
+                            Gender.values()[ConsoleApplication.readInt(
+                                    "Bitte das Geschlecht auswählen: ",
+                                    (value) -> (value >= 0 && value < Gender.values().length)
+                            )]
                     );
                     break;
                 case 5:
@@ -200,10 +202,10 @@ public class Application {
                     }
                     System.out.println();
                     predicable = new ProgramEqualsPredicate(
-                        Program.values()[ConsoleApplication.readInt(
-                            "Bitte den Studiengang auswählen: ",
-                            (value) -> (value >= 0 && value < Program.values().length)
-                        )]
+                            Program.values()[ConsoleApplication.readInt(
+                                    "Bitte den Studiengang auswählen: ",
+                                    (value) -> (value >= 0 && value < Program.values().length)
+                            )]
                     );
                     break;
                 default:
@@ -282,10 +284,10 @@ public class Application {
         }
         System.out.println();
         student.setProgram(
-            Program.values()[ConsoleApplication.readInt(
-                "Bitte den Studiengang auswählen: ",
-                (value) -> (value >= 0 && value < Program.values().length)
-            )]
+                Program.values()[ConsoleApplication.readInt(
+                        "Bitte den Studiengang auswählen: ",
+                        (value) -> (value >= 0 && value < Program.values().length)
+                )]
         );
 
         System.out.println();
@@ -294,10 +296,10 @@ public class Application {
         }
         System.out.println();
         student.setGender(
-            Gender.values()[ConsoleApplication.readInt(
-                "Bitte das Geschlecht auswählen: ",
-                (value) -> (value >= 0 && value < Gender.values().length)
-            )]
+                Gender.values()[ConsoleApplication.readInt(
+                        "Bitte das Geschlecht auswählen: ",
+                        (value) -> (value >= 0 && value < Gender.values().length)
+                )]
         );
 
         return student;
