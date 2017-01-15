@@ -7,6 +7,29 @@
 \usepackage{amsmath}
 \usepackage{libertine}
 \usepackage{libertinust1math}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{pblue}{rgb}{0.13,0.13,1}
+\definecolor{pgreen}{rgb}{0,0.5,0}
+\definecolor{pred}{rgb}{0.9,0,0}
+\definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+
+\lstset{
+    language=java,
+    showspaces=false,
+    showtabs=false,
+    breaklines=true,
+    showstringspaces=false,
+    breakatwhitespace=true,
+    commentstyle=\color{pgreen},
+    keywordstyle=\color{pblue},
+    stringstyle=\color{pred},
+    basicstyle=\tiny,
+    moredelim=[il][\textcolor{pgrey}]{$$},
+    moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+}
+
 
 
 \begin{document}
@@ -21,19 +44,23 @@
 
 Test
 
-\section*{Zu speichern in unserer Liste sind Studenten mit Vor- und Nachnamen nebst Ma-
-          trikelnummer und Studiengang. Entwerfen Sie die notwendigen Datentypen und
-          begründen Sie gegebenenfalls Ihre Wahl.}
+\section*{Zu speichern in unserer Liste sind Studenten mit Vor- und Nachnamen nebst Matrikelnummer und Studiengang.
+          Entwerfen Sie die notwendigen Datentypen und begründen Sie gegebenenfalls Ihre Wahl.}
 
-\begin{itemize}
-    \item int mn: Kann ein Integer sein, da es sich um ganze Zahlen handelt
-    \item String firstName: Ein String, da Zeichenketten gespeichert werden müssen
-    \item String lastName: Ein String, da Zeichenketten gespeichert werden müssen
-    \item Program program: Ein Enum ist Performater zu sortieren als Strings (intern sind Enums Integer) und in der implementierung eleganter.
-Das Enum enthält die entsprechende Studiengänge z.B. APPLIED\_COMPUTER\_SIENCE
-    \item Gender gender: Ein Enum ist Performater zu sortieren als Strings (intern sind Enums Integer) und in der implementierung eleganter.
-Das Enum enthält entsprechen FEMALE und MALE
-\end{itemize}
+\begin{minipage}[t]{0.7\textwidth}
+    \begin{itemize}
+        \item int mn: Kann ein Integer sein, da es sich um ganze Zahlen handelt
+        \item String firstName: Ein String, da Zeichenketten gespeichert werden müssen
+        \item String lastName: Ein String, da Zeichenketten gespeichert werden müssen
+        \item Program program: Ein Enum ist Performater zu sortieren als Strings (intern sind Enums Integer) und in der implementierung eleganter.
+    Das Enum enthält die entsprechende Studiengänge z.B. APPLIED\_COMPUTER\_SIENCE
+        \item Gender gender: Ein Enum ist Performater zu sortieren als Strings (intern sind Enums Integer) und in der implementierung eleganter.
+    Das Enum enthält entsprechen FEMALE und MALE
+    \end{itemize}
+\end{minipage}
+\begin{minipage}[t]{0.4\textwidth}
+
+\end{minipage}
 
 \section*{Einige Methoden obiger einfach verketteter Liste lassen sich (im Gegensatz zum
           Array oder einer doppelt verketteten Liste) effizient (in unterschiedlicher Hinsicht)
@@ -99,19 +126,106 @@ Methoden \textit{insert()}, \textit{insertFirst()}, \textit{insertLast()} und \t
 
 \subsubsection*{Bubble Sort}
 
-Im ersten durchlauf werden im schlechtesten Fall n - 1 Vergleiche und n - 1 Vetauschungen durchgeführt.
-Im den weiteren Durchläufen jeweils (n - k). k ist dabei die Nummer des Durchlaufs. Somit ergibt sich z.B. bei n = 5: \\
+\begin{lstlisting}[language=java]
+void sort(Listable<T> listable, Comparable<T> comparable) {
+    boolean swapped;                                    //
+    int i = 1;                                          // | 1
+                                                        //
+    do  {                                               //              |
+        swapped = false;                                // | 2          |
+        for (int j = 0; j < listable.size() - i; j++) { // | 2      |   |
+            if (comparable.compare(listable.get(j),     //          |   |
+                listable.get(j + 1)) > 0) {             // | 2x+3   |   |
+                                                        //          |   |
+                swap(listable, j, j + 1);               // | 3x+y+1 | n | n
+                swapped = true;                         // | 1      |   |
+            }                                           //          |   |
+        }                                               //          |   |
+                                                        //              |
+        i++;                                            // | 1          |
+    } while (swapped);                                  //              |
+}
 
-\begin{equation*}
-\begin{split}
-Vergleiche(5) = & 5 - 1 + \\
-                & 5 - 2 + \\
-                & 5 - 3 + \\
-                & 5 - 4
-\end{split}
-\end{equation*}
+void swap(Listable<T> listable, int a, int b) {         //       |
+    T memorizedObject = listable.get(a);                // | x+y |
+    listable.set(a, listable.get(b));                   // | y   | 3x+y
+    listable.set(b, memorizedObject);                   // | y   |
+}                                                       //       |
+\end{lstlisting}
+x = Laufzeit von listable.get() \\
+y = Laufzeit von listable.set() \\
+n = Anzahl Datensätze \\
+\ \\
+\( T(n, x, y) = 1 + n(2 + n(2 + 2x + 3 + 3x + y + 1 + 1) + 1) \) \\
+\( T(n, x, y) = 1 + n(3 + n(5x + y + 7)) \) \\
+\( T(n, x, y) = 1 + n(3 + 5nx + ny + 7n) \) \\
+\( T(n, x, y) = 1 + 3n + 5n^2x + n^2y + 7n^2 \) \\
+\ \\
+Schlechtester Fall:      \( O(n^2) \) \\
+Bester Fall:             \( O(n) \)   \\
+Durschnitt:              \( O(n^2) \) \\
 
+\pagebreak
 
 \subsubsection*{Quick Sort}
+
+\begin{lstlisting}[language=java]
+public void sort(Listable<T> listable, Comparable<T> comparable) {
+    quickSort(listable, comparable,                          //
+        0, listable.size() - 1);                             // | 1
+}
+
+private void quickSort(Listable<T> listable,
+    Comparable<T> comparable, int from, int to) {                                              |
+                                                                                               |
+    if (from < to) {                                         // | 1                            |
+        int pivotIndex = sortFromTo(listable,                //                                |
+            comparable, from, to);                           // | 2+x+1+n(1+x+2+3x+y+1+1)+3x+y |
+                                                             //                                |
+        quickSort(listable, comparable,                      //                                | log(n)
+            from, pivotIndex - 1);                           // | 1                            |
+        quickSort(listable, comparable,                      //                                |
+            pivotIndex + 1, to);                             //                                |
+    }                                                        // | 1                            |
+}                                                                                              |
+
+private int sortFromTo(Listable<T> listable,
+    Comparable<T> comparable, int from, int to) { // = 2+x+1+n(1+x+2+3x+y+1+1)+3x+y
+
+    int i = from, j = to - 1;                                 // | 2
+    T pivot = listable.get(to);                               // | x+1
+                                                              //
+    while (i <= j) {                                          // | 1    |
+        if (comparable.compare(listable.get(i), pivot) > 0) { // | x+2  |
+            swap(listable, i, j);                             // | 3x+y |
+            j--;                                              // | 1    | n
+        } else {                                              //        |
+            i++;                                              // | 1    |
+        }                                                     //        |
+    }                                                         //        |
+                                                              //
+    swap(listable, i, to);                                    // | 3x+y
+                                                              //
+    return i;                                                 //
+}
+
+void swap(Listable<T> listable, int a, int b) {               //       |
+    T memorizedObject = listable.get(a);                      // | x+y |
+    listable.set(a, listable.get(b));                         // | y   | 3x+y
+    listable.set(b, memorizedObject);                         // | y   |
+}
+\end{lstlisting}
+x = Laufzeit von listable.get() \\
+y = Laufzeit von listable.set() \\
+n = Anzahl Datensätze \\
+\ \\
+\( T(n, x, y) = 1 + ( \log(n) * (1 + 2 + x + 1 + n(1 + x + 2 + 3x + y + 1 + 1) + 3x + y + 1 + 1)) \) \\
+\( T(n, x, y) = 1 + ( \log(n) * (6 + x + n(5 + 4x + y) + 3x + y)) \) \\
+\( T(n, x, y) = 1 + ( \log(n) * (6 + 4x + 5n + 4nx + ny + y)) \) \\
+\( T(n, x, y) = 1 + ( \log(n) * (5n + 4nx + 4x + ny + y + 6)) \) \\
+\ \\
+Schlechtester Fall:      \( O(n^2) \) \\
+Bester Fall:             \( O(n * \log(n)) \)   \\
+Durschnitt:              \( O(n * \log(n)) \) \\
 
 \end{document}
