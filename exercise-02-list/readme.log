@@ -1,0 +1,2417 @@
+open source     > 1 > 1 > /usr/share/texmf-dist/tex/context/base/mkiv/cont-yes.mkiv
+
+ConTeXt  ver: 2016.05.17 19:20 MKIV current  fmt: 2017.1.16  int: english/english
+
+system          > 'cont-new.mkiv' loaded
+open source     > 2 > 2 > /usr/share/texmf-dist/tex/context/base/mkiv/cont-new.mkiv
+close source    > 2 > 2 > /usr/share/texmf-dist/tex/context/base/mkiv/cont-new.mkiv
+system          > files > jobname 'readme', input './readme', result 'readme'
+fonts           > latin modern fonts are not preloaded
+languages       > language 'en' is active
+open source     > 2 > 3 > /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Undefined control sequence
+
+l.1 \documentclass
+                [a4paper, 11pt]{article}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 3 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Undefined control sequence
+
+l.3 \usepackage
+             {comment}
+
+ 1     \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3 >>  \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+12     \usepackage{wrapfig}
+13     \usepackage{color}
+
+
+? 
+
+tex error       > tex error on line 4 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Undefined control sequence
+
+l.4 \usepackage
+             {lipsum}
+
+ 1     \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4 >>  \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+12     \usepackage{wrapfig}
+13     \usepackage{color}
+14     \usepackage{graphicx}
+
+
+? 
+
+tex error       > tex error on line 5 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Undefined control sequence
+
+l.5 \usepackage
+             {fullpage}
+
+ 1     \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5 >>  \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+12     \usepackage{wrapfig}
+13     \usepackage{color}
+14     \usepackage{graphicx}
+15     
+
+
+? 
+
+tex error       > tex error on line 6 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Undefined control sequence
+
+l.6 \usepackage
+             [utf8]{inputenc}
+
+ 1     \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6 >>  \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+12     \usepackage{wrapfig}
+13     \usepackage{color}
+14     \usepackage{graphicx}
+15     
+16     
+
+
+? 
+
+tex error       > tex error on line 7 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Undefined control sequence
+
+l.7 \usepackage
+             [T1]{fontenc}
+
+ 1     \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7 >>  \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+12     \usepackage{wrapfig}
+13     \usepackage{color}
+14     \usepackage{graphicx}
+15     
+16     
+17     
+
+
+? 
+
+tex error       > tex error on line 8 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Undefined control sequence
+
+l.8 \usepackage
+             {amsmath}
+
+ 1     \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8 >>  \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+12     \usepackage{wrapfig}
+13     \usepackage{color}
+14     \usepackage{graphicx}
+15     
+16     
+17     
+18     \definecolor{pblue}{rgb}{0.13,0.13,1}
+
+
+? 
+
+tex error       > tex error on line 9 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Undefined control sequence
+
+l.9 \usepackage
+             {libertine}
+
+ 1     \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9 >>  \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+12     \usepackage{wrapfig}
+13     \usepackage{color}
+14     \usepackage{graphicx}
+15     
+16     
+17     
+18     \definecolor{pblue}{rgb}{0.13,0.13,1}
+19     \definecolor{pgreen}{rgb}{0,0.5,0}
+
+
+? 
+
+tex error       > tex error on line 10 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Undefined control sequence
+
+l.10 \usepackage
+              {libertinust1math}
+
+ 1     \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10 >>  \usepackage{libertinust1math}
+11     \usepackage{listings}
+12     \usepackage{wrapfig}
+13     \usepackage{color}
+14     \usepackage{graphicx}
+15     
+16     
+17     
+18     \definecolor{pblue}{rgb}{0.13,0.13,1}
+19     \definecolor{pgreen}{rgb}{0,0.5,0}
+20     \definecolor{pred}{rgb}{0.9,0,0}
+
+
+? 
+
+tex error       > tex error on line 11 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Undefined control sequence
+
+l.11 \usepackage
+              {listings}
+
+ 1     \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11 >>  \usepackage{listings}
+12     \usepackage{wrapfig}
+13     \usepackage{color}
+14     \usepackage{graphicx}
+15     
+16     
+17     
+18     \definecolor{pblue}{rgb}{0.13,0.13,1}
+19     \definecolor{pgreen}{rgb}{0,0.5,0}
+20     \definecolor{pred}{rgb}{0.9,0,0}
+21     \definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+
+
+? 
+
+tex error       > tex error on line 12 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Undefined control sequence
+
+l.12 \usepackage
+              {wrapfig}
+
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+12 >>  \usepackage{wrapfig}
+13     \usepackage{color}
+14     \usepackage{graphicx}
+15     
+16     
+17     
+18     \definecolor{pblue}{rgb}{0.13,0.13,1}
+19     \definecolor{pgreen}{rgb}{0,0.5,0}
+20     \definecolor{pred}{rgb}{0.9,0,0}
+21     \definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+22     
+
+
+? 
+
+tex error       > tex error on line 13 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Undefined control sequence
+
+l.13 \usepackage
+              {color}
+
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+12     \usepackage{wrapfig}
+13 >>  \usepackage{color}
+14     \usepackage{graphicx}
+15     
+16     
+17     
+18     \definecolor{pblue}{rgb}{0.13,0.13,1}
+19     \definecolor{pgreen}{rgb}{0,0.5,0}
+20     \definecolor{pred}{rgb}{0.9,0,0}
+21     \definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+22     
+23     \lstset{
+
+
+? 
+
+tex error       > tex error on line 14 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Undefined control sequence
+
+l.14 \usepackage
+              {graphicx}
+
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+12     \usepackage{wrapfig}
+13     \usepackage{color}
+14 >>  \usepackage{graphicx}
+15     
+16     
+17     
+18     \definecolor{pblue}{rgb}{0.13,0.13,1}
+19     \definecolor{pgreen}{rgb}{0,0.5,0}
+20     \definecolor{pred}{rgb}{0.9,0,0}
+21     \definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+22     
+23     \lstset{
+24         language=java,
+
+
+? 
+
+tex error       > tex error on line 23 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Undefined control sequence
+
+l.23 \lstset
+          {
+
+13     \usepackage{color}
+14     \usepackage{graphicx}
+15     
+16     
+17     
+18     \definecolor{pblue}{rgb}{0.13,0.13,1}
+19     \definecolor{pgreen}{rgb}{0,0.5,0}
+20     \definecolor{pred}{rgb}{0.9,0,0}
+21     \definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+22     
+23 >>  \lstset{
+24         language=java,
+25         showspaces=false,
+26         showtabs=false,
+27         breaklines=true,
+28         showstringspaces=false,
+29         breakatwhitespace=true,
+30         commentstyle=\color{pgreen},
+31         keywordstyle=\color{pblue},
+32         stringstyle=\color{pred},
+33         basicstyle=\tiny,
+
+
+? 
+
+tex error       > tex error on line 30 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Use of \color doesn't match its definition
+
+l.30     commentstyle=\color{
+                           pgreen},
+
+20     \definecolor{pred}{rgb}{0.9,0,0}
+21     \definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+22     
+23     \lstset{
+24         language=java,
+25         showspaces=false,
+26         showtabs=false,
+27         breaklines=true,
+28         showstringspaces=false,
+29         breakatwhitespace=true,
+30 >>      commentstyle=\color{pgreen},
+31         keywordstyle=\color{pblue},
+32         stringstyle=\color{pred},
+33         basicstyle=\tiny,
+34         moredelim=[il][\textcolor{pgrey}]{$$},
+35         moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+36     }
+37     
+38     
+39     
+40     \begin{document}
+
+
+? 
+
+tex error       > tex error on line 31 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Use of \color doesn't match its definition
+
+l.31     keywordstyle=\color{
+                           pblue},
+
+21     \definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+22     
+23     \lstset{
+24         language=java,
+25         showspaces=false,
+26         showtabs=false,
+27         breaklines=true,
+28         showstringspaces=false,
+29         breakatwhitespace=true,
+30         commentstyle=\color{pgreen},
+31 >>      keywordstyle=\color{pblue},
+32         stringstyle=\color{pred},
+33         basicstyle=\tiny,
+34         moredelim=[il][\textcolor{pgrey}]{$$},
+35         moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+36     }
+37     
+38     
+39     
+40     \begin{document}
+41     
+
+
+? 
+
+tex error       > tex error on line 31 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Too many }'s
+
+l.31     keywordstyle=\color{pblue}
+                                 ,
+
+21     \definecolor{pgrey}{rgb}{0.46,0.45,0.48}
+22     
+23     \lstset{
+24         language=java,
+25         showspaces=false,
+26         showtabs=false,
+27         breaklines=true,
+28         showstringspaces=false,
+29         breakatwhitespace=true,
+30         commentstyle=\color{pgreen},
+31 >>      keywordstyle=\color{pblue},
+32         stringstyle=\color{pred},
+33         basicstyle=\tiny,
+34         moredelim=[il][\textcolor{pgrey}]{$$},
+35         moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+36     }
+37     
+38     
+39     
+40     \begin{document}
+41     
+
+
+? 
+
+tex error       > tex error on line 32 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Use of \color doesn't match its definition
+
+l.32     stringstyle=\color{
+                          pred},
+
+22     
+23     \lstset{
+24         language=java,
+25         showspaces=false,
+26         showtabs=false,
+27         breaklines=true,
+28         showstringspaces=false,
+29         breakatwhitespace=true,
+30         commentstyle=\color{pgreen},
+31         keywordstyle=\color{pblue},
+32 >>      stringstyle=\color{pred},
+33         basicstyle=\tiny,
+34         moredelim=[il][\textcolor{pgrey}]{$$},
+35         moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+36     }
+37     
+38     
+39     
+40     \begin{document}
+41     
+42     \noindent
+
+
+? 
+
+tex error       > tex error on line 32 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Too many }'s
+
+l.32     stringstyle=\color{pred}
+                               ,
+
+22     
+23     \lstset{
+24         language=java,
+25         showspaces=false,
+26         showtabs=false,
+27         breaklines=true,
+28         showstringspaces=false,
+29         breakatwhitespace=true,
+30         commentstyle=\color{pgreen},
+31         keywordstyle=\color{pblue},
+32 >>      stringstyle=\color{pred},
+33         basicstyle=\tiny,
+34         moredelim=[il][\textcolor{pgrey}]{$$},
+35         moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+36     }
+37     
+38     
+39     
+40     \begin{document}
+41     
+42     \noindent
+
+
+? 
+
+tex error       > tex error on line 33 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Undefined control sequence
+
+l.33     basicstyle=\tiny
+                       ,
+
+23     \lstset{
+24         language=java,
+25         showspaces=false,
+26         showtabs=false,
+27         breaklines=true,
+28         showstringspaces=false,
+29         breakatwhitespace=true,
+30         commentstyle=\color{pgreen},
+31         keywordstyle=\color{pblue},
+32         stringstyle=\color{pred},
+33 >>      basicstyle=\tiny,
+34         moredelim=[il][\textcolor{pgrey}]{$$},
+35         moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+36     }
+37     
+38     
+39     
+40     \begin{document}
+41     
+42     \noindent
+43     \large\textbf{Algorithmen und Datenstrukturen} \hfill \textbf{Christoph Stach (555912)} \\
+
+
+? 
+
+tex error       > tex error on line 34 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Undefined control sequence
+
+l.34     moredelim=[il][\textcolor
+                                {pgrey}]{$$},
+
+24         language=java,
+25         showspaces=false,
+26         showtabs=false,
+27         breaklines=true,
+28         showstringspaces=false,
+29         breakatwhitespace=true,
+30         commentstyle=\color{pgreen},
+31         keywordstyle=\color{pblue},
+32         stringstyle=\color{pred},
+33         basicstyle=\tiny,
+34 >>      moredelim=[il][\textcolor{pgrey}]{$$},
+35         moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+36     }
+37     
+38     
+39     
+40     \begin{document}
+41     
+42     \noindent
+43     \large\textbf{Algorithmen und Datenstrukturen} \hfill \textbf{Christoph Stach (555912)} \\
+44     \normalsize Aufgabe 2: Einfach und doppelt verkette Liste \hfill Tom Buhrtz \\
+
+
+? 
+
+tex error       > tex error on line 34 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Extra }, or forgotten $
+
+l.34     moredelim=[il][\textcolor{pgrey}]{$$}
+                                            ,
+
+24         language=java,
+25         showspaces=false,
+26         showtabs=false,
+27         breaklines=true,
+28         showstringspaces=false,
+29         breakatwhitespace=true,
+30         commentstyle=\color{pgreen},
+31         keywordstyle=\color{pblue},
+32         stringstyle=\color{pred},
+33         basicstyle=\tiny,
+34 >>      moredelim=[il][\textcolor{pgrey}]{$$},
+35         moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+36     }
+37     
+38     
+39     
+40     \begin{document}
+41     
+42     \noindent
+43     \large\textbf{Algorithmen und Datenstrukturen} \hfill \textbf{Christoph Stach (555912)} \\
+44     \normalsize Aufgabe 2: Einfach und doppelt verkette Liste \hfill Tom Buhrtz \\
+
+
+? 
+
+tex error       > tex error on line 35 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Undefined control sequence
+
+l.35     moredelim=[is][\textcolor
+                                {pgrey}]{\%\%}{\%\%}
+
+25         showspaces=false,
+26         showtabs=false,
+27         breaklines=true,
+28         showstringspaces=false,
+29         breakatwhitespace=true,
+30         commentstyle=\color{pgreen},
+31         keywordstyle=\color{pblue},
+32         stringstyle=\color{pred},
+33         basicstyle=\tiny,
+34         moredelim=[il][\textcolor{pgrey}]{$$},
+35 >>      moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+36     }
+37     
+38     
+39     
+40     \begin{document}
+41     
+42     \noindent
+43     \large\textbf{Algorithmen und Datenstrukturen} \hfill \textbf{Christoph Stach (555912)} \\
+44     \normalsize Aufgabe 2: Einfach und doppelt verkette Liste \hfill Tom Buhrtz \\
+45     
+
+
+? 
+
+tex error       > tex error on line 36 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Extra }, or forgotten $
+
+l.36 }
+    
+
+26         showtabs=false,
+27         breaklines=true,
+28         showstringspaces=false,
+29         breakatwhitespace=true,
+30         commentstyle=\color{pgreen},
+31         keywordstyle=\color{pblue},
+32         stringstyle=\color{pred},
+33         basicstyle=\tiny,
+34         moredelim=[il][\textcolor{pgrey}]{$$},
+35         moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+36 >>  }
+37     
+38     
+39     
+40     \begin{document}
+41     
+42     \noindent
+43     \large\textbf{Algorithmen und Datenstrukturen} \hfill \textbf{Christoph Stach (555912)} \\
+44     \normalsize Aufgabe 2: Einfach und doppelt verkette Liste \hfill Tom Buhrtz \\
+45     
+46     \section*{Erarbeiten Sie sich die notwendige Datenstruktur einer einfach verketteten Liste}
+
+
+? 
+
+tex error       > tex error on line 40 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Undefined control sequence
+
+l.40 \begin
+         {document}
+
+30         commentstyle=\color{pgreen},
+31         keywordstyle=\color{pblue},
+32         stringstyle=\color{pred},
+33         basicstyle=\tiny,
+34         moredelim=[il][\textcolor{pgrey}]{$$},
+35         moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+36     }
+37     
+38     
+39     
+40 >>  \begin{document}
+41     
+42     \noindent
+43     \large\textbf{Algorithmen und Datenstrukturen} \hfill \textbf{Christoph Stach (555912)} \\
+44     \normalsize Aufgabe 2: Einfach und doppelt verkette Liste \hfill Tom Buhrtz \\
+45     
+46     \section*{Erarbeiten Sie sich die notwendige Datenstruktur einer einfach verketteten Liste}
+47     
+48     
+49     \subsection*{SinglyLinkedList}
+50     \includegraphics[width=\linewidth]{img/png/SinglyLinkedList}
+
+
+? 
+
+tex error       > tex error on line 43 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Undefined control sequence
+
+l.43 \large
+         \textbf{Algorithmen und Datenstrukturen} \hfill \textbf{Christoph S...
+
+33         basicstyle=\tiny,
+34         moredelim=[il][\textcolor{pgrey}]{$$},
+35         moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+36     }
+37     
+38     
+39     
+40     \begin{document}
+41     
+42     \noindent
+43 >>  \large\textbf{Algorithmen und Datenstrukturen} \hfill \textbf{Christoph Stach (555912)} \\
+44     \normalsize Aufgabe 2: Einfach und doppelt verkette Liste \hfill Tom Buhrtz \\
+45     
+46     \section*{Erarbeiten Sie sich die notwendige Datenstruktur einer einfach verketteten Liste}
+47     
+48     
+49     \subsection*{SinglyLinkedList}
+50     \includegraphics[width=\linewidth]{img/png/SinglyLinkedList}
+51     \subsection*{DoublyLinkedList}
+52     \includegraphics[width=\linewidth]{img/png/DoublyLinkedList}
+53     
+
+
+? 
+
+tex error       > tex error on line 43 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Undefined control sequence
+
+l.43 \large\textbf
+                {Algorithmen und Datenstrukturen} \hfill \textbf{Christoph S...
+
+33         basicstyle=\tiny,
+34         moredelim=[il][\textcolor{pgrey}]{$$},
+35         moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+36     }
+37     
+38     
+39     
+40     \begin{document}
+41     
+42     \noindent
+43 >>  \large\textbf{Algorithmen und Datenstrukturen} \hfill \textbf{Christoph Stach (555912)} \\
+44     \normalsize Aufgabe 2: Einfach und doppelt verkette Liste \hfill Tom Buhrtz \\
+45     
+46     \section*{Erarbeiten Sie sich die notwendige Datenstruktur einer einfach verketteten Liste}
+47     
+48     
+49     \subsection*{SinglyLinkedList}
+50     \includegraphics[width=\linewidth]{img/png/SinglyLinkedList}
+51     \subsection*{DoublyLinkedList}
+52     \includegraphics[width=\linewidth]{img/png/DoublyLinkedList}
+53     
+
+
+? 
+
+tex error       > tex error on line 43 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Undefined control sequence
+
+l.43 ...orithmen und Datenstrukturen} \hfill \textbf
+                                                  {Christoph Stach (555912)} \\
+
+33         basicstyle=\tiny,
+34         moredelim=[il][\textcolor{pgrey}]{$$},
+35         moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+36     }
+37     
+38     
+39     
+40     \begin{document}
+41     
+42     \noindent
+43 >>  \large\textbf{Algorithmen und Datenstrukturen} \hfill \textbf{Christoph Stach (555912)} \\
+44     \normalsize Aufgabe 2: Einfach und doppelt verkette Liste \hfill Tom Buhrtz \\
+45     
+46     \section*{Erarbeiten Sie sich die notwendige Datenstruktur einer einfach verketteten Liste}
+47     
+48     
+49     \subsection*{SinglyLinkedList}
+50     \includegraphics[width=\linewidth]{img/png/SinglyLinkedList}
+51     \subsection*{DoublyLinkedList}
+52     \includegraphics[width=\linewidth]{img/png/DoublyLinkedList}
+53     
+
+
+? 
+
+tex error       > tex error on line 44 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Undefined control sequence
+
+l.44 \normalsize
+               Aufgabe 2: Einfach und doppelt verkette Liste \hfill Tom Buhr...
+
+34         moredelim=[il][\textcolor{pgrey}]{$$},
+35         moredelim=[is][\textcolor{pgrey}]{\%\%}{\%\%}
+36     }
+37     
+38     
+39     
+40     \begin{document}
+41     
+42     \noindent
+43     \large\textbf{Algorithmen und Datenstrukturen} \hfill \textbf{Christoph Stach (555912)} \\
+44 >>  \normalsize Aufgabe 2: Einfach und doppelt verkette Liste \hfill Tom Buhrtz \\
+45     
+46     \section*{Erarbeiten Sie sich die notwendige Datenstruktur einer einfach verketteten Liste}
+47     
+48     
+49     \subsection*{SinglyLinkedList}
+50     \includegraphics[width=\linewidth]{img/png/SinglyLinkedList}
+51     \subsection*{DoublyLinkedList}
+52     \includegraphics[width=\linewidth]{img/png/DoublyLinkedList}
+53     
+54     
+
+
+? 
+structure       > sectioning > section @ level 3 : 0.0.1 -> *
+fonts           > beware: no fonts are loaded yet, using 'lm mono' in box
+structure       > sectioning > subsection @ level 4 : 0.0.1.1 -> *
+
+tex error       > tex error on line 50 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Undefined control sequence
+
+l.50 \includegraphics
+                   [width=\linewidth]{img/png/SinglyLinkedList}
+
+40     \begin{document}
+41     
+42     \noindent
+43     \large\textbf{Algorithmen und Datenstrukturen} \hfill \textbf{Christoph Stach (555912)} \\
+44     \normalsize Aufgabe 2: Einfach und doppelt verkette Liste \hfill Tom Buhrtz \\
+45     
+46     \section*{Erarbeiten Sie sich die notwendige Datenstruktur einer einfach verketteten Liste}
+47     
+48     
+49     \subsection*{SinglyLinkedList}
+50 >>  \includegraphics[width=\linewidth]{img/png/SinglyLinkedList}
+51     \subsection*{DoublyLinkedList}
+52     \includegraphics[width=\linewidth]{img/png/DoublyLinkedList}
+53     
+54     
+55     \section*{Zu speichern in unserer Liste sind Studenten mit Vor- und Nachnamen nebst Matrikelnummer und Studiengang.
+56               Entwerfen Sie die notwendigen Datentypen und begründen Sie gegebenenfalls Ihre Wahl.}
+57     
+58     
+59     \begin{center}
+60         \includegraphics[width=0.5\linewidth]{img/pdf/Student}
+
+
+? 
+
+tex error       > tex error on line 50 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Missing number, treated as zero
+
+<to be read again> 
+]
+l.50 \includegraphics[width=\linewidth]
+                                     {img/png/SinglyLinkedList}
+
+40     \begin{document}
+41     
+42     \noindent
+43     \large\textbf{Algorithmen und Datenstrukturen} \hfill \textbf{Christoph Stach (555912)} \\
+44     \normalsize Aufgabe 2: Einfach und doppelt verkette Liste \hfill Tom Buhrtz \\
+45     
+46     \section*{Erarbeiten Sie sich die notwendige Datenstruktur einer einfach verketteten Liste}
+47     
+48     
+49     \subsection*{SinglyLinkedList}
+50 >>  \includegraphics[width=\linewidth]{img/png/SinglyLinkedList}
+51     \subsection*{DoublyLinkedList}
+52     \includegraphics[width=\linewidth]{img/png/DoublyLinkedList}
+53     
+54     
+55     \section*{Zu speichern in unserer Liste sind Studenten mit Vor- und Nachnamen nebst Matrikelnummer und Studiengang.
+56               Entwerfen Sie die notwendigen Datentypen und begründen Sie gegebenenfalls Ihre Wahl.}
+57     
+58     
+59     \begin{center}
+60         \includegraphics[width=0.5\linewidth]{img/pdf/Student}
+
+
+? 
+
+tex error       > tex error on line 50 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Illegal unit of measure (pt inserted)
+
+<to be read again> 
+]
+l.50 \includegraphics[width=\linewidth]
+                                     {img/png/SinglyLinkedList}
+
+40     \begin{document}
+41     
+42     \noindent
+43     \large\textbf{Algorithmen und Datenstrukturen} \hfill \textbf{Christoph Stach (555912)} \\
+44     \normalsize Aufgabe 2: Einfach und doppelt verkette Liste \hfill Tom Buhrtz \\
+45     
+46     \section*{Erarbeiten Sie sich die notwendige Datenstruktur einer einfach verketteten Liste}
+47     
+48     
+49     \subsection*{SinglyLinkedList}
+50 >>  \includegraphics[width=\linewidth]{img/png/SinglyLinkedList}
+51     \subsection*{DoublyLinkedList}
+52     \includegraphics[width=\linewidth]{img/png/DoublyLinkedList}
+53     
+54     
+55     \section*{Zu speichern in unserer Liste sind Studenten mit Vor- und Nachnamen nebst Matrikelnummer und Studiengang.
+56               Entwerfen Sie die notwendigen Datentypen und begründen Sie gegebenenfalls Ihre Wahl.}
+57     
+58     
+59     \begin{center}
+60         \includegraphics[width=0.5\linewidth]{img/pdf/Student}
+
+
+? 
+structure       > sectioning > subsection @ level 4 : 0.0.1.2 -> *
+
+tex error       > tex error on line 52 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Undefined control sequence
+
+l.52 \includegraphics
+                   [width=\linewidth]{img/png/DoublyLinkedList}
+
+42     \noindent
+43     \large\textbf{Algorithmen und Datenstrukturen} \hfill \textbf{Christoph Stach (555912)} \\
+44     \normalsize Aufgabe 2: Einfach und doppelt verkette Liste \hfill Tom Buhrtz \\
+45     
+46     \section*{Erarbeiten Sie sich die notwendige Datenstruktur einer einfach verketteten Liste}
+47     
+48     
+49     \subsection*{SinglyLinkedList}
+50     \includegraphics[width=\linewidth]{img/png/SinglyLinkedList}
+51     \subsection*{DoublyLinkedList}
+52 >>  \includegraphics[width=\linewidth]{img/png/DoublyLinkedList}
+53     
+54     
+55     \section*{Zu speichern in unserer Liste sind Studenten mit Vor- und Nachnamen nebst Matrikelnummer und Studiengang.
+56               Entwerfen Sie die notwendigen Datentypen und begründen Sie gegebenenfalls Ihre Wahl.}
+57     
+58     
+59     \begin{center}
+60         \includegraphics[width=0.5\linewidth]{img/pdf/Student}
+61     \end{center}
+62     
+
+
+? 
+
+tex error       > tex error on line 52 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Missing number, treated as zero
+
+<to be read again> 
+]
+l.52 \includegraphics[width=\linewidth]
+                                     {img/png/DoublyLinkedList}
+
+42     \noindent
+43     \large\textbf{Algorithmen und Datenstrukturen} \hfill \textbf{Christoph Stach (555912)} \\
+44     \normalsize Aufgabe 2: Einfach und doppelt verkette Liste \hfill Tom Buhrtz \\
+45     
+46     \section*{Erarbeiten Sie sich die notwendige Datenstruktur einer einfach verketteten Liste}
+47     
+48     
+49     \subsection*{SinglyLinkedList}
+50     \includegraphics[width=\linewidth]{img/png/SinglyLinkedList}
+51     \subsection*{DoublyLinkedList}
+52 >>  \includegraphics[width=\linewidth]{img/png/DoublyLinkedList}
+53     
+54     
+55     \section*{Zu speichern in unserer Liste sind Studenten mit Vor- und Nachnamen nebst Matrikelnummer und Studiengang.
+56               Entwerfen Sie die notwendigen Datentypen und begründen Sie gegebenenfalls Ihre Wahl.}
+57     
+58     
+59     \begin{center}
+60         \includegraphics[width=0.5\linewidth]{img/pdf/Student}
+61     \end{center}
+62     
+
+
+? 
+
+tex error       > tex error on line 52 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Illegal unit of measure (pt inserted)
+
+<to be read again> 
+]
+l.52 \includegraphics[width=\linewidth]
+                                     {img/png/DoublyLinkedList}
+
+42     \noindent
+43     \large\textbf{Algorithmen und Datenstrukturen} \hfill \textbf{Christoph Stach (555912)} \\
+44     \normalsize Aufgabe 2: Einfach und doppelt verkette Liste \hfill Tom Buhrtz \\
+45     
+46     \section*{Erarbeiten Sie sich die notwendige Datenstruktur einer einfach verketteten Liste}
+47     
+48     
+49     \subsection*{SinglyLinkedList}
+50     \includegraphics[width=\linewidth]{img/png/SinglyLinkedList}
+51     \subsection*{DoublyLinkedList}
+52 >>  \includegraphics[width=\linewidth]{img/png/DoublyLinkedList}
+53     
+54     
+55     \section*{Zu speichern in unserer Liste sind Studenten mit Vor- und Nachnamen nebst Matrikelnummer und Studiengang.
+56               Entwerfen Sie die notwendigen Datentypen und begründen Sie gegebenenfalls Ihre Wahl.}
+57     
+58     
+59     \begin{center}
+60         \includegraphics[width=0.5\linewidth]{img/pdf/Student}
+61     \end{center}
+62     
+
+
+? 
+structure       > sectioning > section @ level 3 : 0.0.2 -> *
+
+tex error       > tex error on line 59 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Undefined control sequence
+
+l.59 \begin
+         {center}
+
+49     \subsection*{SinglyLinkedList}
+50     \includegraphics[width=\linewidth]{img/png/SinglyLinkedList}
+51     \subsection*{DoublyLinkedList}
+52     \includegraphics[width=\linewidth]{img/png/DoublyLinkedList}
+53     
+54     
+55     \section*{Zu speichern in unserer Liste sind Studenten mit Vor- und Nachnamen nebst Matrikelnummer und Studiengang.
+56               Entwerfen Sie die notwendigen Datentypen und begründen Sie gegebenenfalls Ihre Wahl.}
+57     
+58     
+59 >>  \begin{center}
+60         \includegraphics[width=0.5\linewidth]{img/pdf/Student}
+61     \end{center}
+62     
+63     \begin{itemize}
+64         \item int mn: Kann ein Integer sein, da es sich um ganze Zahlen handelt
+65         \item String firstName: Ein String, da Zeichenketten gespeichert werden müssen
+66         \item String lastName: Ein String, da Zeichenketten gespeichert werden müssen
+67         \item Program program: Ein Enum ist Performater zu sortieren als Strings (intern sind Enums Integer) und in der implementierung eleganter.
+68     Das Enum enthält die entsprechende Studiengänge z.B. APPLIED\_COMPUTER\_SIENCE
+69         \item Gender gender: Ein Enum ist Performater zu sortieren als Strings (intern sind Enums Integer) und in der implementierung eleganter.
+
+
+? 
+
+tex error       > tex error on line 60 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Undefined control sequence
+
+l.60     \includegraphics
+                       [width=0.5\linewidth]{img/pdf/Student}
+
+50     \includegraphics[width=\linewidth]{img/png/SinglyLinkedList}
+51     \subsection*{DoublyLinkedList}
+52     \includegraphics[width=\linewidth]{img/png/DoublyLinkedList}
+53     
+54     
+55     \section*{Zu speichern in unserer Liste sind Studenten mit Vor- und Nachnamen nebst Matrikelnummer und Studiengang.
+56               Entwerfen Sie die notwendigen Datentypen und begründen Sie gegebenenfalls Ihre Wahl.}
+57     
+58     
+59     \begin{center}
+60 >>      \includegraphics[width=0.5\linewidth]{img/pdf/Student}
+61     \end{center}
+62     
+63     \begin{itemize}
+64         \item int mn: Kann ein Integer sein, da es sich um ganze Zahlen handelt
+65         \item String firstName: Ein String, da Zeichenketten gespeichert werden müssen
+66         \item String lastName: Ein String, da Zeichenketten gespeichert werden müssen
+67         \item Program program: Ein Enum ist Performater zu sortieren als Strings (intern sind Enums Integer) und in der implementierung eleganter.
+68     Das Enum enthält die entsprechende Studiengänge z.B. APPLIED\_COMPUTER\_SIENCE
+69         \item Gender gender: Ein Enum ist Performater zu sortieren als Strings (intern sind Enums Integer) und in der implementierung eleganter.
+70     Das Enum enthält entsprechen FEMALE und MALE
+
+
+? 
+
+tex error       > tex error on line 60 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Missing number, treated as zero
+
+<to be read again> 
+]
+l.60     \includegraphics[width=0.5\linewidth]
+                                            {img/pdf/Student}
+
+50     \includegraphics[width=\linewidth]{img/png/SinglyLinkedList}
+51     \subsection*{DoublyLinkedList}
+52     \includegraphics[width=\linewidth]{img/png/DoublyLinkedList}
+53     
+54     
+55     \section*{Zu speichern in unserer Liste sind Studenten mit Vor- und Nachnamen nebst Matrikelnummer und Studiengang.
+56               Entwerfen Sie die notwendigen Datentypen und begründen Sie gegebenenfalls Ihre Wahl.}
+57     
+58     
+59     \begin{center}
+60 >>      \includegraphics[width=0.5\linewidth]{img/pdf/Student}
+61     \end{center}
+62     
+63     \begin{itemize}
+64         \item int mn: Kann ein Integer sein, da es sich um ganze Zahlen handelt
+65         \item String firstName: Ein String, da Zeichenketten gespeichert werden müssen
+66         \item String lastName: Ein String, da Zeichenketten gespeichert werden müssen
+67         \item Program program: Ein Enum ist Performater zu sortieren als Strings (intern sind Enums Integer) und in der implementierung eleganter.
+68     Das Enum enthält die entsprechende Studiengänge z.B. APPLIED\_COMPUTER\_SIENCE
+69         \item Gender gender: Ein Enum ist Performater zu sortieren als Strings (intern sind Enums Integer) und in der implementierung eleganter.
+70     Das Enum enthält entsprechen FEMALE und MALE
+
+
+? 
+
+tex error       > tex error on line 60 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Illegal unit of measure (pt inserted)
+
+<to be read again> 
+]
+l.60     \includegraphics[width=0.5\linewidth]
+                                            {img/pdf/Student}
+
+50     \includegraphics[width=\linewidth]{img/png/SinglyLinkedList}
+51     \subsection*{DoublyLinkedList}
+52     \includegraphics[width=\linewidth]{img/png/DoublyLinkedList}
+53     
+54     
+55     \section*{Zu speichern in unserer Liste sind Studenten mit Vor- und Nachnamen nebst Matrikelnummer und Studiengang.
+56               Entwerfen Sie die notwendigen Datentypen und begründen Sie gegebenenfalls Ihre Wahl.}
+57     
+58     
+59     \begin{center}
+60 >>      \includegraphics[width=0.5\linewidth]{img/pdf/Student}
+61     \end{center}
+62     
+63     \begin{itemize}
+64         \item int mn: Kann ein Integer sein, da es sich um ganze Zahlen handelt
+65         \item String firstName: Ein String, da Zeichenketten gespeichert werden müssen
+66         \item String lastName: Ein String, da Zeichenketten gespeichert werden müssen
+67         \item Program program: Ein Enum ist Performater zu sortieren als Strings (intern sind Enums Integer) und in der implementierung eleganter.
+68     Das Enum enthält die entsprechende Studiengänge z.B. APPLIED\_COMPUTER\_SIENCE
+69         \item Gender gender: Ein Enum ist Performater zu sortieren als Strings (intern sind Enums Integer) und in der implementierung eleganter.
+70     Das Enum enthält entsprechen FEMALE und MALE
+
+
+? 
+system          > don't use \end to finish a document
+system          > invalid \starttext ... \stoptext structure
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Missing $ inserted
+
+<inserted text> 
+$
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Display math should end with $$
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! \textfont0 is undefined (character 63)
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+
+? 
+
+tex error       > tex error on line 1 in file /home/christoph/Projects/JavaUniAlgorithmsAndDataStructures/exercise-02-list/readme.tex: ! Emergency stop
+
+<to be read again> 
+\normalend 
+l.1 \dostoptext
+             
+\clf_stoptext ->\luafunction \16>>clf_stoptext 
+                                               
+l.1 \stoptext
+           
+\clf_forceendjob ...function \16>>clf_forceendjob 
+                                                  
+l.61 \end
+       {center}
+
+ 1 >>  \documentclass[a4paper, 11pt]{article}
+ 2     
+ 3     \usepackage{comment}
+ 4     \usepackage{lipsum}
+ 5     \usepackage{fullpage}
+ 6     \usepackage[utf8]{inputenc}
+ 7     \usepackage[T1]{fontenc}
+ 8     \usepackage{amsmath}
+ 9     \usepackage{libertine}
+10     \usepackage{libertinust1math}
+11     \usepackage{listings}
+
+End of file on the terminal!
+
+
