@@ -8,7 +8,6 @@
 \usepackage{libertinust1math}
 \usepackage{graphicx}
 \usepackage{svg}
-\graphicspath{ {images/} }
 
 
 \begin{document}
@@ -17,28 +16,44 @@
 \large\textbf{Algorithmen und Datenstrukturen} \hfill \textbf{Christoph Stach (555912)} \\
 \normalsize Aufgabe 3: Stack \hfill Tom Buhrtz \\
 
-\section*{AufgabenBlatt 3 - 2}
+\section*{Aufgabenblatt 3 - 2}
 
 \subsection*{Adjazenzmatrix}
 \begin{tabular}{ |c|c|c|c|c|c|c| }
 \hline
-  & A & B & C & D & E & F \\
+ & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{E} & \textbf{F} \\
 \hline
-A & 0 & 0 & 0 & 0 & 0 & 0 \\
+\textbf{A} & 0 & 1 & 1 & 1 & 1 & 1 \\
 \hline
-B & 0 & 0 & 0 & 0 & 0 & 0 \\
+\textbf{B} & 1 & 0 & 0 & 0 & 0 & 0 \\
 \hline
-C & 0 & 0 & 0 & 0 & 0 & 0 \\
+\textbf{C} & 1 & 0 & 0 & 0 & 0 & 0 \\
 \hline
-D & 0 & 0 & 0 & 0 & 0 & 0 \\
+\textbf{D} & 1 & 0 & 0 & 0 & 0 & 0 \\
 \hline
-E & 0 & 0 & 0 & 0 & 0 & 0 \\
+\textbf{E} & 1 & 0 & 0 & 0 & 0 & 0 \\
 \hline
-F & 0 & 0 & 0 & 0 & 0 & 0 \\
+\textbf{F} & 1 & 0 & 0 & 0 & 0 & 0 \\
 \hline
 \end{tabular}
 
 \subsection*{Adjazenzliste}
+\begin{tabular}{ |c|c|c|c|c|c| }
+\hline
+\textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{E} & \textbf{F} \\
+\hline
+\hline
+B & A & A & A & A & A \\
+\hline
+C & & & & & \\
+\hline
+D & & & & & \\
+\hline
+E & & & & & \\
+\hline
+F & & & & & \\
+\hline
+\end{tabular}
 
 
 \subsection*{Mathematische Darstellung}
@@ -48,7 +63,65 @@ F & 0 & 0 & 0 & 0 & 0 & 0 \\
 
 \pagebreak
 
-\section*{AufgabenBlatt 3 - 3}
+\section*{Aufgabenblatt 3 - 3}
+
+\subsection*{Adjazenzmatrix}
+\begin{tabular}{ |c|c|c|c|c|c|c| }
+\hline
+ & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{E} & \textbf{F} \\
+\hline
+\textbf{A} & 0 & 1 & 1 & 1 & 1 & 1 \\
+\hline
+\textbf{B} & 0 & 0 & 0 & 0 & 0 & 0 \\
+\hline
+\textbf{C} & 0 & 0 & 0 & 0 & 0 & 0 \\
+\hline
+\textbf{D} & 0 & 0 & 0 & 0 & 0 & 0 \\
+\hline
+\textbf{E} & 0 & 0 & 0 & 0 & 0 & 0 \\
+\hline
+\textbf{F} & 1 & 0 & 0 & 0 & 0 & 0 \\
+\hline
+\end{tabular}
+
+\subsection*{Graph}
+\includegraphics[width=0.5\linewidth]{img/pdf/Aufgabe_3-3}
+
+
+\subsection*{Mathematische Darstellung}
+\( G = \{ V , X \} \) \\
+\( V = \{ A , B , C , D , E , F \} \)  \\
+\( \vec X = \{ (A,B) , (A,C) , (A,D) , (A,E) , (A,F) , (F,A) \} \)
+
+\pagebreak
+
+\section*{Aufgabenblatt 3 - 4}
+
+\subsection*{Adjazenzliste}
+\begin{tabular}{ |c|c|c|c|c|c| }
+\hline
+\textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} \\
+\hline
+\hline
+2 | 5 & & & & & \\
+\hline
+3 | 3 & & & & & \\
+\hline
+4 | 11 & & & & & \\
+\hline
+5 | 1 & & & & & \\
+\hline
+6 | 9 & & & & & \\
+\hline
+\end{tabular}
+
+\subsection*{Graph}
+\includegraphics[width=0.5\linewidth]{img/pdf/Aufgabe_3-4}
+
+\subsection*{Mathematische Darstellung}
+\( G = \{ V , X \} \) \\
+\( V = \{ 1 , 2 , 3 , 4 , 5 , 6 \} \)  \\
+\( \vec X = \{ (1,2,5) , (1,3,3) , (1,4,11) , (1,5,1) , (1,6,9) \} \)
 
 
 
